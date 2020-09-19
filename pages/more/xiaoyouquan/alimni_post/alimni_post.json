@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "GridView":"../../../../components/GridView/index"
+  },
+  "navigationBarTitleText": "发帖",
+  "navigationBarBackgroundColor": "#F5F5F5"
+}

@@ -1,0 +1,8 @@
+/* pages/wangfeichongzhi/wangfeichongzhi.wxss */
+@import "/pages/xiaoyuankachongzhi/xiaoyuankachongzhi.wxss";
+.chongzhi-haoma{
+  text-align: center;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+  border-bottom: 1rpx solid rgb(194, 180, 180,0.7);
+}

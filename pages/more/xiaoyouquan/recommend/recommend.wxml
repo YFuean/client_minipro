@@ -1,0 +1,62 @@
+<!--pages/index/recommend/recommend.wxml-->
+<view bindtap="fanhui" class="back-to">
+<image class="back-icon" src="/image/icon_jiantou.png"/>
+</view>
+<view style="margin-top:150rpx;">
+<view class="top">
+<view class="percent">{{name}}</view>
+<!-- <view class="title">互动亲密度</view> -->
+</view>
+
+<view class="zhedie">
+<view class="zhedie-on">ta在刚刚也发布或查看了与你相同类型的动态</view>
+<view class="zhedie-in"></view>
+</view>
+
+<view bindtap="gochat" class="zhedie">
+<view class="zhedie-under-on">聊一聊，会有惊喜发现</view>
+<view class="zhedie-under-in"></view>
+</view>
+
+<view class="shu">2020.06.28</view>
+
+<view style="margin-top:600rpx;">
+<scroll-view class="scrollx" scroll-x>
+<block wx:for="{{one}}">
+	<view animation="{{animation}}" class="row">
+		<image bindtap="translate" data-item="{{index}}" data-index="{{item.nickname}}"  class="avatar" src="{{item.avatar}}" />
+    <view class="back" bindtap="gochat"><image class="sayhai" src="/asstes/alimni_icon/shou.png"/>sayHaiii~</view>
+    <view><text class="nick">{{item.gender}} </text><text class="nick">{{item.address}}  </text></view>
+	</view>
+  </block>
+  <block wx:for="{{two}}">
+	<view animation="{{animation}}" class="row">
+		<image bindtap="translate" data-index="{{item.nickname}}"  class="avatar" src="{{item.avatar}}" />
+     <view class="back"><image class="sayhai" src="/asstes/alimni_icon/shou.png"/>sayHaii~</view>
+     <view><text class="nick">{{item.gender}} </text><text class="nick">{{item.address}}  </text></view>
+	</view>
+  </block>
+  <block wx:for="{{three}}">
+	<view animation="{{animation}}" class="row">
+		<image bindtap="translate" data-index="{{item.nickname}}"  class="avatar" src="{{item.avatar}}" />
+     <view class="back"><image class="sayhai" src="/image/shou.png"/>sayHaiii~</view>
+     <view><text class="nick">{{item.gender}} </text><text class="nick">{{item.address}}  </text></view>
+	</view>
+  </block>
+  <block wx:for="{{four}}">
+	<view animation="{{animation}}" class="row">
+		<image bindtap="translate" data-index="{{item.nickname}}"  class="avatar" src="{{item.avatar}}" />
+     <view class="back"><image class="sayhai" src="/image/shou.png"/>sayHaiii~</view>
+     <view><text class="nick">{{item.gender}} </text><text class="nick">{{item.address}}  </text></view>
+	</view>
+  </block>
+  <block wx:for="{{five}}">
+	<view animation="{{animation}}" class="row">
+		<image bindtap="translate" data-index="{{item.nickname}}"  class="avatar" src="{{item.avatar}}" />
+     <view class="back"><image class="sayhai" src="/image/shou.png"/>sayHaiii~</view>
+     <view><text class="nick">{{item.gender}}</text><text class="nick">{{item.address}}  </text></view>
+	</view>
+  </block>
+</scroll-view>
+</view>
+</view>

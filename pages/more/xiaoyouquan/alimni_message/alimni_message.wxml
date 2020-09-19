@@ -1,0 +1,34 @@
+<!--pages/message/alimni_message/alimni_message.wxml-->
+<view class="message-top">
+
+<view bindtap="goComment" class="message-back-comm">
+<view wx:if="{{isComm}}"  class="dian"></view>
+<image class="message-icon" src="/image/icon/pinglun_icon.png"/>
+<view class="message-text">评论</view>
+</view>
+
+<view bindtap="goLike" class="message-zan">
+<view wx:if="{{isLike}}"  class="dian"></view>
+<image class="message-icon" src="/image/icon/dianzan_icon.png"/>
+<view class="message-text">赞</view>
+</view>
+
+<view class="message-news" bindtap="changeMess">
+<view wx:if="{{isMsg}}"  class="dian"></view>
+<image class="message-icon" src="/image/icon/xiaoxi_icon.png"/>
+<view class="message-text">私聊</view>
+</view>
+</view>
+
+<view class="message-title">
+<text class="message-title-left">帖子动态</text>
+<text class="message-title-right">全部已读</text>
+</view>
+
+<view style="text-align: center;margin:30rpx auto;">
+<view wx:if="{{content.length == 0}}">暂无消息</view>
+<view class="recomm" wx:else>
+<image class="recomm-icon" src="/image/icon_laba.png"/>
+<text class="recomm-text">{{content}}</text></view>
+<view class="message-line"></view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "GridView":"../../../../components/GridView/index"
+  },
+  "navigationBarBackgroundColor": "#F5F5F5",
+  "navigationBarTitleText": "动态"
+}

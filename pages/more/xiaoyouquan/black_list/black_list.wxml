@@ -1,0 +1,12 @@
+<!--pages/index/black_list/black_list.wxml-->
+<view class="black">
+<text>屏蔽私聊</text>
+<switch class='switch-view' color="#5898b8" checked="{{switch1Checked}}" bindchange="switch1Change" type='switch'/>
+<view class="line"></view>
+</view>
+
+<view class="black">
+<text>不看他的内容</text>
+<switch class='switch-view' color="#5898b8" checked="{{switch1Checked}}" bindchange="changeView" type='switch'/>
+<view class="line"></view>
+</view>

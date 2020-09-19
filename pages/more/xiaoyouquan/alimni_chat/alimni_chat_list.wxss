@@ -1,0 +1,63 @@
+/* pages/index/alimni_chat/alimni_chat_list.wxss */
+page {
+  width: 100%;
+  margin: 0 auto;
+}
+.chat-top {
+  float: right;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+.chat-row {
+  height:80rpx;
+  border-bottom: 1rpx solid rgb(241, 241, 241);
+  width: 100%;
+}
+
+.chat-list-icon {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  right: 24%;
+}
+.chat-shezhi {
+  margin-left:20rpx;
+}
+.chat-list-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50rpx;
+}
+.chat-list-user {
+  font-size: 32rpx;
+  position: absolute;
+  left: 20%;
+}
+.chat-list-content {
+  font-size: 25rpx;
+  color: gray;
+  margin-left: 16%;
+  margin-top: -30rpx;
+}
+.chat-list-time {
+  font-size: 25rpx;
+  float: right;
+  margin-top: -70rpx;
+  margin-right: 20rpx;
+  color: gray;
+}
+
+.chat-list {
+  width: 95%;
+  margin: 40rpx;
+}
+
+.line {
+  background-color: rgb(230, 230, 230);
+  height: 1rpx;
+  line-height: 1rpx;
+  border: none;
+  width: 90%;
+  margin: auto;
+  margin-top: 10rpx;
+}

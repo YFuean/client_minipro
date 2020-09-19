@@ -1,0 +1,40 @@
+<!--pages/library/library.wxml-->
+<view class="library-page">
+<scroll-view scroll-y class="scroll-view">
+<view class="page-head">
+<view class="jieyue-text">
+<text>已借阅</text><text class="jieyue-num">{{count}}</text><text>本</text>
+</view>
+</view>
+<view>
+<view class="page-info">
+<view>
+  <view class="books-title m-tb">
+    <text class="title-description">待还书籍</text>
+  </view>
+  <view class="book-info">
+    <view wx:for="{{borrowBooks.sysBorrowNoReturnList}}" class="book-item" wx:for-item="book">
+      <text class="book-name">{{book.borrowBookName}}</text>
+      <view  class="data-description">
+        <text>借阅日期：{{book.gmtCreate}}</text>
+        <text class="font-red">应还日期：{{book.gmtModified}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="books-title m-tb">
+    <text class="title-description">历史借阅</text>
+  </view>
+  <view class="book-info">
+    <view wx:for="{{borrowBooks.sysBorrowReturnList}}" class="book-item" wx:for-item="book">
+      <text class="book-name">{{book.borrowBookName}}</text>
+      <view  class="data-description">
+        <text class="font-gray">借阅日期：{{book.gmtCreate}}</text>
+        <text class="font-gray">归还日期：{{book.gmtModified}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+</view>
+</view>
+</scroll-view>
+</view>

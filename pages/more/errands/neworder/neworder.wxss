@@ -1,0 +1,205 @@
+/* pages/more/errands/neworder/neworder.wxss */
+.background {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-content: center; */
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #F5F5F5;
+  margin: auto;
+  background-image: url("https://newbers.cn/pic/bg_order_service_dialog.png");
+  background-repeat: no-repeat;
+  background-size: 100% 20%;
+}
+
+.container_e {
+  position: absolute;
+  top: 250rpx;
+  width: 100%;
+  /* 在绝对定位下实现水平居中 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-card {
+  width: 90%;
+  height: 14em;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 5px 0px;
+}
+
+
+.message-card-list {
+  display: flex;
+  height: 50%;
+  margin: 30rpx 0rpx 30rpx 0rpx;
+}
+
+.horizontal-line {
+  border: 2rpx solid #F5F5F5;
+}
+
+.message-card-list-left {
+  margin-left: 20rpx;
+  height: 100%;
+  width: 10%;
+}
+
+.message-card-list-right {
+  margin-left: 20rpx;
+  height: 100%;
+  width: 90%;
+}
+.message-card-list-right-top{
+  height: 100%;
+  width: 90%;
+}
+
+.hollow-circle-blue {
+  width: 4px;
+  height: 4px;
+  border: 2px solid rgb(0, 154, 255);
+  border-radius: 4px;
+  margin: 27rpx 10rpx 27rpx 0rpx;
+}
+
+.hollow-circle-yellow {
+  width: 4px;
+  height: 4px;
+  border: 2px solid rgb(255, 211, 0);
+  border-radius: 4px;
+  margin: 27rpx 10rpx 27rpx 0rpx;
+}
+
+.message-card-address {
+  line-height:32rpx;
+  font-size: 32rpx;
+  width: 330px;
+  height: 50%;
+  font-weight: 600;
+}
+.message-card-address-text{
+  height: 50%;
+  width: 100%;
+  text-align: left;
+  color: #000000;
+  line-height: 34rpx;
+  font-size: 34rpx;
+  /* overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break:break-all; */
+}
+.message-card-NT {
+  font-size: 26rpx;
+  line-height: 26rpx;
+  height: 50%;
+  width: 100%;
+}
+
+.message-card-NT-text {
+  color: #777777;
+}
+/* 物品名称 */
+.goods-card{
+  width: 90%;
+  height: 3em;
+  display: flex;
+  border-radius: 5px;
+  background-color: #fff;
+  margin:10px 0px 10px 0px ;
+  border: 1rpx solid rgba(0, 0, 0, 0.1);
+}
+.goods-card-left{
+  margin: 10px;
+}
+.goods-card-right{
+  height: 100%;
+  width: 90%;
+}
+.goods-card image{
+  height: 1.5em;
+  width: 1.5em;
+}
+.goods-card-input{
+  font-size: 28rpx;
+  line-height: 3em;
+  height: 100%;
+  width: 100%;
+}
+/* 取件时间 */
+.deliveryTime-card{
+  width: 90%;
+  height: 3em;
+  display: flex;
+  border-radius: 5px;
+  background-color: #fff;
+  margin:10px 0px 10px 0px ;
+  border: 1rpx solid rgba(0, 0, 0, 0.1);
+}
+.deliveryTime-card-left{
+  margin: 10px;
+}
+.deliveryTime-card-right{
+  height: 100%;
+  width: 90%;
+}
+.deliveryTime-card image{
+  height: 1.5em;
+  width: 1.5em;
+}
+.deliveryTime-card-input{
+  font-size: 28rpx;
+  line-height: 3em;
+  height: 100%;
+  width: 100%;
+}
+/* 备注 */
+.remark-card{
+  width: 90%;
+  height: 3em;
+  display: flex;
+  border-radius: 5px;
+  background-color: #fff;
+  margin:10px 0px 10px 0px ;
+  border: 1rpx solid rgba(0, 0, 0, 0.1);
+}
+.remark-card-left{
+  margin: 10px;
+}
+.remark-card-right{
+  height: 100%;
+  width: 90%;
+}
+.remark-card image{
+  height: 1.5em;
+  width: 1.5em;
+}
+.remark-card-input{
+  font-size: 28rpx;
+  line-height: 3em;
+  height: 100%;
+  width: 100%;
+}
+
+
+/* 按钮 */
+.btn{
+  display: flex;
+  width: 100%;
+  margin: 100rpx 0rpx 0rpx 0rpx;
+  justify-content: center;
+  align-items: center;
+}
+.btn-enter{
+  background-color: deepskyblue ;
+  color:#ffff;
+  font-weight: 500;
+}

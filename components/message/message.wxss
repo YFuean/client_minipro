@@ -1,0 +1,23 @@
+/* components/message/message.wxss */
+.msg-back {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  text-align: center;
+  background-color: rgb(221, 230, 236);
+  
+}
+.msg-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 20rpx;
+}
+.dian {
+  position: fixed;
+  width: 25rpx;
+  height: 25rpx;
+  border-radius: 50%;
+  margin-left: 10rpx;
+  background-color: rgb(160, 36, 36);
+  z-index: 1;
+}

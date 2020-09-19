@@ -1,0 +1,76 @@
+<view class="companyDetailPage">
+    <view class=" bcmask" >
+
+        <view class="bgimg" style="background-image: url(https://images.weserv.nl/?url={{detailInfo.logo}})">
+            <view class="bcmask">
+                <!-- 公司信息的开头：公司名、工作时间、规模等 -->
+                <view class="company-banner">
+                    <!-- 公司名 -->
+                    <view class="row1 mb-45">
+                        <view class="com-info" hover-class="none" hover-stop-propagation="false">
+                            <text class="text--title mb-15">{{detailInfo.name}}</text>
+                            <text class="text1">{{detailInfo.tag}}·{{detailInfo.workers}}人以上</text>
+                        </view>
+                        <image class="icon-logo" src="https://images.weserv.nl/?url={{detailInfo.logo}}" mode="aspectFill" lazy-load="false" binderror="" bindload=""></image>
+                    </view>
+                    <!-- 工作时间 那三个图标-文本  -->
+                    <view class="row2">
+                        <view class="icon-item mb-25">
+                            <image class="icon--small" src="https://miaoxun.oss-cn-hangzhou.aliyuncs.com/images/xiaoyuanpin/shijian_white.png"></image>
+                            <text class="icon--text">{{detailInfo.workingTime}}</text>
+                        </view>
+                        <view class="icon-item mb-25">
+                            <image class="icon--small" src="https://miaoxun.oss-cn-hangzhou.aliyuncs.com/images/xiaoyuanpin/paiban_white.png"></image>
+                            <text class="icon--text">{{detailInfo.vacation}}</text>
+                        </view>
+                        <view class="icon-item mb-25">
+                            <image class="icon--small" src="https://miaoxun.oss-cn-hangzhou.aliyuncs.com/images/xiaoyuanpin/gongzuo_white.png"></image>
+                            <text class="icon--text">{{detailInfo.workingStatus}}</text>
+                        </view>
+                    </view>
+                </view>
+                <!-- 公司简介、职位设置等 -->
+                <view class="company-content">
+                    <!-- 公司地址 -->
+                    <view class="com-address mb-25">
+                        <text class="text--title2 mb-25" selectable="false" space="false" decode="false">公司地址</text>
+                        <text class="text2" selectable="false" space="false" decode="false">{{detailInfo.address}}</text>
+                    </view>
+                    <!-- 公司介绍 -->
+                    <view class="com-address">
+                        <text class="text--title2 mb-25" selectable="false" space="false" decode="false">公司介绍</text>
+                        <text class="text2" selectable="false" space="false" decode="false">{{detailInfo.description}}</text>
+                    </view>
+                </view>
+            
+            </view>
+            
+        
+        </view>
+        
+        <view class="company-job">
+            <!-- 开设职位 -->
+            <view class="job-count">
+                <text class="job-count-text" selectable="false" space="false" decode="false">职位 {{detailInfo.companyJobVos.length}}</text>
+            </view>
+            <view class="joblist">
+                <view class="list-card" wx:for="{{detailInfo.companyJobVos}}" wx:key="index"
+                bind:tap="toNextPage" data-url="jobDetailXz" data-id="{{item.pkJobId}}">
+                    <view class="row3">
+                        <text class="title3--text mb-15">{{item.name}}</text>
+                        <text class="title3--text mb-15">{{item.min}}-{{item.max}}k</text>
+                    </view>
+                    <view class="row3">
+                        <text class="type mb-15">{{item.jobType.name}}</text>
+                    </view>
+                    <view class="row3">
+                        <text class="text1">岗位负责人·{{item.boss}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    
+
+
+</view>

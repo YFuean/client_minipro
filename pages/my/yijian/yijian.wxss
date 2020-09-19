@@ -1,0 +1,106 @@
+/* pages/my/yijian/yijain.wxss */
+page {
+  background-color: whitesmoke;
+  width: 100%;
+  height: 100%;
+}
+.feed-content {
+  background-color: white;
+  border-radius: 10rpx;
+  margin: 20rpx;
+  padding: 30rpx;
+  height: 60vh;
+}
+.advice-page{
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+}
+.zhuti {
+  background-color:#E5E5E5;
+  font-size: 30rpx;
+  height: 80rpx;
+  width: 100%;
+}
+.title {
+  width: 70%;
+}
+
+.feed-add-img {
+  width: 110rpx;
+  height: 110rpx;
+  margin: 10rpx;
+}
+.feed-title-icon {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 50rpx;
+  top: 60rpx;
+}
+.feed-content-icon {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 50rpx;
+  top: 170rpx;
+}
+/* .feed-phone-icon {
+  width: 40rpx;
+  height: 40rpx;
+  float: right;
+  position: absolute;
+} */
+.feed-img {
+  border: 1rpx solid rgb(167, 163, 163);
+  border-radius: 5rpx;
+  width: 70rpx;
+  height: 70rpx;
+  opacity: 0.7;
+  padding: 20rpx;
+  margin: 10rpx;
+}
+.feed-icon {
+  width: 35rpx;
+  height: 35rpx;
+  margin-left: 15rpx;
+}
+
+
+textarea{
+  padding: 10rpx;
+  min-height: 30rpx;
+  width: 97%;
+}
+
+.neirong{
+  background-color:#E5E5E5;
+  height: 400rpx;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+  width: 100%;
+}
+.content {
+  height: 200rpx;
+  width: 70%;
+}
+.lianxi {
+  background-color:#E5E5E5;
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  height: 80rpx;
+  width: 100%;
+}
+.feed-content-right {
+  color: rgb(167, 163, 163);
+  position: absolute;
+  right: 80rpx;
+}
+.phone {
+  width: 70%;
+}
+.fankui{
+  color: white;
+  margin-top: 100rpx;
+  background-color: #5CACEE;
+}

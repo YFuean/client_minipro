@@ -1,0 +1,13 @@
+<!--pages/more/more.wxml-->
+<view class="more-page">
+<view class="more-nav">
+<view class="nav-list" wx:for="{{nav_list}}" wx:for-item="item">
+<navigator url="{{item.path}}">
+<view class="nav-item">
+<image src="{{item.icon}}" class="nav-icon"></image>
+<text class="nav-title">{{item.title}}</text>
+</view>
+</navigator>
+</view>
+</view>
+</view>

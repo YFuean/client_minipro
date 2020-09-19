@@ -1,0 +1,8 @@
+
+{
+  "navigationBarTitleText":"通讯录",
+  "usingComponents": {
+    "tabbar": "/tabbarCmponent/tabbar/tabbar"
+  }
+
+}

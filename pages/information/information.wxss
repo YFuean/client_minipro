@@ -1,0 +1,184 @@
+.top-wrap{
+  margin-left: 10rpx;
+}
+
+.container {
+  /* 固定 */
+  display: flex;
+  /* 排序的方向 */
+  flex-direction: row;
+  /* 中间 */
+  justify-content: center;
+  /* 属性适用于所有的flex容器，它是用来设置每个flex元素在侧轴上的默认对齐方式。 */
+  align-items: flex-start;
+  padding: 10rpx 20rpx 10rpx 20rpx;
+}
+/* 图片 */
+.first {
+  width: 250rpx;
+  height: 140rpx;
+}
+.text1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500rpx;
+  height: 150rpx;
+}
+/* 字体只显示两行其余省略 */
+.firsttext {
+  font-size: medium;
+  overflow: hidden;
+  /* 超出省略号 */
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* 控制行数 两行 */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-left: 10px;
+}
+.firsttext1 {
+  font-size: small;
+  color: #777777;
+  margin-left: 10px;
+}
+
+.firsttext3 {
+  font-size: small;
+  color: #777777;
+  margin-left: 10px;
+}
+
+/* 资讯（全部，教导处，学生会）的页面跳转 */
+.swiper-tab {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: -10rpx;
+  margin-bottom: 10rpx;
+}
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 130rpx;
+  border-bottom: 5rpx solid #e0e0e0;
+}
+.on {
+  color: #1ca1ff;
+  border-bottom: 5rpx solid #1ca1ff;
+}
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container3 {
+  /* 固定 */
+  display: flex;
+  /* 中间 */
+  justify-content: center;
+  padding: 5px 10px;
+  /* background-color: honeydew; */
+}
+/* 图片 */
+.first3 {
+  width: 250rpx;
+  height: 140rpx;
+}
+.text3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 500rpx;
+  height: 140rpx;
+  /* background-color: darkcyan; */
+}
+
+.lasttext3 {
+  font-size: small;
+  overflow: hidden;
+  /* 超出省略号 */
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* 控制行数 两行 */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-left: 10px;
+  margin-bottom: 5rpx;
+}
+
+.time3 {
+  font-size: small;
+  color: #777777;
+  margin-left: 10px;
+  /* background-color: darkseagreen; */
+}
+
+.container4 {
+  /* 固定 */
+  display: flex;
+  /* 排序的方向 */
+  flex-direction: row;
+  /* 中间 */
+  justify-content: center;
+  /* 属性适用于所有的flex容器，它是用来设置每个flex元素在侧轴上的默认对齐方式。 */
+  align-items: flex-start;
+  padding: 10px;
+  margin-left: 10px;
+}
+/* 图片 */
+.first4 {
+  width: 250rpx;
+  height: 150rpx;
+}
+
+.text4 {
+  width: 500rpx;
+  height: 50rpx;
+}
+
+.time4 {
+  font-size: small;
+  color: #777777;
+  margin-left: 10px;
+}
+
+.container5 {
+  /* 固定 */
+  display: flex;
+  /* 排序的方向 */
+  flex-direction: row;
+  /* 中间 */
+  justify-content: center;
+  /* 属性适用于所有的flex容器，它是用来设置每个flex元素在侧轴上的默认对齐方式。 */
+  align-items: flex-start;
+  padding: 10px;
+  margin-left: 10px;
+}
+/* 图片 */
+.first5 {
+  width: 250rpx;
+  height: 150rpx;
+}
+.text5 {
+  width: 500rpx;
+  height: 50rpx;
+}
+
+.time5 {
+  font-size: small;
+  color: #777777;
+  margin-left: 10px;
+}
+
+.slide-image{
+  width: 100%;
+}
+
+.scroll-view{
+  height: 100%;
+}

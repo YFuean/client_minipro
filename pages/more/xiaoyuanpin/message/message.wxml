@@ -1,0 +1,41 @@
+<xiaoyuanpinTabbar selected="{{2}}" bindmyevent="onMyEvent" />
+<!-- <view class="card" wx:for="{{1}}" wx:key="index"> -->
+<view class="card">
+    <view class="img mr-20">
+        <image class="xavatar" src="https://img.bosszhipin.com/boss/avatar/avatar_16.png"></image>
+    </view>
+    <view class="info">
+        <view class="row1">
+            <view class="info-inf">
+                <text class="xtitle4--text mr-20">王宁</text>
+                <text class="xsubtitle--text">沃铭-人事</text>
+            </view>
+            <view class="info-tool">
+                <text class="xsubtitle--text mr-20">昨天</text>
+                <image class="xicon-small" src="https://miaoxun.oss-cn-hangzhou.aliyuncs.com/images/xiaoyuanpin/caidan.png"></image>
+            </view>
+        </view>
+        <view class="xsubtitle--text xone-line">我们正在寻求并肩奋斗的伙伴们，如感兴趣请联系我们</view>
+    </view>
+    
+</view>
+<!-- </view> -->
+<view class="card">
+
+<view class="img mr-20">
+        <image class="xavatar" src="https://img.bosszhipin.com/boss/avatar/avatar_16.png"></image>
+    </view>
+    <view class="info">
+        <view class="row1">
+            <view class="info-inf">
+                <text class="xtitle4--text mr-20">庞宁博</text>
+                <text class="xsubtitle--text">南京安谱</text>
+            </view>
+            <view class="info-tool">
+                <text class="xsubtitle--text mr-20">昨天</text>
+                <image class="xicon-small" src="https://miaoxun.oss-cn-hangzhou.aliyuncs.com/images/xiaoyuanpin/caidan.png"></image>
+            </view>
+        </view>
+        <view class="xsubtitle--text xone-line">我们正在寻求并肩奋斗的伙伴们，如感兴趣请联系我们</view>
+    </view>
+</view>

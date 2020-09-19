@@ -1,0 +1,24 @@
+/* pages/more/tiaozaoshichang/goodstype.wxss */
+@import '/pages/more/tiaozaoshichang/index.wxss';
+
+Page{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(247, 237, 237);
+  height: 100%;
+}
+
+.nocate{
+  padding:100rpx;
+  text-align: center;  
+} 
+ 
+.nocate image{
+  width:70rpx;
+  height:70rpx;
+}
+.nocate text{
+  font-size:28rpx;
+  display:block;
+  color:#BBB;
+}

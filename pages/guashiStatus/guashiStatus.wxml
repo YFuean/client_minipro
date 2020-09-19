@@ -1,0 +1,13 @@
+<!--pages/guashiStatus/guashiStatus.wxml-->
+<view class="guashi-page">
+<view wx:if="{{!guashiStatus}}">
+<input placeholder="请输入卡密" class="placeholder-class" bindinput="bindpassword" value="{{password}}" type="password" ></input>
+<textarea placeholder="请输入备注" placeholder-class="placeholder-class" bindinput="bindremark" value="{{remark}}"  class="beizhu"></textarea>
+<button bindtap="guashi">挂失</button>
+</view>
+<view wx:else>
+<textarea placeholder="挂失状态中" placeholder-class="placeholder-class"></textarea>
+<input placeholder="请输入卡密" class="placeholder-class" bindinput="bindpassword" value="{{password}}" type="password" ></input>
+<button bindtap="quxiao_guashi">取消挂失</button>
+</view>
+</view>

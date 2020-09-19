@@ -1,0 +1,34 @@
+<!-- pages/more/findJob/my/my.wxml -->
+<xiaoyuanpinTabbar selected="{{3}}" bindmyevent="onMyEvent" />
+<view class="my-page">
+<!-- 主色banner区域，简易个人信息等 -->
+    <view class="banner">
+        <view class="info">
+            <view class="info-inf">
+                <text class="xtitle3--text mb-10">谢晓茜</text>
+                <text class="subinfo">21岁·大专·2年</text>
+            </view>
+            <view class="img">
+                <image class="xavatar" src="https://miaoxun.oss-cn-hangzhou.aliyuncs.com/photos/0fbf322f-f660-46d4-a8f9-9ea087abec4c.jpg"></image>
+            </view>
+        </view>
+        <view class="toolbar">
+            <view class="tool-item" wx:for="{{toolItemList}}" wx:key="index">
+                <text class="num mb-10">{{item.num}}</text>
+                <text class="name">{{item.name}}</text>
+            </view>
+        </view>
+    </view>
+    <!-- 功能板 -->
+    <view class="row-item mb-30 mt-30" wx:for="{{fucList}}" wx:key="index">
+        <view class="block">
+            <view class="img mr-40">
+                <image class="xicon-small" src="{{item.src}}"></image>
+            </view>
+            <text class="name">{{item.name}}</text>
+        </view>
+        <view class="img">
+            <image class="xicon-tiny" src="https://zhxy-vue.oss-cn-hangzhou.aliyuncs.com/icon/youjiantou.png"></image>
+        </view>
+    </view>
+</view>

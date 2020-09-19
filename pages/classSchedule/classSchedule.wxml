@@ -1,0 +1,62 @@
+<view class='content'>
+  <swiper class="swiper" style='width:100%;height:100%;'>
+    <swiper-item catchtouchmove="stopTouchMove">
+      <view class='title'>
+     <Select prop-array='{{semester}}' width='350' bind:myget='getDate'></Select>
+     <Select prop-array='{{weekList}}' width='200' bind:myget='getDate'></Select>
+      </view>
+        <view class="top">
+          <view class='left'>节/周</view>
+          <view wx:for="{{['一','二','三','四','五','六','日']}}" wx:key="index" class="top-text">
+            周{{item}}
+          </view>
+        </view>
+        <scroll-view scroll-y="true" class="scroll" style='height:{{windowHeight-110}}px;'>
+          <view style="width:100%;display:flex;">
+            <view style="background-color:#EFEFF4;color:#333;">
+              <view wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}" wx:key="index" class="left" style='height:60px'>
+                {{item}}
+              </view>
+            </view>
+            <view wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}" wx:key="index">
+              <view style="width:100%;margin-top:{{(index+1)*60-0.8}}px;  position: absolute;border-bottom:1rpx solid lightgray;">
+              </view>
+            </view>
+            <!--课表-->
+            <view wx:for="{{wlist}}" wx:key="index">
+              <view class="flex-item kcb-item" bindtap="showCardView" data-wlist='{{item}}' data-index='{{index}}' style="margin-left:{{(item.xqj-1)*98}}rpx;margin-top:{{(item.skjc-1)*60+2}}px;height:{{item.skcd*60-5}}px;background-color:{{item.color == '0'?'#FCB8AF':(item.color == '1'?'#81D2FC':'#F8C77A')}}">
+                <view class="smalltext" style='-webkit-line-clamp: {{item.skcd == "3"?"4":(item.skcd == "4"?"6":"2")}};'>{{item.kcm}}</view>
+                <view class='classRoom'>({{item.jsbh == ''?'--':item.jsbh}})</view>
+                <view class='logo' style="background-color:{{item.color == '0'?'#FA7666':(item.color == '1'?'#3CB9FB':'#F39C13')}}">必</view>
+                <!-- xqj代表星期几上课，sksj是上课时间，skcd上课长度，kcm课程名，jsbh教室编号 -->
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="drawer_screen" data-statu="close" wx:if="{{showModalStatus}}" catchtouchmove='preventTouchMove' bindtap='hideModal'></view>
+
+<view class="drawer_box" wx:if="{{showModalStatus}}" catchtouchmove='preventTouchMove'>
+
+  <view class="do_drawer_content" style="color:#FFF;background-color:{{cardView.color == '0'?'#FCB8AF':(cardView.color == '1'?'#81D2FC':'#F8C77A')}}">
+    <view class='drawer_top'>
+      <text>{{cardView.kcm}}</text>
+    </view>
+    <!-- <image class="card-img" src="https://profile.csdnimg.cn/F/5/7/2_qq_43516238"></image> -->
+    <!-- <image class="card-img" src="{{cardView.cover}}"></image> -->
+    <view>
+      <view class='noidle-item'>
+        <label class='noidle-item-prefix'>教师：</label>
+        <label class='noidle-item-content'>{{cardView.teacherName}}</label>
+      </view>
+      <view class='noidle-item'>
+        <label class='noidle-item-prefix'>教室：</label>
+        <label class='noidle-item-content'>{{cardView.jsbh}}</label>
+      </view>
+    </view>
+    <view class='drawer_logo' style="background-color:{{cardView.color == '0'?'#FA7666':(cardView.color == '1'?'#3CB9FB':'#F39C13')}}">{{cardView.color == '0'?'必':(cardView.color == '1'?'选':'其')}}</view>
+  </view>
+</view>

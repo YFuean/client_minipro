@@ -1,0 +1,91 @@
+<!--pages/more/tiaozaoshichang/tiaozaoshichang.wxml-->
+<view class="fabu-page">
+<view class="description-info">
+<textarea focus placeholder="标题"
+ placeholder-class="placeholder-class"
+ value="{{name}}"
+ adjust-position
+ bindinput="bindName" class="name-textarea"></textarea>
+<textarea focus placeholder="品牌、型号、新旧程度、入手渠道、转手原因等相关描述"
+ placeholder-class="placeholder-class"
+ value="{{description}}"
+ adjust-position
+ bindinput="bindDescription" class="description-textarea"></textarea>
+</view>
+<view class="image-info">
+<view class="image-box" wx:for="{{imageList}}" wx:for-item="item">
+<image src="{{item}}" class="image-show" wx:if="{{item==='/image/picture.png'}}"></image>
+<image src="{{item}}" class="image-view" wx:else></image>
+<image class="image-cha" src="/image/icon_cha.png" wx:if="{{item!=='/image/picture.png'}}" data-item="{{item}}" catchtap="deleteImg"></image>
+</view>
+<view class="image-add-box" catchtap="addPicture">
+<image src="/image/add-picture.png" class="image-add"></image>
+</view>
+</view>
+<view class="other-description">
+<view class="jiage">
+<view class="description-left">
+<image src="/image/biaoqian.png"></image>
+<text>价格</text>
+</view>
+<view class="description-right">
+<text class="money" bindtap="isKeyboard">￥{{price}}</text>
+<!-- <input style="position:fixed;caret-color:white" disabled  focus="auto" wx:if="{{showInput}}" type="digit"></input> -->
+<keyboard isKeyboard="{{isKeyboard}}" keyboardType="{{keyboardType}}" maxLength="{{maxLength}}" minLength="{{minLength}}" test="{{test}}" 
+placeholder="{{placeholder}}" bind:fwhfContent="{{whichInput}}" inputContent=""/>
+<image src="/image/right-dark.png"></image>
+</view>
+</view>
+<!-- <view class="tongkuan">
+<view class="description-left">
+<image src="/image/aixin.png"></image>
+<text>同款</text>
+</view>
+<view class="description-right">
+<text class="gray">关联同款后，将推送给...</text>
+<image src="/image/right-dark.png"></image>
+</view>
+</view> -->
+<view class="more">
+<view class="description-left">
+<image src="/image/gengduo.png"></image>
+<text>更多信息</text>
+</view>
+<view class="description-right" bindtap="showModal">
+<text class="gray">{{type}}</text>
+<image src="/image/right-dark.png"></image>
+</view>
+</view>
+</view>
+<modal hidden="{{hiddenmodalput}}" title="选择分类/添加标签" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+    <view class="fenlei-choose">
+    <text>分类:</text>
+    <text wx:if="{{type!='添加标签/类型/..'}}" class="choosed-type">{{type}}</text>
+    <view class="one-type">
+    <block wx:for="{{types}}" wx:key="{{index}}">
+      <view class="one-type-item {{curNav==item.pkFleaTypeId?'active':''}}" bindtap="switchRightTab" data-index='{{index}}' data-id="{{item.pkFleaTypeId}}">{{item.typeName}}</view>
+    </block>
+    </view>
+    <view class="two-type">
+     <view>
+      <block wx:for="{{types[curIndex].subTypes}}" wx:key="{{index}}" >
+        <view class="nav_right_items" data-index='{{index}}' data-id="{{item.pkFleaTypeId}}" data-name="{{item.typeName}}" bindtap="chooseType">
+        <text>{{item.typeName}}</text>
+        </view>
+      </block>
+    </view>
+    </view>
+    </view>
+    <view class="biaoqian-choose">
+      <view class="add-biaoqian">
+      <text style="margin-right:20rpx;margin-bottom:20rpx">标签(最多3个):</text>
+      <view wx:for="{{selectMark}}" class="choosed-biaoqian">
+      <text>{{item}}</text>
+      <image class="delete-img" src="/image/icon_quxiao.png" data-mark="{{item}}" bindtap="deleteMark"></image>
+      </view>
+      </view>
+      <input placeholder="输入文字，添加自定义标签" value="{{mark}}" bindinput="bindMark"  bindconfirm='addMark'></input>
+    </view>
+</modal> 
+<button class="fabu-btn {{disabled?'disabled':''}}" bindtap="postGood" disabled="{{disabled}}">发布</button>
+</view>

@@ -1,0 +1,134 @@
+/* pages/more/tiaozaoshichang/gooddetail.wxss */
+.good-detail-page{
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx;
+}
+
+.shangjia-description{
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1rpx solid gray;
+}
+
+.shangjia-description image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 10rpx;
+  border-radius: 10rpx;
+}
+
+.shangjia-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-weight: 600;
+  font-size: 30rpx;
+}
+
+.fabu-time{
+  font-weight: 500;
+  font-size: 25rpx;
+  color: gray;
+}
+
+.good-description{
+  display: flex;
+  flex-direction: column;
+  font-size: 30rpx;
+  font-weight: 600;
+  padding: 30rpx;
+  /* border-bottom: 1rpx solid gray; */
+}
+
+.good-name{
+  margin-bottom: 20rpx;
+  font-size: 38rpx;
+}
+
+.good-price{
+  color: red;
+  font-size: 40rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+}
+
+.description{
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+
+.mark-list{
+  display: flex;
+  flex-direction: row;
+}
+
+.mark-item{
+  padding: 10rpx;
+  background-color: rgb(224, 215, 215);
+  border-radius: 20rpx;
+  font-size: 22rpx;
+  margin-right: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.good-description image{
+  /* margin: 10rpx; */
+  width: 100%;
+  height: 650rpx;
+  border-radius: 10rpx;
+}
+
+.shouye-info-silde{
+  height: 680rpx;
+}
+
+#image-item{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.add-collection-or-order{
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  height: 100rpx;
+  justify-content: flex-end;
+  align-content: center;
+  background-color: white;
+  width: 98%;
+  border-top: 1rpx solid gray;
+}
+
+.add-collection{
+  display: flex;
+  flex-direction: column;
+  color: gray;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  width: 100rpx;
+  margin-right: 20rpx;
+}
+
+.add-collection image{
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.add-order{
+  color: white;
+  background-color: rgb(218, 22, 22);
+  padding: 10rpx;
+  border-radius: 25rpx;
+  height: 40rpx;
+  width: 100rpx;
+  display: flex;
+  justify-content: center;
+  line-height: 40rpx;
+  font-size: 25rpx;
+  margin-top: 10rpx;
+}

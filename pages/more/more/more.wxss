@@ -1,0 +1,32 @@
+/* pages/more/more.wxss */
+.more-page{
+  display: flex;
+  width: 100%;
+  padding: 50rpx   ;
+}
+.more-nav{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.nav-item{
+  display: flex;
+  flex: 0 0 33%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 30rpx;
+}
+
+.nav-icon{
+  width: 85rpx;
+  height: 85rpx;
+  margin-bottom: 15rpx;
+}
+
+.nav-title{
+  font-size: 30rpx;
+}

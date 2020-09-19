@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "xiaoyuanpinTabbar": "/tabbarCmponent/xiaoyuanpinTabbar/xiaoyuanpinTabbar"
+  },
+  "navigationBarBackgroundColor": "#37c2bc",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "公司",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true
+}

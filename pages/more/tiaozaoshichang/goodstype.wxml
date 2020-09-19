@@ -1,0 +1,32 @@
+<!--pages/more/tiaozaoshichang/goodstype.wxml-->
+<view class="goods-show" wx:if="{{goods.length>0}}">
+<view id="left">
+    <view style="margin-bottom:20rpx;" wx:for="{{leftList}}" wx:key class="good-card" bindtap="go_detail" data-good="{{item}}">
+      <image src="{{item.goodsImgUrl[0]}}" mode='widthFix' class="cover-image"></image>
+      <view class="good-description">
+        <text>{{item.goodsName}}</text>
+        <text class="good-price">￥{{item.goodsPrice}}</text>
+        <view class="good-buy">
+        <image src="{{item.userAvatar}}"></image>
+        <text>{{item.username}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view id="right">
+    <view style="margin-bottom:20rpx;" wx:for="{{rightList}}" wx:key class="good-card" bindtap="go_detail" data-good="{{item}}">
+      <image src="{{item.goodsImgUrl[0]}}" mode='widthFix' class="cover-image"></image>
+      <view class="good-description">
+        <text>{{item.goodsName}}</text>
+        <text class="good-price">￥{{item.goodsPrice}}</text>
+        <view class="good-buy">
+        <image src="{{item.userAvatar}}"></image>
+        <text>{{item.username}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="nocate" wx:else>
+      <text>该分类暂无数据</text>
+</view>

@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "GridView":"../../../components/GridView/index",
+    "message":"../../../components/message/message"
+  },
+  "navigationBarTitleText": "校友圈",
+  "navigationBarBackgroundColor": "#F5F5F5",
+  "enablePullDownRefresh": true ,
+    "backgroundTextStyle": "dark" 
+  
+}

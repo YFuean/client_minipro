@@ -1,0 +1,49 @@
+<!--components/keyboard/keyboard.wxml-->
+<cover-view class="keyboard {{isKeyboard ? 'show' : 'hide'}}">
+  <cover-view class="{{keyboardType == 'keyboardOne' ? 'show' : 'hide'}}">
+    <cover-view class="inputBox"><cover-view class="inputBoxContent {{inputContent ? 'lightContent' : 'darkContent'}}">{{inputContent || placeholder}}</cover-view></cover-view>
+    <cover-view class="keyboardTitle">
+      <cover-view class="keyboardTitleLogo">love.fwhf.xyz</cover-view>
+      <cover-view class="keyboardTitleContent {{isKeyboardContent ? 'keyboardTitleContentColorDark' : 'keyboardTitleContentColorWhite'}}" data-value="省称" bindtap="changeKeyboardContent">省称</cover-view>
+      <cover-view class="keyboardTitleContent {{isKeyboardContent ? 'keyboardTitleContentColorWhite' : 'keyboardTitleContentColorDark'}}" data-value="英\数" bindtap="changeKeyboardContent">英\数</cover-view>
+      <cover-view class="keyboardFinish" data-value="✔" bindtap="keyboard">✔</cover-view>
+    </cover-view>
+    <cover-view class="keyboardContentOne {{isKeyboardContent ? 'keyboardContentOneShow' : 'keyboardContentOneHide'}}" bindtap="keyboard">
+      <cover-view class="keyboardContentOneContent" hover-class="keyboardContentDark" hover-start-time="0" hover-stay-time="100" wx:for="{{categoryOne}}" wx:key="index" data-value="{{item}}">
+        {{item}}
+      </cover-view>
+    </cover-view>
+    <cover-view class="keyboardContentTwo {{isKeyboardContent ? 'keyboardContentTwoHide' : 'keyboardContentTwoShow'}}">
+      <cover-view class="keyboardContentTwoLineOne" bindtap="keyboard">
+        <cover-view class="keyboardContentTwoLineOneContent" hover-class="keyboardContentDark" hover-start-time="0" hover-stay-time="100" wx:for="{{categoryTwo}}" wx:key="index" data-value="{{item}}">
+          {{item}}
+        </cover-view>
+      </cover-view>
+      <cover-view class="keyboardContentTwoLineTwo" bindtap="keyboard">
+        <cover-view class="keyboardContentTwoLineTwoContent" hover-class="keyboardContentDark" hover-start-time="0" hover-stay-time="100" wx:for="{{categoryThree}}" wx:key="index" data-value="{{item}}">
+          {{item}}
+        </cover-view>
+      </cover-view>
+      <cover-view class="keyboardContentTwoLineThree"  bindtap="keyboard">
+        <cover-view class="keyboardContentTwoLineThreeContent" hover-class="keyboardContentDark" hover-start-time="0" hover-stay-time="100" wx:for="{{categoryFour}}" wx:key="index" data-value="{{item}}">
+          {{item}}
+        </cover-view>
+      </cover-view>
+      <cover-view class="keyboardContentTwoLineFour" bindtap="keyboard">
+        <cover-view class="keyboardContentTwoLineFourContent" hover-class="keyboardContentDark" hover-start-time="0" hover-stay-time="100" wx:for="{{categoryFive}}" wx:key="index" data-value="{{item}}">
+          {{item}}
+        </cover-view>
+      </cover-view>
+    </cover-view>
+  </cover-view>
+ 
+  <cover-view class="{{keyboardType == 'keyboardTwo' ? 'show' : 'hide'}}">
+    <cover-view class="inputBox"><cover-view class="inputBoxContent {{inputContent ? 'lightContent' : 'darkContent'}}">{{inputContent || placeholder}}</cover-view></cover-view>
+    <cover-view class="keyboardTwo" bindtap="keyboard">
+      <cover-view class="keyboardTwoContent" hover-class="keyboardContentDark" hover-start-time="0" hover-stay-time="100" wx:for="{{categorySix}}" wx:key="index" data-value="{{item}}">
+        {{item}}
+      </cover-view>
+    </cover-view>
+  </cover-view>
+</cover-view>
+

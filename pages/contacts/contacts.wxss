@@ -1,0 +1,355 @@
+/* cardList.wxss */
+text,
+view,
+swiper,
+icon,
+button,
+checkbox-group,
+checkbox,
+input,
+label,
+picker,
+radio-group,
+radio,
+slider,
+switch,
+textarea,
+navigator,
+image,
+video,
+audio,
+map {
+    box-sizing: border-box;
+}
+
+.card-search {
+    position: relative;
+    height: 60rpx;
+    line-height: 60rpx;
+    background: #f5f5f5;
+    padding: 20rpx;
+    margin: 2rpx 0;
+
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 20rpx;
+    margin-top: -22rpx;
+}
+
+.scan-add {
+    position: absolute;
+    top: 50%;
+    right: 12rpx;
+    margin-top: -22rpx;
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.search-input {
+    display: inline-block;
+    width: 505rpx;
+    height: 60rpx;
+    background: #fff;
+    border-radius: 4rpx;
+    font-size: 28rpx;
+    padding-left: 78rpx;
+}
+
+.scroll-con {
+    height: 1106rpx;
+}
+
+.card-retrieval {
+    position: fixed;
+    right: 40rpx;
+    height: 100%;
+    padding-top: 10%;
+    padding-bottom: 10px;
+    width: 25rpx;
+}
+
+.card-az {
+    text-align: center;
+    font-size: 25rpx;
+}
+
+page {
+    height: 100%;
+}
+
+.content {
+    padding-bottom: 20rpx;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.location {
+    width: 100%;
+}
+
+.location_top {
+    height: 76rpx;
+    line-height: 76rpx;
+    background: #f4f4f4;
+    color: #606660;
+    font-size: 28rpx;
+    padding: 0 20rpx;
+}
+
+.location_bottom {
+    height: 140rpx;
+    line-height: 140rpx;
+    color: #d91f16;
+    font-size: 28rpx;
+    border-top: 2rpx #ebebeb solid;
+    border-bottom: 2rpx #ebebeb solid;
+    padding: 0 20rpx;
+    align-items: center;
+    display: -webkit-flex;
+}
+
+.address_top {
+    height: 76rpx;
+    line-height: 76rpx;
+    background: #f4f4f4;
+    color: #999999;
+    font-size: 28rpx;
+    padding: 0 20rpx;
+}
+
+.address_bottom {
+    height: 88rpx;
+    line-height: 88rpx;
+    background: #fff;
+    color: #000000;
+    font-size: 32rpx;
+    padding: 0 20rpx;
+    border-bottom: 2rpx #ebebeb solid;
+    margin-left: 20rpx;
+    margin-right: 50rpx;
+}
+
+
+.location_img {
+    width: 48rpx;
+    height: 48rpx;
+    position: absolute;
+    right: 20rpx;
+    top: 125rpx;
+}
+
+.add_city {
+    width: 228rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    border: 2rpx solid #ebebeb;
+    color: #000000;
+    margin-right: 20rpx;
+}
+
+
+.add_citying {
+    width: 228rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    border: 2rpx solid #2487b9;
+    color: #2487b9;
+    margin-right: 20rpx;
+}
+
+.orientation {
+    white-space: normal;
+    display: inline-block;
+    width: 55rpx;
+    height: 58rpx;
+    color: #999;
+    text-align: center;
+}
+
+.orientation_region {
+    width: 55rpx;
+    font-size: 20rpx;
+    position: fixed;
+    top: 220rpx;
+    right: 0rpx;
+}
+
+.orientation_city {
+    height: 50rpx;
+    line-height: 50rpx;
+    color: #000;
+    text-align: center;
+}
+
+.top-search {
+    position: relative;
+    height: 100rpx;
+    padding: 20rpx 0 20rpx 30rpx;
+}
+
+.top-search .input-box {
+    position: relative;
+    display: inline-block;
+    width: 620rpx;
+    background: #fff;
+}
+
+.top-search view {
+    vertical-align: top;
+    width: 90rpx;
+    display: inline-block;
+    text-align: left;
+    line-height: 60rpx;
+    height: 60rpx;
+    font-size: 30rpx;
+}
+
+.top-search view[hidden] {
+    display: none;
+}
+
+.input-box .inp {
+    padding-left: 78rpx;
+}
+
+.top-search .add-card {
+    position: absolute;
+    top: 20rpx;
+    right: 16rpx;
+    display: inline-block;
+    border: 0px solid #000;
+    width: 60rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    padding: 0;
+    background: #eef1f7;
+}
+
+.add-card::after {
+    border: 0rpx;
+    border-radius: 0;
+}
+
+.add-card .add-img {
+    right: 12rpx;
+    width: 40rpx;
+    height: 40rpx;
+    margin-top: 10rpx;
+}
+
+.top-search .cancel-search {
+    color: #20a0ff;
+    width: 80rpx;
+    font-size: 30rpx;
+    background: #fff;
+}
+
+.top-search input image {
+    position: absolute;
+    top: 10rpx;
+    right: 20rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.item-title {
+    padding-left: 20rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    background-color: #f5f5f5;
+    font-size: 28rpx;
+    color: #8e8e93;
+}
+
+.card-li {
+    position: relative;
+    padding: 25rpx 120rpx 25rpx 30rpx;
+    background-color: #fff;
+    height: 150rpx;
+    box-shadow: inset 0 -1px 0 0 #e5e5e5, inset 0 1px 0 0 #e5e5e5;
+}
+
+.card-li .card-avatar {
+    margin-right: 20rpx;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+
+.card-li .info-box {
+    display: inline-block;
+    width: 460rpx;
+    font-size: 28rpx;
+    line-height: 45rpx;
+
+    color: #797979;
+    vertical-align: baseline;
+}
+
+.info-box view {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info-box .big-name {
+    margin-right: 20rpx;
+    font-size: 32rpx;
+    color: #4a4a4a;
+}
+
+.card-li .call-box {
+    position: absolute;
+    top: 0;
+    right: 50rpx;
+    height: 100%;
+    width: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+}
+
+.call-box image {
+    width: 40rpx;
+    height: 40rpx;
+    vertical-align: bottom;
+}
+
+.side-az {
+    position: fixed;
+    top: 200rpx;
+    right: 0;
+    width: 60rpx;
+}
+
+.side-az .scroll-btn-group {
+    display: flex;
+    flex-direction: column;
+    height: 864rpx;
+}
+
+.scroll-btn-group view {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding-left: 10rpx;
+}
+
+.scroll-btn-group view text {
+    color: #555;
+    font-size: 24rpx;
+}
+
+.side-az image {
+    margin-left: 10rpx;
+    width: 20rpx;
+    height: 20rpx;
+}
+
+.hover {
+    background-color: #D4DFE6;
+}

@@ -1,0 +1,95 @@
+<!--pages/more/tiaozaoshichang/index.wxml-->
+<!-- <tabbar selected="{{0}}"></tabbar> -->
+<navigator url="/pages/more/tiaozaoshichang/tiaozaoshichang">
+<view class="float-btn">
+<image src="/image/加.png" id="pub-img"></image>
+</view>
+</navigator>
+
+<view class="shouye-page">
+<!-- 顶部搜索区域 -->
+  <view class='page_row'>
+  <navigator url="/pages/more/tiaozaoshichang/my">
+  <view>
+  <image src="{{user.avatar}}"></image>
+  </view>
+  </navigator>  
+      <view class="search">  
+        <view class="df search_arr">  
+          <icon class="searchcion" size='20' type='search'></icon>  
+           <input class="search-input" 
+           placeholder="电子产品|书本笔记" 
+           placeholder-class="placeholder-class"  
+           bindtap='go_search'/>  
+        </view>  
+      </view>
+       <navigator url="/pages/more/tiaozaoshichang/tiaozaoshichang">
+    <!-- <view>
+  <image src="/image/add_icon.png" class="fabu-img"></image>
+   </view>  -->
+    </navigator>  
+    </view>
+
+<!-- 分类 -->
+<view  class="fenlei-info">
+<view class="tip">
+<text style="margin-left:10rpx;font-weight:600">热门分类</text>
+<navigator url="/pages/more/tiaozaoshichang/fenlei">
+<text class="more">更多></text>
+</navigator>
+</view>
+<view wx:for="{{cateItems}}" wx:for-item="item" class="fenlei-item">
+<view class="fenlei-item-info" bindtap="go_type" data-id="{{item.pkFleaTypeId}}">
+<image src="{{item.typeCoverUrl}}"></image>
+<text>{{item.typeName}}</text>
+</view>
+</view>
+</view>
+
+<!-- 悬赏 -->
+<!-- <view  class="xuanshang-info">
+<view class="tip">
+<text style="margin-left:10rpx;font-weight:600">悬赏</text>
+<navigator url="/pages/more/tiaozaoshichang/xuanshang">
+<text class="more">更多></text>
+</navigator>
+</view>
+<view wx:for="{{rewardTop}}" wx:for-item="item" class="fenlei-item">
+<view class="fenlei-item-info">
+<image src="{{item.imageUrl}}"></image>
+<text>{{item.title}}</text>
+</view>
+</view>
+</view> -->
+
+<view class="goods-show">
+<view id="left">
+    <view style="margin-bottom:20rpx;" wx:for="{{leftList}}" wx:key class="good-card" bindtap="go_detail" data-good="{{item}}" wx:if="{{!item.isDeleted}}">
+      <image src="{{item.goodsImgUrl[0]}}" mode='widthFix' class="cover-image"></image>
+      <view class="good-description">
+        <text style="font-weight:600">{{item.goodsName}}</text>
+        <text class="good-price">￥{{item.goodsPrice}}</text>
+        <view class="good-buy">
+        <image src="{{item.userAvatar}}"></image>
+        <text style="font-weight:600">{{item.username}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view id="right">
+    <view style="margin-bottom:20rpx;" wx:for="{{rightList}}" wx:key class="good-card" bindtap="go_detail" data-good="{{item}}" wx:if="{{!item.isDeleted}}">
+      <image src="{{item.goodsImgUrl[0]}}" mode='widthFix' class="cover-image"></image>
+      <view class="good-description">
+        <text style="font-weight:600">{{item.goodsName}}</text>
+        <text class="good-price">￥{{item.goodsPrice}}</text>
+        <view class="good-buy">
+        <image src="{{item.userAvatar}}"></image>
+        <text style="font-weight:600">{{item.username}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+</view>

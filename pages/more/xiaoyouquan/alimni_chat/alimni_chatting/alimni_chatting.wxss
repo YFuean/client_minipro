@@ -1,0 +1,133 @@
+/* pages/index/alimni_chat/alimni_chatting/climni_chatting.wxss */
+page {
+  background-color: #f2f2f2;
+}
+.chat-other-time {
+  text-align: center;
+  color: gray;
+  font-size: 22rpx;
+}
+/* 底部输入框 */
+.alimni-info-reply-cra {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 20rpx;
+}
+
+.alimni-info-reply {
+  display: flex;
+  height: 90rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  border-top: 1rpx solid rgb(210, 207, 207);
+}
+
+.alimni-info-reply-input {
+  background-color: rgb(239, 239, 239);
+  width: 65%;
+  display: flex;
+  padding: 5rpx;
+  border-radius: 40rpx;
+  height: 50rpx;
+  margin: 15rpx 20rpx;
+}
+
+.alimni-info-reply-input-con {
+  color: grey;
+  font-size: 32rpx;
+  text-align: left;
+}
+
+.alimni-info-reply-btn {
+  color: rgb(44, 138, 206);
+  margin: 22rpx 28rpx;
+  font-size: 35rpx;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+
+/* 中部 */
+
+.avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 60rpx;
+}
+
+.text {
+  color: #000;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  margin: 30rpx 30rpx;
+  position: relative;
+}
+
+.text {
+  max-width: 460rpx;
+  border-radius: 10rpx;
+  padding: 10rpx 20rpx;
+}
+
+.text::after {
+  /*用伪类写出小三角形*/
+  content: '';
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  position: absolute;
+  top: 25rpx;
+}
+
+.left .text {
+  background-color: #fff;
+  margin-left: 30rpx;
+  border-radius: 30rpx;
+  margin-top: 10rpx;
+}
+
+.left .text::after {
+  border-right: 8px solid #fff;
+  left: 78rpx;
+}
+
+.right {
+  display: flex;
+  margin: 30rpx 30rpx;
+  position: relative;
+  flex-direction: row-reverse;
+}
+
+.right .text {
+  /* background-color: #a9e77b; */
+  background-color: #fff;
+  margin-right: 30rpx;
+  border-radius: 30rpx;
+  margin-top: 10rpx;
+}
+
+.right .text::after {
+  /* border-left: 8px solid #a9e77b; */
+  border-left: 8px solid #fff;
+  right: 78rpx;
+}
+
+.image {
+  padding: 0 20rpx;
+}
+
+.image image {
+  width: 250rpx;
+  border-radius: 6rpx;
+}

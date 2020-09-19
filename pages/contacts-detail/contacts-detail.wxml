@@ -1,0 +1,33 @@
+<view class="mail-info-bg"></view>
+<view class="mail-info">
+
+	<view class="mail-info-tap">
+		<image class="mail-info-avatar" src='{{avatar==null || avatar == ""?"https://avatars3.githubusercontent.com/u/59445871?s=460&u=da5694544e03959d2e2c54ea5b2a29c67174cbcc&v=4":avatar}}' />
+		<view class="mail-info-title">{{name}}
+			<image bindtap="changeBeizhu" class="mail-info-tap-beizhu" src="/image/icon_beizhu (2).png" />
+
+			<modal hidden="{{hiddenmodalput}}" style="color:#000000" title="修改备注名" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+				<input type='text' bindinput="bindBeizhu" placeholder="请输入备注名" auto-focus />
+			</modal>
+		</view>
+	</view>
+
+	<view class="mail-info-content">
+		<view class="mail-info-content-one">
+			<image class="mail-info-ico" src="/image/icon_user.png" />
+			<text class="mail-info-content-text">昵称：{{name}}</text>
+      <view class="mail-line"></view>
+		</view>
+
+		<view class="mail-info-content-one">
+			<image class="mail-info-ico" src="/image/telephone_icon.png"></image>
+			<text class="mail-info-content-text">联系电话：{{tele}}</text>
+      <view class="mail-line"></view>
+		</view>
+
+		<view class="mail-info-btn">
+			<button style="width:80vw;height:50%;background-color: rgb(112, 164, 197);color:white;" wx:if="{{isDel===false}}" bindtap="deleteMail">删除好友</button>
+			<button style="width:80vw;height:50%;background-color: rgb(112, 164, 197);color:white;" wx:if="{{isDel===true}}" bindtap="addMail">添加好友</button>
+		</view>
+	</view>
+</view>

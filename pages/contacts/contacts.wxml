@@ -1,0 +1,43 @@
+<!--cardList.wxml-->
+<tabbar selected="{{1}}"></tabbar>
+<view>
+    <!-- 搜索框 -->
+    <view class="top-search">
+        <form>
+            <view class="input-box ">
+                <input class="inp" type="text" placeholder="请输入联系人姓名" confirm-type="search" bindinput="bindKeyInput"></input>
+                <icon class="search-icon" type="search" size="20"/> 
+            </view>
+            <button hidden="{{isInputing}}" class="add-card">
+                <image class="add-img" src="/image/icon_add_blue.png" bindtap="addPerson"> </image>
+            </button>
+            <button formType="reset" hidden="{{!isInputing}}" class="add-card cancel-search" bindtap="cancelSearch">取消</button> 
+        </form>
+    </view>
+
+    <view wx:if="{{searchKey}}"></view> 
+    <!-- 主要内容 -->
+    <scroll-view class="scroll-con" scroll-y scroll-top="{{scrollTop}}" bindscroll="scroll">
+        <view wx:for="{{scrollList}}" wx:key="*this" id="view_{{item}}" wx:key="">
+            <view class="item-title" >{{cardObj[item].title}}</view>
+            <view class="card-li" wx:for="{{cardObj[item].list}}" hover-class="hover" wx:key="index" hidden="{{item.isDeleted}}" bindtap="enter" data-delete="{{item.isDeleted}}" data-rename="{{item.remark}}" data-userid="{{item.userId}}" data-avatar="{{item.avatar}}"  data-tele="{{item.phoneNumber}}" data-addressid="{{item.pkAddressBookId}}">
+                <image binderror="avatarError" data-imgindex="{{index}}"  src='{{item.avatar==null || item.avatar == ""?"/image/icon_wode.png":item.avatar}}' class="card-avatar"></image>
+                <view class="info-box">
+                    <view class="info-top">
+                        <text class="big-name">{{item.remark}}</text>
+                    </view>
+                    <view class="info-company">
+                        <text>{{item.phoneNumber}}</text>
+                    </view>
+                </view>
+            </view>
+        </view> 
+    </scroll-view>
+    <!-- 侧边字母  -->
+    <view class="side-az">
+        <view class="scroll-btn-group" >
+            <view wx:for="{{scrollList}}" wx:key="*this" data-key="{{item}}" bindtap="handleScrollView"><text>{{cardObj[item].title}}</text></view>  
+        </view>
+    </view>
+
+</view>

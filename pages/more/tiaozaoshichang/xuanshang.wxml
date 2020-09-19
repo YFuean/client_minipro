@@ -1,0 +1,14 @@
+<!--pages/more/tiaozaoshichang/xuanshang.wxml-->
+<!-- <tabbar selected="{{3}}"></tabbar> -->
+<text>悬赏</text>
+<view class="xuanshang-page">
+<view class="shouye-silde">
+            <swiper class="shouye-info-silde" indicator-color="rgba(255,255,255,.5)" indicator-active-color="#fff" indicator-dots circular autoplay current="{{swiperCurrent}}">
+                <block wx:for="{{slide_list}}" wx:for-item="item">
+                    <swiper-item id="image-item">
+                        <image class="swiper-img" src="{{item.src}}"></image>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+</view>

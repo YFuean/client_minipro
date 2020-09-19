@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Select": "/components/selectArray/select-array"
+  },
+  "navigationBarTitleText": "课程表"
+}

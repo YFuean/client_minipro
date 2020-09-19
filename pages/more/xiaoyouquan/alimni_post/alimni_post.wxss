@@ -1,0 +1,161 @@
+/* pages/message/alimni_post/alimni_post.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.post {
+  width: 90%;
+  height: auto;
+  margin: auto;
+}
+
+.post-row {
+  height: 100%;
+}
+
+/* .upload-img {
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-all;
+} */
+.imgList {
+  width: 100%;
+  word-wrap: break-word;
+  word-break: normal;
+  overflow: hidden;
+}
+
+.post-pic {
+  border: 1rpx dashed rgb(222, 222, 222);
+  width: 200rpx;
+  height: 200rpx;
+  text-align: center;
+  margin: 10rpx;
+  float:left;
+  position: relative;
+}
+
+.add-img {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 10rpx;
+  float:left;
+  position: relative;
+}
+.icon {
+  width: 50rpx;
+  height: 50rpx;
+  position:absolute;
+  right: 5%;
+}
+.post-area {
+  text-align: left;
+  font-size: 28rpx;
+}
+
+.post-pla {
+  text-align: left;
+  font-size: 30rpx;
+}
+
+.post-pic-icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 50rpx;
+}
+
+
+.post-num {
+  float: right;
+  color: grey;
+  font-size: 24rpx;
+  position: absolute;
+  top: 28%;
+  right: 5%;
+}
+
+.post-pic-text {
+  font-size: 24rpx;
+  color: gray;
+}
+
+.post-dingwei {
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+  margin-top: 30rpx;
+}
+
+.post-dingwei-right {
+  width: 40rpx;
+  height: 40rpx;
+  float: right;
+  margin-top: 30rpx;
+}
+
+.post-weizhi {
+  border-top: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
+  height: 100rpx;
+  margin: 30rpx auto;
+  width: 90%;
+  display: inline-block;
+}
+
+.post-dingwei-text {
+  margin-left: 20rpx;
+  float: left;
+  color: grey;
+  font-size: 26rpx;
+  margin-top: 35rpx;
+}
+
+.post-rule {
+  color: grey;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}
+
+.post-btn {
+  color: rgba(255, 255, 255, 1);
+  background-color: #5898b8;
+  border: 1rpx solid #5898b8;
+  border-radius: 60rpx;
+  width: 65%;
+  padding: 20rpx;
+  margin: 100rpx auto;
+}
+
+
+
+
+.sign-setting-border {
+  margin-left: 2%;
+  width: 17%;
+  float: left;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 20px;
+  font-size: 24rpx;
+  text-align: center;
+  font-family: -apple-system;
+  margin-bottom: 15px;
+  margin-top: 20rpx;
+  
+
+  background-color: white;
+  border: 1rpx solid #5898b8;
+}
+
+.selected {
+  border: 1rpx solid #5898b8;
+  background-color: #5898b8;
+  color: white;
+}
+
+.images-even:nth-of-type(even) {
+  margin-right: 30%;
+}

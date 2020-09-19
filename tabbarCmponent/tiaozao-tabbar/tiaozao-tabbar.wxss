@@ -1,0 +1,52 @@
+/* tabbarCmponent/tiaozao-tabbar/tiaozao-tabbar.wxss */
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  background: rgb(255, 255, 255);
+  display: flex;
+  padding-bottom: env(safe-area-inset-bottom);
+  z-index:998
+}
+
+.tab-bar-border {
+  background-color: rgba(211, 206, 206, 0.73);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1rpx;
+  transform: scaleY(0.5);
+}
+
+.tab-bar-item {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tab-bar-item cover-image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: 15rpx;
+}
+
+.tab-bar-item cover-view {
+  font-size: 20rpx;
+}
+
+#pub-img{
+  position: fixed;
+  bottom: 10rpx;
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  border: 8rpx solid white;
+  background-color: rgb(223, 223, 218);
+}
+

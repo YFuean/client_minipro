@@ -1,0 +1,77 @@
+.library-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: auto;
+  padding: 30rpx;
+  background-color:#f2f2f2;
+}
+page{
+  background-color: #f2f2f2;
+}
+
+.scroll-view{
+  display: flex;
+  flex-direction: column;
+}
+
+.page-head{
+  background-image: url(https://swl-kuzma.oss-cn-beijing.aliyuncs.com/markdown/20200604113302.png);
+  width: 92%;
+  height: 20vh;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.jieyue-text{
+  color: white;
+  font-size: 25rpx;
+  position: absolute;
+  top: 20%;
+  left: 17%;
+  letter-spacing: 8rpx;
+}
+.jieyue-num{
+  font-size: 80rpx;
+  font-weight: 500;
+}
+.page-info{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.title-description{
+  color: #a9a9a9;
+}
+.book-item{
+  background-color: white;
+  padding: 15rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 20rpx;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+  height: 150rpx;
+  width: 88%;
+}
+.book-name{
+  font-size: 35rpx;
+}
+.data-description{
+  display: flex;
+  justify-content: space-between;
+}
+.font-gray{
+  color: #919191;
+}
+.font-red{
+  color: #e23b3b;
+}
+.m-tb{
+  margin-top: 0.75rem;
+  margin-bottom: 0.751rem;
+}

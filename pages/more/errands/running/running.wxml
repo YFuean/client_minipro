@@ -1,0 +1,124 @@
+<!--pages/more/errands/running/running.wxml-->
+<!-- <text>pages/more/errands/running/running.wxml</text> -->
+<view class="container_e">
+	<!-- 全部、进行中、待评价的tab/跳转 -->
+	<view class="swiper-tab">
+		<view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">进行中</view>
+		<view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">已完成</view>
+	</view>
+	<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight*5}}px" bindchange="bindChange">
+<!-- 进行中 -->
+		<swiper-item>
+			<view class="container_e2">
+				<view class="order-card" wx:for="{{order}}" wx:for-item="orders">
+					<view class="card-title">
+						<view class="card-title-left">
+							<text class="card-title-text">发件</text>
+						</view>
+						<view class="card-title-right">
+							<text wx:if="{{orders.status==0}}" class="text-red">已抢单</text>
+							<text wx:elif="{{orders.status==1}}">送货中</text>
+							<text wx:elif="{{orders.status==2}}">已完成</text>
+						</view>
+					</view>
+
+					<view class="card-body">
+						<view class="card-body-list">
+							<view class="card-body-list-left">
+								<view class="hollow-circle-blue"></view>
+							</view>
+							<view class="card-body-list-right">
+								<view class="card-body-list-right-top">
+									<view class="card-body-address">
+										<text class="card-body-address-text">{{orders.originAddress}}</text>
+									</view>
+									<view class="card-body-NT">
+										<text class="card-body-NT-text">{{orders.founderName}} {{orders.founderPhonenumber}}</text>
+									</view>
+								</view>
+							</view>
+						</view>
+						<view class="card-body-list">
+							<view class="card-body-list-left">
+								<view class="hollow-circle-yellow"></view>
+							</view>
+							<view class="card-body-list-right">
+								<view class="card-body-list-right-top">
+									<view class="card-body-address">
+										<text class="card-body-address-text">{{orders.destination}}</text>
+									</view>
+									<view class="card-body-NT">
+										<text class="card-body-NT-text">{{orders.receiverName}} {{orders.receiverPhoneNumber}}</text>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+
+					<view class="card-foot">
+						<view><text class="card-foot-time">{{orders.deliveryTime}}</text></view>
+						<view class="btn-cancle-view"><button class="btn-cancle" size="mini" style="background-color: rgb(0, 154, 255);" data-id="{{orders.id}}" bindtap="finish_order"><text>完 成</text></button></view>
+					</view>
+
+				</view>
+			</view>
+		</swiper-item>
+<!-- 已完成 -->
+		<swiper-item>
+			<view class="container_e2">
+				<view class="order-card" wx:for="{{order}}" wx:for-item="orders">
+					<view class="card-title">
+						<view class="card-title-left">
+							<text class="card-title-text">发件</text>
+						</view>
+						<view class="card-title-right">
+							<text wx:if="{{orders.status==0}}" class="text-red">已抢单</text>
+							<text wx:elif="{{orders.status==1}}">送货中</text>
+							<text wx:elif="{{orders.status==2}}">已完成</text>
+						</view>
+					</view>
+
+					<view class="card-body">
+						<view class="card-body-list">
+							<view class="card-body-list-left">
+								<view class="hollow-circle-blue"></view>
+							</view>
+							<view class="card-body-list-right">
+								<view class="card-body-list-right-top">
+									<view class="card-body-address">
+										<text class="card-body-address-text">{{orders.originAddress}}</text>
+									</view>
+									<view class="card-body-NT">
+										<text class="card-body-NT-text">{{orders.founderName}} {{orders.founderPhonenumber}}</text>
+									</view>
+								</view>
+							</view>
+						</view>
+						<view class="card-body-list">
+							<view class="card-body-list-left">
+								<view class="hollow-circle-yellow"></view>
+							</view>
+							<view class="card-body-list-right">
+								<view class="card-body-list-right-top">
+									<view class="card-body-address">
+										<text class="card-body-address-text">{{orders.destination}}</text>
+									</view>
+									<view class="card-body-NT">
+										<text class="card-body-NT-text">{{orders.receiverName}} {{orders.receiverPhoneNumber}}</text>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+
+					<view class="card-foot">
+						<view><text class="card-foot-time">{{orders.finshTime}}</text></view>
+					</view>
+
+				</view>
+			</view>
+		</swiper-item>
+
+	</swiper>
+
+</view>

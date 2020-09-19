@@ -1,0 +1,153 @@
+<!--pages/more/errands/errands.wxml-->
+<!-- <text>pages/more/errands/errands.wxml</text> -->
+<view class="background">
+	<!-- 背景图片 -->
+	<!-- <view class="background-img">
+		<image src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/%E9%97%AA%E9%80%81%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87.png"></image>
+	</view> -->
+	<view class="container_e">
+		<!-- 位置列表 -->
+		<view class="city-list">
+		</view>
+		<!-- 帮我送、帮我取 -->
+		<view class="service">
+			<view class="service-tab">
+				<view class="service-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">帮我送</view>
+				<view class="service-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">帮我取</view>
+			</view>
+
+			<swiper current=" {{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange">
+				<!-- 帮我送 -->
+				<swiper-item>
+					<view class="service-tab-body">
+						<!-- 一行 -->
+						<navigator url="/pages/more/errands/neworder/neworder-get/neworder-get">
+							<view class="service-tab-input">
+								<view class="my-list-left">
+									<view class="hollow-circle-blue"></view>
+								</view>
+
+								<view class="my-list-middle">
+									<text wx:if="{{originAddress==''}}" class="service-tab-input-text">从哪儿取件</text>
+									<view wx:else class="my-list-middle-double">
+										<text class="service-tab-input-text-single">{{originAddress}}</text>
+										<text class="service-tab-input-text-double">{{founderName}} {{founderPhonenumer}}</text>
+									</view>
+								</view>
+
+								<!-- <view class="my-list-right">
+									<image class="my-list-forward" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/ic_recognition_forward.png"></image>
+								</view> -->
+
+								<!-- <view class="my-list-right">
+									<text wx:if="{{originAddress}}+{{founderName}}+{{founderPhonenumer}}!=''" class="service-tab-input-text">从哪儿取件</text>
+									<image class="my-list-forward" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/ic_recognition_forward.png"></image>
+								</view> -->
+							</view>
+						</navigator>
+						<!-- 第二行 -->
+						<navigator url="/pages/more/errands/neworder/neworder-send/neworder-send">
+							<view class="service-tab-input">
+								<view class="my-list-left">
+									<view class="hollow-circle-yellow"></view>
+								</view>
+
+								<view class="my-list-middle">
+									<text wx:if="{{destination==''}}" class="service-tab-input-text">送到哪里</text>
+									<view wx:else class="my-list-middle-double">
+										<text class="service-tab-input-text-single">{{destination}}</text>
+										<text class="service-tab-input-text-double">{{receiverName}} {{receiverPhonenumer}}</text>
+									</view>
+
+									<!-- <view class="my-list-right">
+									<text class="service-tab-input-text">送到哪里</text>
+									<image class="my-list-forward" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/ic_recognition_forward.png"></image>
+								</view> -->
+								</view>
+							</view>
+						</navigator>
+					</view>
+				</swiper-item>
+
+				<!-- 帮我取 -->
+				<swiper-item>
+					<view class="service-tab-body">
+						<!-- 第一行 -->
+						<navigator url="/pages/more/errands/neworder/neworder-get/neworder-get">
+							<view class="service-tab-input">
+								<view class="my-list-left">
+									<view class="hollow-circle-blue"></view>
+								</view>
+
+								<view class="my-list-middle">
+									<text wx:if="{{originAddress==''}}" class="service-tab-input-text">从哪儿取件</text>
+									<view wx:else class="my-list-middle-double">
+										<text class="service-tab-input-text-single">{{originAddress}}</text>
+										<text class="service-tab-input-text-double">{{founderName}} {{founderPhonenumer}}</text>
+									</view>
+								</view>
+
+
+								<!-- <view class="my-list-right">
+									<image class="my-list-forward" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/ic_recognition_forward.png"></image>
+								</view> -->
+							</view>
+						</navigator>
+						<!-- 第二行 -->
+						<navigator url="/pages/more/errands/neworder/neworder-send/neworder-send">
+							<view class="service-tab-input">
+								<view class="my-list-left">
+									<view class="hollow-circle-yellow"></view>
+								</view>
+
+								<view class="my-list-middle">
+									<text wx:if="{{destination==''}}" class="service-tab-input-text">送到哪里</text>
+									<view wx:else class="my-list-middle-double">
+										<text class="service-tab-input-text-single">{{destination}}</text>
+										<text class="service-tab-input-text-double">{{receiverName}} {{receiverPhonenumer}}</text>
+									</view>
+
+									<!-- <view class="my-list-right">
+									<text class="service-tab-input-text">送到哪里</text>
+									<image class="my-list-forward" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/ic_recognition_forward.png"></image>
+								</view> -->
+								</view>
+							</view>
+						</navigator>
+					</view>
+				</swiper-item>
+			</swiper>
+
+
+		</view>
+
+	</view>
+
+	<!-- 个人中心、我的订单、接单、跑腿 -->
+	<view class="navigator-tab">
+		<view class="nav-list" wx:for="{{nav_list}}" wx:for-item="item">
+			<!-- <navigator url="{{item.path}}"> -->
+				<view class="nav-item" bindtap="iserrends" data-url="{{item.path}}" data-id="{{item.id}}">
+					<image src="{{item.icon}}" class="nav-icon"></image>
+					<text class="nav-title">{{item.title}}</text>
+				</view>
+			<!-- </navigator> -->
+		</view>
+	</view>
+
+	<!-- 各资讯卡片 -->
+	<view class="information-container_e">
+		<view wx:for="{{information}}" wx:for-item="item" class="information-card">
+			<view class="information-left">
+				<view class="information-title"><text class="information-title-text">{{item.title}}</text></view>
+				<view class="information-info"><text class="information-info-text">{{item.info}}</text></view>
+				<!-- <text class="date-info">{{date}}</text> -->
+			</view>
+			<view class="information-right">
+				<image src="{{item.img}}"></image>
+			</view>
+		</view>
+	</view>
+
+
+</view>

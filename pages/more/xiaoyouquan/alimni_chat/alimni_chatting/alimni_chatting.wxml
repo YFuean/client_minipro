@@ -1,0 +1,62 @@
+<!--pages/index/alimni_chat/alimni_chatting/climni_chatting.wxml-->
+<scroll-view scroll-y style='height:{{chatContentHeight}}rpx'>
+  <block wx:for="{{msgList}}" wx:key="unique" wx:for-item="message">
+  <view class="chat-other-time">{{message.gmtModified}}</view>
+    <view class='{{message.fromId==openid?"left":"right"}}'>
+      <!-- <image wx:if="{{message.user.avatarUrl.length != 0}}" class='avatar' src='{{message.user.avatarUrl}}'></image> -->
+      <image  class='avatar' src='{{avatar}}'></image>
+      <!-- <block wx:if="{{message.type==1}}"> -->
+        <view class='text'>{{message.content}}</view>
+      <!-- </block>
+      <block wx:elif="{{message.type==2}}"> -->
+        <!-- <view class='image'>
+          <image src='{{message.content}}' data-url='{{message.content}}' mode="widthFix" bindtap='previewImage'></image>
+        </view> -->
+      <!-- </block> -->
+    </view>
+  </block>
+</scroll-view>
+
+<modal hidden="{{hiddenmodalput}}" title="请输入对方openId" confirm-text="提交" cancel-text="重置" bindcancel="cancel" bindconfirm="confirm">
+    <input type='text' bindinput="inputvalue" placeholder="请输入内容" auto-focus/>
+</modal>
+
+
+<!-- <view class="send-block {{isIpx ?'send-block-ipx':''}}">
+  <input type="text" value="{{msg}}" confirm-type="send" bindconfirm="sendText" bindinput="bindMsgInput" cursor-spacing="6"></input>
+  <view class='send-block-button'>
+    <image src='/resource/image/add.png' bindtap='chooseImage'></image>
+  </view>
+</view> -->
+
+
+
+
+
+
+<!-- <view class="chat"> -->
+
+<!-- <view class="chat-other-time">10：30</view> -->
+
+<!-- <view class="chat-other">
+<image class="chat-avatar" src="https://avatars3.githubusercontent.com/u/59445871?s=460&u=da5694544e03959d2e2c54ea5b2a29c67174cbcc&v=4"/>
+<view class="chat-other-news">对方的消息</view>
+</view> -->
+
+<!-- <view>
+<view class="chat-me">
+<view class="chat-me-news">我的消息</view>
+<image class="chat-avatar" src="https://avatars3.githubusercontent.com/u/59445871?s=460&u=da5694544e03959d2e2c54ea5b2a29c67174cbcc&v=4"/>
+</view>
+</view> -->
+
+<!-- </view> -->
+
+<view  class="alimni-info-reply">
+<image class="alimni-info-reply-cra" bindtap='chooseImage' src="/image/icon/camera_icon.png"/>
+<view class="alimni-info-reply-input">
+<input type="text" value="{{msg}}" confirm-type="send" bindconfirm="sendText" bindinput="bindMsgInput" cursor-spacing="30rpx" maxlength="100" focus class="alimni-info-reply-input-con" placeholder-style="text-align: left;color: #aeaeae;" placeholder="请输入私聊内容"/>
+ <!-- <image class="alimni-info-reply-icon" src="/asstes/icon/xiaolian_icon.png"/> -->
+</view>
+<text class="alimni-info-reply-btn" bindtap="sendText">发送</text>
+</view>

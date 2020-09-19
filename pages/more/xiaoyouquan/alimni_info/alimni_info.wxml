@@ -1,0 +1,142 @@
+<!--pages/message/alumni_info/alimni_info.wxml-->
+
+<!-- 顶部内容区 -->
+<!-- <view class="{{images.length == 0 ?'alimni-info-auto':'alimni-info-back'}}"> -->
+<view class="alimni-info">
+
+	<image class="alimni-info-avatar" src="{{dynamic.userAccount.avatar}}" />
+
+	<text class="alimni-info-user">{{dynamic.userAccount.userName}}<text class="alimni-info-time">{{time}}</text></text>
+
+	<text bindtap="reportSelect" class="alimni-info-jubao">举报</text>
+
+	<view class="alimni-info-under">{{dynamic.content}}</view>
+
+	<!-- 图片展示 -->
+	<!-- <view class="image-box"> -->
+		<block wx:for="{{images}}">
+			<block wx:if="{{images.length==1}}">
+				<image src="{{item.picture}}" class="{{dynamic.content.length<=20? 'info-img-list':'info-img-list-long'}}" style="{{imageSize.direction(size,windowWidth)}}" bindload="loadImage" mode="aspectFit" data-index="{{index}}" id="{{item.picture}}" catchtap="openImage"></image>
+			</block>
+			<block wx:elif="{{images.length==4}}">
+				<image src="{{item.picture}}" mode="aspectFill" id="{{item.picture}}" data-index="{{index}}" catchtap="openImage"></image>
+			</block>
+			<block wx:else>
+				<image class="{{dynamic.content.length<=20? 'info-img-list':'info-img-list-long'}}" src="{{item.picture}}" mode="aspectFill" data-index="{{index}}" id="{{item.picture}}" catchtap="openImage"></image>
+			</block>
+
+		</block>
+		<wxs src="../../../../components/GridView/index.wxs" module="imageSize"></wxs>
+	<!-- </view> -->
+	<!-- 1-9张图片摆放组件 -->
+		<!-- <block wx:for="{{item.dynamicPhotoList}}" wx:for-item="imgs" wx:key="view-images"> -->
+		<!-- <block wx:for="{{imgs}}" wx:for-item="img"> -->
+			<!-- <view class="image-box"> -->
+			<!-- <text>111111111</text>
+				<GridView images="{{imgs}}" mode='center'></GridView> -->
+			<!-- </view> -->
+			<!-- </block> -->
+		<!-- </block> -->
+
+
+	<view class="alimni-type">{{dynamic.type}}</view>
+
+	<!-- 内容底部按钮区 -->
+	<view class="alimni-info-play">
+
+		<block wx:if="{{!shoucang}}">
+			<image bindtap="changeStar" class="alimni-info-star" src="/image/icon_shoucang.png" />
+			<text bindtap="changeStar" class="alimni-info-star-text">收藏</text>
+		</block>
+
+		<block bindtap="changeStar" wx:if="{{shoucang}}">
+			<image bindtap="changeStar" class="alimni-info-star" src="/image/icon/Collection_yell_icon.png" />
+			<text bindtap="changeStar" class="alimni-info-star-text">已收藏</text>
+		</block>
+
+
+
+		<button style="background-color:white;width:40rpx;height:45rpx;padding:0;float:left;margin-left:10rpx;margin-top:-10rpx" open-type="share">
+			<image class="share-ico" src="/image/icon/fenxiang_ico.png" /></button>
+		<image bindtap="changeComment" class="alimni-info-pinglun" src="/image/icon/pinglun_black_icon.png" />
+		<!-- <text bindtap="changeComment" class="alimni-info-pinglun-text">评论</text> -->
+		<text class="alimni-info-dianzan-text">{{dynamic.thumbs}}</text>
+		<image bindtap="changeDianzan" wx:if="{{!dianzan}}" class="alimni-info-dianzan" src="/image/icon_dianzan.png" />
+		<image bindtap="changeDianzan" wx:if="{{dianzan}}" class="alimni-info-dianzan" src="/image/icon/yidianzan_icon.png" />
+	</view>
+</view>
+<!-- </view> -->
+
+
+<!-- 底部评论区 -->
+<view class="line"></view>
+<view class="alimni-info-commonts">
+
+	<view class="alimni-info-commonts-row">
+		<view wx:if="{{dynamic.comments != 0}}" class="alimni-info-commonts-title">共{{dynamic.comments}}条评论</view>
+ 
+
+		<block wx:for="{{comments}}" wx:for-item="item">
+			<view style="margin-top:20rpx;" bindtap="changeReply" bindtouchstart='delStart' bindtouchend='delEnd' data-comment="{{item.pkCommentId}}">
+				<image class="alimni-info-commonts-avatar" src="{{item.avatar}}" />
+				<text class="alimni-info-commonts-user">{{item.nickname}}   ·   <text class="alimni-info-commonts-time">{{item.gmtCreate}}</text></text>
+
+				<text class="shanchu" data-id="{{item.pkCommentId}}" bindtap="delComment">删除</text>
+				<!-- <image bindtap="changeDianzan" wx:if="{{dianzan}}" class="alimni-info-commonts-dianzan" src="/asstes/alimni_icon/icon_dianzan.png"/>
+<image bindtap="changeDianzan" wx:if="{{dianzan}}" class="alimni-info-commonts-dianzan" src="/asstes/icon/yidianzan_icon.png"/> -->
+				<text class="alimni-info-commonts-content">{{item.content}}</text>
+				<view wx:if="{{item.status}}" bindtap="viewReply" data-index="{{index}}" class="reply-view">查看回复
+					<image class="reply-ico" src="/image/icon/youjiantou_icon.png" />
+				</view>
+
+				<view wx:if="{{!item.status}}" bindtap="reply" data-index="{{index}}" class="reply-view">回复
+				</view>
+
+				<view class="modal-mask" data-index="{{index}}" bindtap="hideModal" catchtouchmove="preventTouchMove" hidden="{{!item.showModal}}"></view>
+				<!-- <view class="modal-mask" catchtouchmove="preventTouchMove" hidden="{{!item.showModal}}"></view> -->
+				<view class="modal-dialog" hidden="{{!item.showModal}}">
+					<view wx:if="{{isTop}}" class="reply-tap">
+						{{index+1}}楼的回复
+						<image data-index="{{index}}" bindtap="chaReply" class="tap-icon" src="/image/icon/cha_icon.png" />
+					</view>
+					<block wx:for="{{item.replyCommentVos}}" wx:if="{{isTop}}" wx:for-item="reply">
+						<view class="alimni-info-commonts">
+							<image class="alimni-info-commonts-avatar" src="{{reply.avatar}}" />
+							<text class="alimni-info-commonts-user">{{reply.nickname}}</text>
+							<text class="alimni-info-commonts-reply">回复</text>
+							<text class="alimni-info-commonts-reply-user">{{item.nickname}}:</text>
+							<text class="alimni-info-commonts-reply-content">{{reply.content}}</text>
+							<text class="shanchu" data-id="{{reply.pkReplyCommentId}}" bindtap="delReply">删除</text>
+						</view>
+					</block>
+
+					<view wx:if="{{isComment}}" class="reply">
+						<image class="alimni-info-reply-cra" src="/image/icon/camera_icon.png" />
+						<view class="alimni-info-reply-input">
+
+							<input cursor-spacing="30rpx" wx:if="{{isReply}}" bindinput="inputContent" value="{{commentContent}}" maxlength="100" focus class="alimni-info-reply-input-con" placeholder="回复 西罗" />
+							<!-- <image class="alimni-info-reply-icon" src="/asstes/icon/xiaolian_icon.png"/> -->
+						</view>
+						<text class="alimni-info-reply-btn" bindtap="sendComment">发送</text>
+					</view>
+				</view>
+
+			</view>
+
+		</block>
+
+
+
+	</view>
+</view>
+
+
+<view wx:if="{{isComment}}" class="alimni-info-reply">
+	<image class="alimni-info-reply-cra" src="/image/icon/camera_icon.png" />
+	<view class="alimni-info-reply-input">
+		<input cursor-spacing="30rpx" wx:if="{{!isReply}}" bindinput="inputContent" value="{{commentContent}}" maxlength="100" focus class="alimni-info-reply-input-con" placeholder="评论" />
+		<!-- <input wx:if="{{isReply}}" bindinput="inputContent" value="{{commentContent}}" maxlength="100" focus class="alimni-info-reply-input-con" placeholder="回复 西罗" /> -->
+		<!-- <image class="alimni-info-reply-icon" src="/asstes/icon/xiaolian_icon.png"/> -->
+	</view>
+	<text class="alimni-info-reply-btn" bindtap="sendComment">发送</text>
+</view>

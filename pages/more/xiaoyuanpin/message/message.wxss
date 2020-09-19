@@ -1,0 +1,38 @@
+@import "../../../../style/xxqGlobalCss.wxss";
+
+.card{
+    width: 94%;
+    display: flex;
+    align-items: center;
+    padding: 20rpx 30rpx;
+    /* background-color: wheat; */
+}
+
+.img{
+
+}
+
+.info{
+    width: 77%;
+    /* background-color: thistle; */
+}
+
+.row1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10rpx;
+}
+
+.info-inf{
+
+}
+
+.row2{
+
+}
+
+.info-tool{
+    display: flex;
+}
+

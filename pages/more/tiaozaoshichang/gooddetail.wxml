@@ -1,0 +1,52 @@
+<!--pages/more/tiaozaoshichang/gooddetail.wxml-->
+<view class="good-detail-page">
+<!-- 商家描述 -->
+<view class="shangjia-description">
+<image src="{{good.userAvatar}}" bindtap="go_user_home" data-good="{{good}}"></image>
+<view class="shangjia-info">
+<text>{{good.nickname}}</text>
+<text class="fabu-time">发布时间：{{good.goodsCreateTime}}</text>
+</view>
+</view>
+<!-- 商品描述 -->
+<view class="good-description">
+<swiper class="shouye-info-silde" indicator-color="rgba(255,255,255,.5)" indicator-active-color="#fff" indicator-dots circular autoplay>
+    <block wx:for="{{good.goodsImgUrl}}" wx:for-item="item">
+      <swiper-item id="image-item">
+         <image src="{{item}}"></image>
+      </swiper-item>
+    </block>
+</swiper>
+<text class="good-price">￥{{good.goodsPrice}}</text>
+<text class="good-name">{{good.goodsName}}</text>
+<text class="description">{{good.goodsDescription}}</text>
+<view class="mark-list" wx:if="{{good.goodsMark[0]!=''}}">
+<view wx:for="{{good.goodsMark}}" class="mark-item">
+<text>#{{item}}</text>
+</view>
+</view>
+</view>
+
+<view class="add-collection-or-order" wx:if="{{good.pkFleaUserId!=4}}">
+<view class="add-collection">
+<image wx:if="{{ifCollected}}" src="/image/yishouchang.png" bindtap="delectCollection"></image>
+<image wx:else src="/image/shouchang.png" bindtap="addCollection"></image>
+<text>{{shoucangText}}</text>
+</view>
+<view class="add-order">
+<text bindtap="addOrder" data-sellerId="{{good.pkFleaUserId}}" data-goodId="{{good.pkFleaGoodsId}}">我想要</text>
+</view>
+</view>
+
+<view class="add-collection-or-order" wx:else>
+<view class="add-collection">
+<image wx:if="{{ifCollected}}" src="/image/yishouchang.png" bindtap="delectCollection"></image>
+<image wx:else src="/image/shouchang.png" bindtap="addCollection"></image>
+<text>{{shoucangText}}</text>
+</view>
+<view class="add-order">
+<text bindtap="manageGood">管理</text>
+</view>
+</view>
+
+</view>

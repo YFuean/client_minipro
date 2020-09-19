@@ -1,0 +1,18 @@
+<view class="choose-partTime">
+    <!-- 类型标签 -->
+    <view class="jobType">
+        <text class="title2--text w--100" selectable="false" space="false" decode="false">兼职类型</text>
+        <view class="chip-box">
+            <view wx:for="{{jobTypeList}}" wx:key="index" 
+            class="item mt-20 {{item.isActive ? 'item-active':''}}" 
+            bind:tap="selectItem1" data-index="{{index}}" data-id="{{item.pkJobTypeId}}" 
+            data-name="{{item.name}}">
+                <text class="item-text">{{item.name}}</text>
+            </view>
+        </view>
+    </view>
+    <!-- 确定按钮 -->
+    <view class="xbtn-large-warp">
+        <view class="xbtn-large" bind:tap="clickOKBtn">确定</view>
+    </view>
+</view>

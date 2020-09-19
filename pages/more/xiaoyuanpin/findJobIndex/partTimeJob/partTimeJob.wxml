@@ -1,0 +1,83 @@
+<!-- tab切换 推荐、最新 -->
+<view class="swiper-tab2 sticky2" style="background-color: {{bgColor}};color: {{color}}" hover-class="none" hover-stop-propagation="false">
+    <view class="tab-wrap">
+        <view wx:for="{{subTabItem}}" wx:key="index" class="swiper-tab-item2 {{currentSubTab === item.id ? 'active2':''}}" hover-class="none" hover-stop-propagation="false" bindtap="switchTab2" data-current="{{item.id}}">
+            {{item.tab}}
+        </view>
+    </view>
+    <view class="tool">
+        <view wx:if="{{showType0}}" class="xchip-active-item mr-50" bind:tap="closeType">清空标签</view>
+        <view bindtap="toNextPage" data-url='chooseType'>
+            <image class="icon-small" src="https://zhxy-vue.oss-cn-hangzhou.aliyuncs.com/icon/position/gengduo.png" mode="aspectFill" lazy-load="false" binderror="" bindload="" />
+        </view>
+    </view>
+</view>
+<!-- 推荐和最新的滑块区域 -->
+<swiper class="swiper-box2" current="{{currentSubTab}}" bindchange="changeTab2">
+    <!-- 推荐区域 -->
+    <swiper-item class="swiper-item2" item-id="">
+        <scroll-view scroll-y="{{true}}" style="height: {{winHeight?winHeight+'px':'auto'}}" bindscrolltolower="">
+            <view class="content-recommend" hover-class="none" hover-stop-propagation="false">
+                <!-- 工作列表的卡片 -->
+                <view wx:for="{{jobListRecommend}}" wx:key="index" class="card-job-wrap" bindtap="toNextPage" data-url="jobDetail" data-id="{{item.pkPartJobId}}">
+                    <view class="card-job" hover-class="none" hover-stop-propagation="false">
+                        <!-- 职位名称、薪资 -->
+                        <view class="card-header">
+                            <view class="job-title">{{item.name}}</view>
+                            <view class="job-salary">￥{{item.pay}}/天</view>
+                        </view>
+                        <!-- 工作时间等 -->
+                        <view class="card-content">
+                            <view class="job-tiem">
+                                <text class="subcont--text">{{item.workingDate}}</text>
+                                <text class="subcont--text">{{item.workingTime}}</text>
+                            </view>
+                            <text class="subcont--text">{{item.have}}/{{item.number}}</text>
+                        </view>
+                        <!-- 联系人和地点 -->
+                        <view class="card-foot">
+                            <view class="manager-info">
+                                <image class="avatar--small mr-15" src="https://images.weserv.nl/?url={{item.bossAvatar}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+                                <text class="manager--text">{{item.bossName}}</text>
+                            </view>
+                            <text class="address-text">{{item.jobType}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+    <!-- 最新区域 -->
+    <swiper-item class="swiper-item2" item-id="">
+        <scroll-view scroll-y="{{true}}" style="height: {{winHeight?winHeight+'px':'auto'}}" bindscrolltolower="">
+            <view class="content-recommend" hover-class="none" hover-stop-propagation="false">
+                <!-- 工作列表的卡片 -->
+                <view wx:for="{{jobListLast}}" wx:key="index" class="card-job-wrap" bindtap="toNextPage" data-url="jobDetail" data-id="{{item.pkPartJobId}}">
+                    <view class="card-job" hover-class="none" hover-stop-propagation="false">
+                        <!-- 职位名称、薪资 -->
+                        <view class="card-header">
+                            <view class="job-title">{{item.name}}</view>
+                            <view class="job-salary">￥{{item.pay}}/天</view>
+                        </view>
+                        <!-- 工作时间等 -->
+                        <view class="card-content">
+                            <view class="job-tiem">
+                                <text class="subcont--text">{{item.workingDate}}</text>
+                                <text class="subcont--text">{{item.workingTime}}</text>
+                            </view>
+                            <text class="subcont--text">{{item.have}}/{{item.number}}</text>
+                        </view>
+                        <!-- 联系人和地点 -->
+                        <view class="card-foot">
+                            <view class="manager-info">
+                                <image class="avatar--small mr-15" src="https://images.weserv.nl/?url={{item.bossAvatar}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+                                <text class="manager--text">{{item.bossName}}</text>
+                            </view>
+                            <text class="address-text">{{item.jobType}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+</swiper>

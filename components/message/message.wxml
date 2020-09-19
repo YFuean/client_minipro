@@ -1,0 +1,5 @@
+<!--components/message/message.wxml-->
+<view bindtap="goMsg" class="msg-back">
+<view wx:if="{{isMsg}}" class="dian"></view>
+<image class="msg-icon" src="../../image/icon/xiaoxi_blue_ico.png"/>
+</view>

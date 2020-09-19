@@ -1,0 +1,16 @@
+<!--pages/index/alimni_star/alimni_star.wxml-->
+<block wx:for="{{starList}}"  wx:for-index="index">
+ <slide-delete pid="{{item.pkCollectionId}}" data-id="{{item.pkCollectionId}}" bindaction="handleSlideDelete" wx:key="{{item.pkCollectionId}}">
+<view class="star-info">
+<view class="star-title">{{item.content}}</view>
+<image class="star-avatar" src="{{item.userAvatar}}"/>
+<text class="star-user">{{item.nickname}}</text>
+<image class="star-image" src="{{item.picture[0]}}"/>
+<text  wx:if="{{item.picture[0] == null}}" class="star-right" >{{item.content}}</text>
+<text class="star-time">{{item.gmtCreate}}</text>
+</view>
+<view class="line"></view>
+</slide-delete>
+</block>
+
+

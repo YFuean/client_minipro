@@ -1,0 +1,59 @@
+<!--pages/more/tiaozaoshichang/personal.wxml-->
+<view class="personal-page">
+<view class="my-info">
+<view class="myInfo">
+<image src="{{user.avatar}}"></image>
+<view class="name">
+<text class="userName">{{user.userName}}</text>
+<text class="nickname">昵称：{{user.nickname}}</text>
+</view>
+</view>
+<view class="update-my" bindtap="go_update" wx:if="{{isMy}}">
+<text>资料卡片</text>
+</view>
+
+</view>
+
+<view class="my-description">
+
+</view>
+
+<view class="tab">
+<view class="tab-item {{tab==0?'active':''}}" bindtap="changeItem" data-item="0">发布</view>
+<view class="tab-item {{tab==1?'active':''}}" bindtap="changeItem" data-item="1">收藏</view>
+</view>
+<view class="container">
+<view wx:if="{{tab==0}}" class="container-info">
+<view wx:if="{{fabuList!=null}}">
+<view wx:for="{{fabuList}}" wx:item="item" class="good-card" data-id="{{item.goodsId}}" bindtap="go_detail"  wx:if="{{!item.isDeleted}}">
+<image src="{{item.goodsImgUrl[0]}}" class="cover-image"></image>
+      <view class="good-description">
+        <text class="good-name">{{item.goodsName}}</text>
+        <text class="good-price">￥{{item.goodsPrice}}</text>
+      </view>
+</view>
+<view class="nocate" wx:if="{{nofabu}}">
+      <text>亲，没有更多数据了~</text>
+</view>  
+</view>
+</view>
+
+
+<view wx:if="{{tab==1}}" class="container-info">
+<view wx:if="{{collectionList!=null}}">
+<view wx:for="{{collectionList}}" wx:item="item" class="good-card" data-id="{{item.goodsId}}" bindtap="go_detail" >
+<image src="{{item.goodsImgUrl[0]}}"  class="cover-image"></image>
+      <view class="good-description">
+        <text class="good-name">{{item.goodsName}}</text>
+        <text class="good-price">￥{{item.goodsPrice}}</text>
+      </view>
+</view>
+<view class="nocate">
+      <text>亲，没有更多数据了~</text>
+</view>  
+</view>
+
+</view>
+
+</view>
+</view>

@@ -1,0 +1,59 @@
+<!--pages/more/tiaozaoshichang/search.wxml-->
+<view class="search-page">
+<view class="search-area">
+ <view class="search">  
+          <icon class="searchcion" size='20' type='search'></icon>  
+          <input class="search-input" 
+           placeholder="电子产品|书本笔记" 
+           placeholder-class="placeholder-class"  
+           focus='true'
+           value="{{content}}"
+           confirm-type="search" 
+           bindinput='bindSearch' 
+           bindconfirm='searchGoods'/>
+</view>
+<text class="input-clear" bindtap="clearInput">清空</text>
+</view>
+<view class='section_show'  wx:if="{{searchStatus}}">
+    <view wx:for='{{searchList[0].content}}' wx:for-item="subItem" class="search-item" data-item="{{subItem}}" catchtap="go_type">
+      <view>{{subItem.goodsName}}</view>
+      <!-- <view class="biaoqian">商品</view> -->
+    </view>     
+    <!-- <view wx:for='{{searchList[1].content}}' wx:for-item="subItem" class="search-item" data-item="{{item}}" bindtap="go_reward">
+      <view>{{subItem.title}}</view>
+      <view class="biaoqian">悬赏</view>
+    </view> -->
+     <!--如果无数据，则显示找不到-->
+    <view class="nocate" wx:if="{{searchList[0].content.length==0}}">
+      <text>暂时找不到~</text>
+    </view>
+</view>
+<view wx:else>
+<view class="search-history" wx:if="{{historyList.length>0}}">
+<view class="search-info">
+<text>搜索历史</text>
+<image src="/image/delete.png" bindtap="clear_search_history"></image>
+</view>
+<view class="history-list">
+<view wx:for="{{historyList}}" class="history-item" bindtap="inputInfo" data-item="{{item}}">
+<wxs src="./../../../utils/sub.wxs" module="tools" />
+<text>{{tools.sub(item)}}</text>
+</view>
+</view>
+</view>
+
+<view class="search-history">
+<view class="search-info">
+<text>搜索发现</text>
+<image src="/image/update.png"></image>
+</view>
+<view class="history-list">
+<view wx:for="{{topMarks}}" class="history-item" bindtap="inputInfo" data-item="{{item}}">
+<text>{{tools.sub(item)}}</text>
+</view>
+</view>
+</view>
+
+</view>
+
+</view>

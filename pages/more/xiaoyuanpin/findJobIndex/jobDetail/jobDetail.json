@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "popup": "../../components/popup"
+  },
+  "navigationBarTitleText": "职位详情"
+}

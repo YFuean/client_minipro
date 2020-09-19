@@ -1,0 +1,167 @@
+@import "../../../../../style/xxqGlobalCss";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 210rpx;
+  color: #ffffff;
+  padding: 25rpx 20rpx 0rpx 20rpx;
+  background-color: #11aca8;
+}
+
+.title--text {
+  font-size: x-large;
+}
+
+.title2--text {
+  font-size: 40rpx;
+}
+
+.title3--text {
+  font-size: large;
+}
+
+.header-body {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-left: 5rpx;
+}
+
+.light--text {
+  font-size: larger;
+  color: gold;
+}
+
+.header-foot {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.full {
+  /* padding: 10rpx; */
+  /* ？？？？？？为什么padding 不能四条边都起作用？？？？？ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 还是没居中，右下两条边始终差一点 */
+  width: 80rpx;
+  height: 50rpx;
+  background-color: #fc8989;
+  font-size: small;
+  border-radius: 5rpx;
+}
+
+.content {
+  padding: 20rpx 40rpx;
+}
+
+.content-header {
+  margin-bottom: 30rpx;
+}
+
+.chip {
+  display: flex;
+  color: #424242;
+}
+
+.content-body {
+  /* margin-top: 20rpx; */
+  margin-bottom: 30rpx;
+  padding-top: 15rpx;
+  color: #424242;
+}
+
+.content-foot {
+  display: flex;
+  align-items: center;
+  /* margin-top: 20rpx; */
+  margin-bottom: 30rpx;
+  padding-top: 20rpx;
+}
+
+.circle {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.tips-title {
+  display: flex;
+  align-items: center;
+  color: #11aca8;
+}
+
+.con {
+  display: flex;
+  align-items: center;
+  color: #11aca8;
+}
+
+.buttom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.tips {
+  width: 96%;
+  /* height: 150rpx; */
+  background-color: #e6f8f7;
+  border-radius: 10rpx;
+  padding: 20rpx;
+}
+
+.btn-large {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 650rpx;
+  height: 80rpx;
+  font-size: large;
+  color: #ffffff;
+  background-color: #11aca8;
+  border-radius: 5rpx;
+}
+
+.card-job-foot {
+  height: 150rpx;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  bottom: 0rpx;
+  left: 0rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.small-icon{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/* 解析换行符等 */
+.world {
+  white-space: pre-wrap;
+}
+
+.ml-10{
+  margin-left: 10rpx;
+}
+
+.mr-10{
+  margin-right: 10rpx;
+}

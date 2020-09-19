@@ -1,0 +1,18 @@
+<!--pages/errands/my/progress/progress.wxml-->
+<!-- <text>pages/errands/my/progress/progress.wxml</text> -->
+<view class="container_e">
+	<view class="card-container_e">
+		<!-- 头像、账号部分 -->
+		<view class="my-head" data-url="{{user.avatar}}">
+			<view class="avatar-info">
+				<image class="userinfo-avatar" src="{{user.avatar}}" mode="cover"></image>
+			</view>
+			<view class="useinfo-phoneNumber"><text>{{user.phoneNumber}}</text></view>
+		</view>
+    <view class="card-content">
+      <text class="ongoing text-red" wx:if="{{user.status==0}}">进行中</text>
+      <text class="ongoing text-green" wx:elif="{{user.status==1}}">申请成功</text>
+			<text class="ongoing text-red" wx:elif="{{user.status==2}}">申请失败</text>
+    </view>
+	</view>
+</view>

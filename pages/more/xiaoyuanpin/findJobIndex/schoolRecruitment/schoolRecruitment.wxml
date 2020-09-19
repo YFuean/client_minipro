@@ -1,0 +1,101 @@
+<!-- tab切换 推荐、最新 -->
+<view class="swiper-tab2 sticky2 " style="background-color: {{bgColor}};color: {{color}}" hover-class="none" hover-stop-propagation="false">
+    <view class="tab-wrap">
+        <view wx:for="{{subTabItem}}" wx:key="index" 
+        class="swiper-tab-item2 {{currentSubTab === item.id ? 'active2':''}}" 
+        hover-class="none" hover-stop-propagation="false" bindtap="switchTab2" 
+        data-current="{{item.id}}">{{item.tab}}</view>
+    </view>
+    <view class="tool">
+        <!-- 已选择的类型标签 -->
+        <view wx:if="{{showType1}}" class="xchip-active-item mr-30 relative" bind:tap="closeType">
+            <text class="item">{{currentName}}</text>
+            <view class="close">
+                <image class="xicon-tiny" src="https://miaoxun.oss-cn-hangzhou.aliyuncs.com/images/xiaoyuanpin/guanbi.png"></image>
+            </view>
+        </view>
+        <view bindtap="toNextPage" data-url='chooseTypeXiaozhao'>
+            <image class="icon-small" src="https://zhxy-vue.oss-cn-hangzhou.aliyuncs.com/icon/position/gengduo.png" mode="aspectFill" lazy-load="false" binderror="" bindload="" />
+        </view>
+    </view>
+</view>
+<!-- 推荐和最新的滑块区域 -->
+<swiper class="swiper-box2" current="{{currentSubTab}}" bindchange="changeTab2">
+    <!-- 推荐区域 -->
+    <swiper-item class="swiper-item2" item-id="">
+        <scroll-view scroll-y="{{true}}" style="height: {{winHeight?winHeight+'px':'auto'}}" bindscrolltolower="">
+            <view class="content-recommend" hover-class="none" hover-stop-propagation="false">
+                <!-- 若搜索结果为空 -->
+                <block wx:if="{{jobListXiaozhao.length === 0}}">
+                    <view class="typeListNull">
+                        <text class="xtitle3--text mt-50" selectable="false" space="false" decode="false">当前分类下没有职位啦~</text>
+                    </view>
+                </block>
+
+                    <!-- 工作列表的卡片 -->
+                <block wx:else>
+                    <view wx:for="{{jobListXiaozhao}}" wx:key="index" class="card-job-wrap" bindtap="toNextPage" data-url="jobDetailXz" data-id="{{item.pkJobId}}">
+                        <view class="card-job" hover-class="none" hover-stop-propagation="false">
+                            <!-- 职位标题、薪资 -->
+                            <view class="card-header">
+                                <view class="job-title">{{item.name}}</view>
+                                <view class="job-salary">{{item.min}}-{{item.max}}K</view>
+                            </view>
+                            <view class="card-content">
+                                <view class="job-item">
+                                    <!-- <text class="subcont--text">{{item.limitTime}}</text>
+                                    <text class="subcont--text">{{item.workTime}}</text> -->
+                                    <view class="chip">
+                                        <!-- <block class="chip" wx:for="{{item.jobType.name}}" wx:key="index"> -->
+                                        <block class="chip">
+                                            <view class="chip-item">{{item.jobType.name}}</view>
+                                        </block>
+                                    </view>
+                                </view>
+                                <text class="member--text pre-wrap">需要 {{item.max}} 人</text>
+                            </view>
+                            <view class="card-foot">
+                                <text class="manager--text">{{item.boss}}</text>
+                                <text class="address-text">{{item.workplace}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </scroll-view>
+    </swiper-item>
+    <!-- 最新区域 -->
+    <swiper-item class="swiper-item2" item-id="">
+        <scroll-view scroll-y="{{true}}" style="height: {{winHeight?winHeight+'px':'auto'}}" bindscrolltolower="">
+            <view class="content-recommend" hover-class="none" hover-stop-propagation="false">
+                <!-- 工作列表的卡片 -->
+                <view wx:for="{{jobListXiaozhaoLast}}" wx:key="index" class="card-job-wrap" bindtap="toNextPage" data-url="jobDetailXz" data-id="{{item.pkJobId}}">
+                    <view class="card-job" hover-class="none" hover-stop-propagation="false">
+                        <!-- 职位标题、薪资 -->
+                        <view class="card-header">
+                            <view class="job-title">{{item.name}}</view>
+                            <view class="job-salary">{{item.min}}-{{item.max}}K</view>
+                        </view>
+                        <view class="card-content">
+                            <view class="job-item">
+                                <!-- <text class="subcont--text">{{item.limitTime}}</text>
+                                <text class="subcont--text">{{item.workTime}}</text> -->
+                                <view class="chip">
+                                    <!-- <block class="chip" wx:for="{{item.jobType.name}}" wx:key="index"> -->
+                                    <block class="chip">
+                                        <view class="chip-item">{{item.jobType.name}}</view>
+                                    </block>
+                                </view>
+                            </view>
+                            <text class="member--text pre-wrap">需要 {{item.max}} 人</text>
+                        </view>
+                        <view class="card-foot">
+                            <text class="manager--text">{{item.boss}}</text>
+                            <text class="address-text">{{item.workplace}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+</swiper>

@@ -1,0 +1,18 @@
+/* pages/index/black_list/black_list.wxss */
+page {
+  width: 100%;
+}
+.line {
+  width: 100%;
+  border: 1rpx solid rgb(219, 218, 218);
+}
+.switch-view {
+  float: right;
+}
+
+.black {
+  width: 95%;
+  margin: 0 auto;
+  height: 130rpx;
+  line-height: 130rpx;
+}

@@ -1,0 +1,36 @@
+<!--pages/errands/neworder/neworder.wxml-->
+<!-- <text>pages/errands/neworder/neworder.wxml</text> -->
+<view class="container_e">
+	<view class="get-address">
+		<text class="address-title">来这儿拿</text>
+		<view class="first-inputs">
+			<!-- <input class="address-input" placeholder="从哪里取件" value="{{nation}} {{province}} {{city}} {{district}}" bindblur="fromCityAddress_onChange"></input> -->
+			<view class="first-inputs-left">
+				<text class="address-input">{{nation}} {{province}} {{city}} {{district}}</text>
+			</view>
+			<view class="first-inputs-right" bindtap="map_selection">
+				<image class="address-icon" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/icon_positioning.png"></image>
+			</view>
+
+		</view>
+
+		<view class="second-inputs">
+			<input class="specific-input" placeholder="请输入楼号，单元，门牌号（必填）" value="{{fromSpecificAddress}}" bindblur="fromSpecificAddress_onChange">
+			</input>
+		</view>
+
+		<view class="third-inputs">
+			<view class="name">
+				<input class="name-input" placeholder="发件人姓名（必填）" value="{{fromName}}" bindblur="fromName_onChange"></input>
+			</view>
+			<view class="tel">
+				<input class="tel-input" placeholder="发件人手机号（必填）" value="{{fromTel}}" maxlength="11" bindinput="fromTel_onChange"></input>
+			</view>
+		</view>
+
+	</view>
+	<view class="btn">
+		<button class="btn-enter" style="width: 90%;border-radius: 30px;background-image: linear-gradient(-45deg, #039DFF 0%, #34AFFD 100%);" catchtap="order_save">确定</button>
+	</view>
+
+</view>

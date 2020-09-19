@@ -1,0 +1,49 @@
+/* pages/more/findJob/my/my.wxss */
+@import "../../../../style/xxqGlobalCss";
+
+.banner {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx 40rpx;
+  background-color: #37c2bc;
+  color: #ffffff;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-inf {
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx 0rpx;
+  font-size: large;
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.row-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 30rpx;
+}
+
+.block {
+  display: flex;
+}

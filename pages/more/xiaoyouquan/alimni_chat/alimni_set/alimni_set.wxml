@@ -1,0 +1,13 @@
+<!--pages/index/alimni_chat/alimni_set/alimni_set.wxml-->
+
+<view class="black">
+<text class="black_list">拉黑列表</text>
+<image class="black_icon" src="/image/icon/youjiantou_icon.png"/>
+</view>
+
+
+
+<view class="black_under">
+<text class="red">清空聊天记录</text>
+</view>
+

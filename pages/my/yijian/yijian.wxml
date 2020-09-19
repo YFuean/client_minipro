@@ -1,0 +1,32 @@
+<!--pages/my/yijian/yijain.wxml-->
+<view class="feed-content">
+
+<view class="zhuti">
+<textarea bindinput="bindTitle" value="{{title}}" maxlength="10" class="title"  placeholder="反馈主题" />
+<image wx:if="{{title.length > 0}}" bindtap="hideTiele" class="feed-title-icon" src="../../../image/icon_cha.png"/>
+</view>
+
+<view class="neirong">
+<textarea bindinput="bindContent" maxlength="100" value="{{content}}" class="content" placeholder="反馈内容"/>
+<image wx:if="{{content.length > 0}}" class="feed-content-icon" src="../../../image/icon_cha.png"/>
+
+<view style="display:flex">
+<block wx:for="{{image}}" wx:key="this">
+<view class="feed-upload" bindtap="reflushImg" id="{{item}}">
+<image src="{{item}}" class="feed-add-img"/>
+<image bindtap="binddelImg" data-id="{{id}}" data-text="{{item}}" class="feed-icon" src="/image/icon_cha.png" />
+</view>
+</block>
+<image wx:if="{{image.length < 3}}" bindtap="uploadImg" class="feed-img" src="/image/icon_add.png"/>
+<view class="feed-content-right">{{contentLength}}/300</view>
+</view>
+
+</view>
+
+<view class="lianxi">
+<textarea bindinput="bindPhoneNum" maxlength="11" class="phone" value="{{phoneNumber}}" placeholder="联系方式（选填）"/>
+</view>
+
+</view>
+
+<button bindtap="feedback" class="fankui">反馈</button>

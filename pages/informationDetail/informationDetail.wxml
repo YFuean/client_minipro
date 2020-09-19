@@ -1,0 +1,13 @@
+<view class="info_detailpage">
+  <view class="cover">
+    <image src="{{infoDetail.cover}}"></image>
+  </view>
+  <view class="title">
+    <text class="title1--text fc" >{{infoDetail.title}}</text>
+    <text class=" ">{{infoDetail.gmtCreate}}</text>
+  </view>
+  <view class="content">
+    <text class="fc">{{infoDetail.text}}</text>
+  </view>
+</view>
+

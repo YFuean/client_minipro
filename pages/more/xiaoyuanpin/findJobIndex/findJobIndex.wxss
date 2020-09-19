@@ -1,0 +1,76 @@
+@import "./partTimeJob/partTimeJob.wxss";
+@import "./schoolRecruitment/schoolRecruitment.wxss";
+@import "../../../../style/xxqGlobalCss";
+
+page {
+  background-color: #eee;
+  /* padding-top: 30rpx; */
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  height: 100rpx;
+  padding: 10rpx 30rpx;
+  background-color: #37c2bc;
+}
+
+/* tab切换：兼职、校招 */
+.swiper-tab1 {
+  width: 90%;
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  /* background-color: lightpink; */
+}
+
+.swiper-tab-item1 {
+  color: #acdedc;
+  font-size: medium;
+  margin-right: 40rpx;
+}
+
+.active1 {
+  color: #fff;
+  font-size: large;
+}
+
+/* 搜索图标 */
+.search-icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/* tab切换：推荐、附近 */
+.swiper-box2 {
+  height: 724px;
+}
+
+.tab-wrap {
+  display: flex;
+}
+
+.swiper-tab2 {
+  width: 92%;
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #eee;
+  background-color: #ffffff;
+}
+
+.swiper-tab-item2 {
+  margin-right: 30rpx;
+}
+
+.active2 {
+  font-weight: 600;
+}
+
+

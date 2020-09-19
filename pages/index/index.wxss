@@ -1,0 +1,183 @@
+
+/**index.wxss**/
+.shouye-page{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.content-info{
+  display: flex;
+  flex-direction: column;
+}
+
+.shouye-silde{
+  height: 100%;
+}
+
+.shouye-nav{
+  display: flex;
+  justify-content: space-around;
+  height: 150rpx;
+  border-bottom: 1rpx solid rgb(194, 180, 180,0.7);
+  padding: 15rpx;
+}
+
+.nav-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-icon{
+  width: 85rpx;
+  height: 85rpx;
+  margin-bottom: 15rpx;
+}
+
+.nav-title{
+  font-size: 30rpx;
+}
+
+.today-course{
+  padding: 30rpx;
+  font-size: 28rpx;
+}
+.course-info{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.course-item.ood{
+  background-image: url(https://swl-kuzma.oss-cn-beijing.aliyuncs.com/markdown/20200530133053.png);
+  display: inline-block;
+  background-color: rgb(169, 134, 134);
+  width: 38%;
+  height: 150rpx;
+  margin-top: 10rpx;
+  margin-right: 40rpx;
+  border-radius: 10rpx;
+  padding: 15rpx;
+}
+
+.course-item.even{
+  background-image: url(https://swl-kuzma.oss-cn-beijing.aliyuncs.com/markdown/20200530133526.png);
+  display: inline-block;
+  background-color: rgb(169, 134, 134);
+  width: 38%;
+  height: 150rpx;
+  margin-top: 10rpx;
+  margin-right: 40rpx;
+  border-radius: 10rpx;
+  padding: 15rpx;
+}
+
+.course-info{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  align-content: space-around;
+  color: white;
+  font-size: 22rpx;
+}
+
+.course-name{
+  font-size: 28rpx;
+}
+
+.classroom{
+  width: 100rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.no_class{
+  color: rgb(141, 141, 235);
+  font-weight: 650;
+  text-align: center;
+  font-size: large;
+  padding: 10rpx;
+  background-color: rgb(216, 212, 212);
+  height: 160rpx;
+  margin: 20rpx;
+  display: flex;
+  border-radius: 10rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(31, 20, 16);
+  padding: 10rpx;
+  border-radius: 10rpx;
+}
+
+.go-login{
+  margin-top: 20rpx;
+  color: rgb(201, 65, 65);
+  font-size: 45rpx;
+  font-weight: 650;
+}
+
+.hot-zixun{
+  padding: 30rpx;
+  font-size: 28rpx;
+}
+
+.hot-zixun-info{  
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-top: 15rpx;
+}
+
+.zixun-card{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  height: auto;
+  margin-bottom: 20rpx;
+}
+
+.zixun-card image{
+  width: 300rpx;
+  height: 140rpx;
+  margin-right: 10rpx;
+}
+
+.zixun-info{
+  width: 100%;
+  padding: 5rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 22rpx;
+}
+
+.info-title{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 28rpx;
+}
+
+.date-info{
+  color: gray;
+}
+
+.swiper-img{
+  width: 100%;
+}

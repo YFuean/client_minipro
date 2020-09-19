@@ -1,0 +1,34 @@
+<!--pages/examinationQuery/examinationQuery.wxml-->
+<!-- <text>pages/examinationQuery/examinationQuery.wxml</text> -->
+<view class="exam-page">
+	<view class="exam-list">
+		<Select prop-array='{{selectArray}}' width="600" bind:myget='getDate'></Select>
+	</view>
+	<view class="exam-body">
+		<view class="examination" >
+			<view class="examination-card" wx:for="{{selectExam}}" wx:for-item="examinations">
+				<view class="card-title">
+					<view class="card-title-left">
+						<text class="classname">{{examinations.subject_name}}</text>
+					</view>
+					<view class="card-title-right">
+						<text wx:if="{{examinations.endTime<0}}" class="{{examinations.score>=60?'text-blue':'text-red'}}">{{examinations.score}}分</text>
+						<text wx:elif="{{examinations.endTime==0}}">正在考试中</text>
+						<text wx:else>距离考试还有{{examinations.endTime}}天</text>
+					</view>
+				</view>
+				<view class="card-area">
+					<text>考试地点：{{examinations.area}}</text>
+				</view>
+				<view class="card-time">
+					<text>
+          考试时间：{{examinations.start_time}}~{{examinations.finish_time}}
+         </text>
+				</view>
+			</view>
+		</view>
+		<!-- <view class="btn">
+			<button class="btn1">成绩报告单</button>
+		</view> -->
+	</view>
+</view>

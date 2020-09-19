@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "consumer-list": "/components/consumerList/consumer-list"
+  },
+  "navigationBarTitleText": "消费明细"
+}

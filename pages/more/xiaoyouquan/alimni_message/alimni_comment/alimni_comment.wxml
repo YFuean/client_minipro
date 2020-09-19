@@ -1,0 +1,14 @@
+<!--pages/index/alimni_message/alimni_comment/alimni_comment.wxml-->
+<block wx:if="{{commList.length != 0}}">
+<view class="like">
+<image class="like-avatar" src="{{commList[5]}}" />
+<view class="like-one">
+<text class="like-user">{{commList[1]}}</text>
+<!-- <text class="like-time"> 1分钟前</text> -->
+</view>
+<view class="like-text">{{commList[4]}}</view>
+<text class="like-content">{{commList[2]}}</text>
+</view>
+<view class="line"></view>
+</block>
+

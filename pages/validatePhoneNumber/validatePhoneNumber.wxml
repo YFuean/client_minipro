@@ -1,0 +1,15 @@
+<!--pages/validatePhoneNumber/validatePhoneNumber.wxml-->
+<view class="validate-phoneNumber-page">
+<form class="login-form" catchsubmit="formSubmit">
+<view class="phonenumber-input">
+<image src="/image/icon_shouji.png"></image>
+<input type="number"  placeholder="请输入手机号" bindinput="bindPhoneNumber"  name="phoneNumber" value="{{phoneNumber}}" placeholder-class="placeholder-class"></input>
+</view>
+<view class="code-input" >
+<image src="/image/icon_yanzhengma.png"></image>
+<input type="number" bindinput="bindCode" name="code" value="{{code}}"></input>
+<button class="getcode-btn" disabled="{{disabled}}" style="background-color: {{disabled ? gray : white}}"  bindtap="getCode">{{msg}}</button>
+</view>
+<button class="login-btn" bindtap="submit" formType="submit">继续</button>
+</form>
+</view>

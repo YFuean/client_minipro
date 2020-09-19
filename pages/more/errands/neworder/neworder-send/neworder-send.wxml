@@ -1,0 +1,34 @@
+<!--pages/more/errands/neworder-send/neworder-send.wxml-->
+<!-- <text>pages/more/errands/neworder-send/neworder-send.wxml</text> -->
+
+<view class="container_e">
+  <view class="send-address">
+		<text class="address-title">送到这儿</text>
+    <view class="first-inputs">
+			<input class="address-input" placeholder="送到哪儿" value="{{sendCityAddress}}" bindblur="sendCityAddress_onChange"></input>
+      <view class="first-inputs-right" bindtap="map_selection">
+				<image class="address-icon" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/icon_positioning.png"></image>
+			</view>
+
+		</view>
+
+		<view class="second-inputs">
+      <input class="specific-input"  placeholder="请输入楼号，单元，门牌号（必填）" value="{{sendSpecificAddress}}" bindblur="sendSpecificAddress_onChange">
+      </input>
+		</view>
+
+		<view class="third-inputs">
+      <view class="name">
+        <input class="name-input" placeholder="收件人姓名（必填）" value="{{sendName}}" bindblur="sendName_onChange"></input>
+      </view>
+      <view class="tel">
+        <input class="tel-input" placeholder="收件人手机号（必填）" value="{{sendTel}}" maxlength="11" bindinput="sendTel_onChange"></input>
+      </view>
+		</view>
+    <view class="btn">
+    <!-- <navigator url="/pages/more/more/errands/neworder/neworder"> -->
+		<button class="btn-enter" style="width: 90%;border-radius: 30px;background-image: linear-gradient(-45deg, #039DFF 0%, #34AFFD 100%);" bindtap="order_enter">确定</button>
+   <!-- </navigator> -->
+	</view>
+	</view>
+</view>

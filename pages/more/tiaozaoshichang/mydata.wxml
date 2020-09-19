@@ -1,0 +1,50 @@
+<!--pages/more/tiaozaoshichang/mydata.wxml-->
+<view class="jinbenxinxi-page">
+<text class="title">基本信息</text>
+
+<view class="zilaio-card">
+<view class="card-row">
+<text>头像</text>
+<view class="info">
+<image src="{{user.avatar}}"></image>
+<image src="/image/right-dark.png" id="right-icon"></image>
+</view>
+</view>
+<view class="card-row">
+<text>昵称</text>
+<view class="info">
+<text class="card-info">{{user.nickname}}</text>
+<image src="/image/right-dark.png" id="right-icon"></image>
+</view>
+</view>
+<view class="card-row">
+<text>姓名</text>
+<view class="info">
+<text class="card-info">{{user.userName}}</text>
+<image src="/image/right-dark.png" id="right-icon"></image>
+</view>
+</view>
+<view class="card-row">
+<text>性别</text>
+<view class="info">
+<text class="card-info">{{user.gender}}</text>
+<image src="/image/right-dark.png" id="right-icon"></image>
+</view>
+</view>
+<view class="card-row">
+<text>联系方式</text>
+<view class="info">
+<text class="card-info">{{user.phoneNumber}}</text>
+<image src="/image/right-dark.png" id="right-icon"></image>
+</view>
+</view>
+<view class="card-row">
+<text>学号</text>
+<view class="info">
+<text class="card-info">{{user.userAccount}}</text>
+<image src="/image/right-dark.png" id="right-icon"></image>
+</view>
+</view>
+</view>
+
+</view>

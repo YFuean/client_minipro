@@ -1,0 +1,10 @@
+/* pages/validatePhoneNumber/validatePhoneNumber.wxss */
+@import "/pages/login/login.wxss";
+.validate-phoneNumber-page{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 75%;
+  align-items: center;
+  position: relative;
+}

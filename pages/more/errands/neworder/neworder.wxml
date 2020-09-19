@@ -1,0 +1,74 @@
+<!--pages/more/errands/neworder/neworder.wxml-->
+<!-- <text>pages/more/errands/neworder/neworder.wxml</text> -->
+<view class="background">
+	<view class="container_e">
+		<view class="message-card">
+
+			<view class="message-card-list">
+				<view class="message-card-list-left">
+					<view class="hollow-circle-blue"></view>
+				</view>
+				<view class="message-card-list-right">
+					<view class="message-card-list-right-top">
+						<view class="message-card-address">
+							<text class="message-card-address-text">{{originAddress}}</text>
+						</view>
+						<view class="message-card-NT">
+							<text class="message-card-NT-text">{{founderName}} {{founderPhonenumer}}</text>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="horizontal-line"></view>
+			<view class="message-card-list">
+				<view class="message-card-list-left">
+					<view class="hollow-circle-yellow"></view>
+				</view>
+				<view class="message-card-list-right">
+					<view class="message-card-list-right-top">
+						<view class="message-card-address">
+							<text class="message-card-address-text">{{destination}}</text>
+						</view>
+						<view class="message-card-NT">
+							<text class="message-card-NT-text">{{receiverName}} {{receiverPhonenumer}}</text>
+						</view>
+					</view>
+				</view>
+			</view>
+
+		</view>
+
+		<view class="goods-card">
+			<view class="goods-card-left">
+				<image src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/icon_goods.png"></image>
+			</view>
+			<view class="goods-card-right">
+				<input class="goods-card-input" placeholder="物品名称（必填）" value="{{type}}" bindblur="type_onChange" />
+			</view>
+		</view>
+
+		<view class="deliveryTime-card">
+			<view class="deliveryTime-card-left">
+				<image src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/icon_pickuptime.png"></image>
+			</view>
+			<view class="deliveryTime-card-right">
+				<input class="deliveryTime-card-input" placeholder="取件时间（必填）" disabled='{{isdisplay}}' value="{{timeDate}}" bindblur="deliveryTime_onChange timeDate_onChange" />
+			</view>
+		</view>
+
+
+		<view class="remark-card">
+			<view class="remark-card-left">
+				<image src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/icon_demo.png"></image>
+			</view>
+			<view class="remark-card-right">
+				<input class="remark-card-input" placeholder="备注（必填）" value="{{remark}}" bindblur="remark_onChange" />
+			</view>
+		</view>
+
+		<view class="btn">
+			<button class="btn-enter" style="width: 90%;border-radius: 30px;background-image: linear-gradient(-45deg, #039DFF 0%, #34AFFD 100%);" bindtap="order_enter">确定</button>
+		</view>
+
+	</view>
+</view>

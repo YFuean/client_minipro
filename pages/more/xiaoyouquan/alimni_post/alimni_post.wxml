@@ -1,0 +1,44 @@
+ <view class="sign-setting-border {{idx==item.id?'selected':''}}" wx:for="{{applyList}}" wx:key="" bindtap='selectApply' data-type="{{item.type}}" data-id="{{item.id}}">{{item.type}}</view>
+
+
+<view class="post">
+<view class="post-row">
+<textarea bindinput="bindValue" focus class="post-area" value="{{textValue}}" maxlength="300" placeholder-class="post-pla" placeholder="在此输入正文   (限制300字以内)">
+</textarea>
+<view style="display: flex;">
+<view class="imgList">
+<block wx:for="{{image}}" wx:key="this">
+<view class="upload-img" bindtap="reflushImg" id="{{item}}">
+<image src="{{item}}" class="add-img"/>
+</view>
+</block>
+
+<image bindtap="delImg" wx:if="{{isDel}}" class="icon" src="/image/icon/cha_icon.png"/>
+<view bindtap="uploadImg" class="post-pic">
+<image class="post-pic-icon" src="/image/icon/picture_icon.png"/>
+<view class="post-pic-text">添加照片</view>
+</view>
+</view>
+
+</view>
+<text class="post-num">{{textValueNum}}/300</text>
+</view>
+</view>
+
+
+<view bindtap="getLocation" class="post-weizhi">
+<image class="post-dingwei" src="/image/icon/dingwei_icon.png"/>
+<text class="post-dingwei-text">{{location}}</text>
+<image class="post-dingwei-right" src="/image/icon/youjiantou_icon.png"/>
+</view>
+
+<view class="post-rule">
+*请按照发帖要求，合理发帖，如有违规将会被删除，乃至封禁
+</view>
+
+<view bindtap="putPost" class="post-btn">
+<text>发布</text>
+</view>
+
+
+

@@ -1,0 +1,30 @@
+/* pages/index/alimni_chat/alimni_set/alimni_set.wxss */
+page {
+  background-color: #F5F5F5;
+}
+.black {
+  background-color: white;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 20rpx;
+}
+.black_under {
+  margin-top: 30rpx;
+  background-color: white;
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+  text-align: center;
+}
+.red{
+  color: rgb(214, 82, 82);
+}
+.black_icon {
+  width: 50rpx;
+  height: 50rpx;
+  float: right;
+  margin-top: 10rpx;
+}
+.black_list {
+  float: left;
+}

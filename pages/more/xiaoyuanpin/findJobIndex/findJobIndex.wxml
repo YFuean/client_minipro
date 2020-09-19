@@ -1,0 +1,30 @@
+<view class="header absolute" hover-class="none" hover-stop-propagation="false">
+    <!-- tab切换：兼职、校招 -->
+    <view class="swiper-tab1" hover-class="none">
+        <view class="swiper-tab-item1 {{currentTabHeader === item.id?'active1':''}}" hover-class="none" wx:for="{{tabItemHeader}}" wx:key="index" data-current="{{item.id}}" bindtap="switchTab1">{{item.tab}}</view>
+    </view>
+    <!-- 搜索图标 -->
+    <navigator url="{{toPath}}" class="search-box" hover-class="none" hover-stop-propagation="false">
+        <image class="search-icon" src="https://zhxy-vue.oss-cn-hangzhou.aliyuncs.com/icon/position/sousuo.png" mode="aspectFill" lazy-load="true" binderror="" bindload="" />
+    </navigator>
+</view>
+<!-- 滑块区域 -->
+<swiper class="swiper-box1 " style="height: {{winHeight?winHeight+'px':'auto'}}" current="{{currentTabHeader}}" bindchange="changeTab1">
+    <!-- 兼职区域 -->
+    <swiper-item class="swiper-item1" item-id="">
+        <scroll-view scroll-y="{{true}}" style="height: {{winHeight?winHeight+'px':'auto'}}" bindscrolltolower="">
+            <!-- 引入兼职文件 -->
+            <include src="./partTimeJob/partTimeJob.wxml" />
+        </scroll-view>
+    </swiper-item>
+    <!-- 校招区域 -->
+    <swiper-item class="swiper-item1" item-id="">
+        <scroll-view scroll-y="{{true}}" style="height: {{winHeight?winHeight+'px':'auto'}}" bindscrolltolower="">
+            <!-- 引入校招文件 -->
+            <include src="./schoolRecruitment/schoolRecruitment.wxml" />
+        </scroll-view>
+    </swiper-item>
+</swiper>
+<!-- 导航栏 -->
+<xiaoyuanpinTabbar selected="{{0}}" bindmyevent="onMyEvent" />
+

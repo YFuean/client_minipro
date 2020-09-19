@@ -1,0 +1,13 @@
+<!--components/ConsumerList/consumer-list.wxml-->
+<view class="list">
+<view class="list-item" wx:for="{{consumer_list}}" wx:for-item="item">
+<view class="description">
+<text>{{item.description}}——{{item.payMethod}}</text>
+<text>{{item.gmtCreate}}</text>
+</view>
+<view class="money">
+<text wx:if="{{item.orderType=='校园卡充值'}}" style="color: #30A9DE">+{{item.orderMoney}}</text>
+<text wx:else style="color: red">-{{item.orderMoney}}</text>
+</view>
+</view>
+</view>

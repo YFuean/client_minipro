@@ -1,0 +1,85 @@
+.exam-page {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-content: center; */
+  /* position: fixed; */
+  height: 100%;
+  width: 100%;
+  background: #F5F5F5;
+  margin: auto;
+}
+page{
+  background: #F5F5F5;
+}
+.exam-list {
+  width: 90%;
+  height: 80rpx;
+  margin: auto;
+}
+
+.examination-card {
+  background-color: white;
+  padding: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 20rpx;
+  border-radius: 10rpx;
+  margin: 20rpx 30rpx 0rpx 30rpx ;
+  height: 150rpx;
+  width: 90%;
+}
+
+.card-title{
+  display: flex;
+  height: 40%;
+  align-items: center;
+}
+
+.card-title-left {
+  width: 50%;
+  font-size: 28rpx;
+  font-weight: 550;
+  text-align: left;
+}
+
+.card-title-right {
+  width: 50%;
+  font-size: 20rpx;
+  text-align: right;
+}
+
+.card-area{
+  display: flex;
+  height: 30%;
+  align-items: center;
+}
+
+.card-time{
+  height: 30%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.btn{
+  display: flex;
+  width: 100%;
+  margin: 100rpx 0rpx 0rpx 0rpx;
+  justify-content: center;
+}
+
+.btn1{
+  background-color: deepskyblue ;
+  color:#ffff;
+  font-weight: 500;
+}
+
+.text-blue{
+  color: #1ccdff;
+}
+
+.text-red{
+  color: #ff2828;
+}

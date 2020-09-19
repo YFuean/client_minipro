@@ -1,0 +1,45 @@
+/* pages/xiaoyuankacongzhi/xiaoyuankacongzhi.wxss */
+.xaoyuankachongzhi-page{
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx;
+}
+.description{
+  margin-left: 20rpx;
+  font-size: 36rpx;
+}
+.jine-list{
+  margin-bottom: 80rpx;
+}
+
+.zhifufangshi-list{
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  margin-top: 30rpx;
+}
+.zhifu-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5rpx;
+  margin-bottom: 20rpx;
+}
+
+.zhifu-description{
+  display: flex;
+  align-content: center;
+}
+.zhifu-item image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+
+.chongzhi-btn{
+  background-color: #30A9DE;
+  color: white;
+  font-size: 40rpx;
+  margin-top: 60rpx;
+  border-radius: 12rpx;
+}

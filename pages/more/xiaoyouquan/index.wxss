@@ -1,0 +1,383 @@
+/**index.wxss**/
+page {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.tab {
+  float: left;
+  width: 28%;
+  text-align: center;
+  padding: 25rpx 0;
+}
+.tab-title {
+  position: absolute;
+  margin-left: 10rpx;
+  font-weight: 700;
+}
+.tab-icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 10rpx;
+}
+
+.topTabSwiper {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  zoom: 1;
+}
+
+.topTabSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
+
+
+
+
+.alumni-title {
+  margin: 5%;
+}
+.alumni-image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 70rpx;
+  margin-left: 20rpx;
+}
+
+.alumni-post {
+  background-image: linear-gradient(-45deg, #8EC0E4 50%, #8EC0E4 50%,#8EC0E4 50%,#9DC8C8 50%);
+  width: 120rpx;
+  color: white;
+  font-size: 28rpx;
+  height: 30rpx;
+  border-radius: 40rpx;
+  padding: 10rpx;
+  text-align: center;
+  margin-top: -20rpx;
+  position: relative;
+  margin-left: 5rpx;
+}
+.alimni-type {
+  margin-left: 17%;
+  width: 90rpx;
+  height: 30rpx;
+  padding-left: 5rpx;
+  font-weight: 600;
+  font-size: 22rpx;
+  border-radius: 20rpx;
+  background-color: white;
+  border: 1rpx solid #5898b8;
+  color: #5898b8;
+}
+.alimni {
+  width: 93%;
+  height: auto;
+  padding: 10rpx;
+  /* border-bottom: 1rpx solid #ccc; */
+}
+.line {
+  margin: 15rpx;
+  width: 95%;
+  background-color: rgb(230, 230, 230);
+  height: 1rpx;
+  line-height: 1rpx;
+  border: none;
+}
+.alimni-info-avatar {
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 60rpx;
+  float:left;
+  margin: 20rpx;
+}
+.alimni-info-icon {
+  width: 35rpx;
+  height: 30rpx;
+  float: right;
+  background-color: #F5F5F5;
+  /* box-shadow:0px 0px 8px #999 inset;  */
+  border-radius: 10rpx;
+  /* margin-top: -120rpx; */
+  margin-right: 10rpx;
+  /* background: linear-gradient(90deg,  #F5F5F5 0%, gray 100%);
+  animation: gradientChange 1s infinite; */
+}
+
+
+.alimni-info-img {
+  width: 50%;
+  height: auto;
+  display: inline-block;
+  margin-right: 15%;
+  margin-top: 20rpx;
+}
+
+
+
+.alimni-info-user {
+  float: left;
+  font-size: 26rpx;
+  position: absolute;
+  margin-top: -40rpx;
+  left: 17%;
+  font-family: sans-serif;
+  color: #004198;
+  font-weight: 800;
+}
+.alimni-info-time {
+  font-size: 20rpx;
+  color: gray;
+  font-family: sans-serif;
+  margin-left: 17%;
+  margin-top: 10rpx;
+}
+
+.alimni-info-content {
+  font-size: 26rpx;
+  font-weight: 500;
+  width: 76%;
+  margin-top: 60rpx;
+  letter-spacing: 2rpx;
+  font-family: sans-serif;
+  display: -webkit-box;
+  -webkit-box-orient:vertical;
+  text-overflow: ellipsis;
+  overflow:hidden; 
+  font-weight: 800;
+}
+.ellipsis{
+  -webkit-line-clamp:3; 
+  opacity: 0.9
+}
+.unellipsis{
+  -webkit-line-clamp:0; 
+  opacity: 1 
+}
+
+.alimni-info-dianzan-text {
+  font-size: 24rpx;
+  color: gray;
+  float: right;
+  margin-right: 10rpx;
+  margin-top: -26rpx;
+}
+
+.alimni-info-dianzan {
+  width: 35rpx;
+  height: 35rpx;
+  float: right;
+  margin-top: -26rpx;
+  margin-right: 15rpx;
+}
+
+.alimni-icon {
+  width: 35rpx;
+  height: 35rpx;
+  float: right;
+  margin-top: -25rpx;
+  margin-right: 10rpx;
+}
+
+.hover {
+  display: flex;
+  background-color: #5898b8;
+  opacity: 0.8;
+  width: 35%;
+  height: 40rpx;
+  position: absolute;
+  right: 12%;
+  /* margin-top: 10rpx; */
+}
+
+.hover-text {
+  color: white;
+  background-color: #5898b8;
+  /* font-weight: 500;
+  font-size: 20rpx; */
+  /* margin: 10rpx; */
+}
+.text-style {
+color: #5898b8;
+font-size: 24rpx;
+margin-left: 17%;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: gray;
+  opacity: 0.4;
+  overflow: hidden;
+  z-index: 9000;
+}
+ 
+.modal-dialog {
+  box-sizing:border-box;
+  width: 100%;
+  padding:30rpx;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  z-index: 9999;
+  background: white;
+  border-radius: 5rpx;
+
+}
+
+.bottom-year {
+  border: 1rpx solid #5898b8;
+  background-color: #5898b8;
+  color: white;
+  border-radius: 20rpx;
+  height: 35rpx;
+  font-size: 24rpx;
+  width: 70rpx;
+  text-align: center;
+  margin: 30rpx;
+}
+
+.bottom-place {
+  font-size: 24rpx;
+  margin: 30rpx;
+}
+
+.bottom-btn-dele {
+  border: 1rpx solid #5898b8;
+  color: #5898b8;
+  width: 180rpx;
+  font-size: 26rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  padding: 20rpx;
+  margin-left: 20rpx;
+}
+
+.bottom-btn {
+  display: flex;
+}
+.bottom-btn-chat {
+  border: 1rpx solid #5898b8;
+  background-color: #5898b8;
+  font-size: 26rpx;
+  border-radius: 40rpx;
+  width: 350rpx;
+  padding: 20rpx;
+  text-align: center;
+  color: white;
+  margin-left: 50rpx;
+}
+
+.bottom-avatar {
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 100rpx;
+  position: fixed;
+  right: 10%;
+  margin-top: -80rpx;
+}
+
+.alimni-info-reply-icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 30rpx;
+}
+
+.alimni-info-commonts-reply {
+  font-size: 22rpx;
+  margin-left: 20rpx;
+  color: rgb(110, 110, 110);
+}
+
+
+
+.alimni-info-reply-cra {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 20rpx;
+}
+
+.alimni-info-reply {
+  display: flex;
+  height: 90rpx;
+  width: 100%;
+  position: fixed;
+  z-index:9999 ;
+  bottom: 0;
+  background-color: white;
+  border-top: 1rpx solid rgb(210, 207, 207);
+}
+
+.alimni-info-reply-input {
+  background-color: rgb(239, 239, 239);
+  width: 63%;
+  display: flex;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  height: 50rpx;
+  margin: 10rpx 20rpx;
+}
+
+.alimni-info-reply-input-con {
+  margin-left: 20rpx;
+  color: grey;
+  font-size: 32rpx;
+}
+
+.alimni-info-reply-btn {
+  color: rgb(44, 138, 206);
+  margin: 22rpx 28rpx;
+  font-size: 35rpx;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.image-box {
+  position: relative;
+  left:17.5%;
+  display: block;
+  overflow: hidden;
+  /* margin: 2vw; */
+  box-sizing:border-box;
+}
+
+.alimni-comments {
+  background-color: #F5F5F5;
+  margin-left: 17%;
+  margin-top: 20rpx;
+  padding-left: 5rpx;
+}
+.comment-content {
+  font-size: 26rpx;
+  font-family: sans-serif;
+  font-weight: 800;
+}
+.comment-user {
+  font-size: 26rpx;
+  font-family: sans-serif;
+  color: #004198;
+  font-weight: 800;
+}
+
+.footer {
+  height:150rpx;
+  line-height:150rpx;
+  text-align:center;
+  border-bottom:1rpx solid whitesmoke;
+  color: gray;
+}
+.msg {
+  position: fixed;
+  right: 10%;
+  margin-top: 10rpx;
+  z-index: 1;
+}

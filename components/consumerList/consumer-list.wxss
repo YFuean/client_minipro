@@ -1,0 +1,29 @@
+/* components/ConsumerList/consumer-list.wxss */
+.list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rpx;
+}
+.list-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+  box-shadow: 2rpx 2rpx 5rpx rgb(203, 212, 218);
+  width: 700rpx;
+  height: 150rpx;
+  margin-bottom: 5rpx;
+}
+.description{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  font-size: 30rpx;
+}
+.money{
+  font-size: 60rpx;
+  font-weight: 700;
+}

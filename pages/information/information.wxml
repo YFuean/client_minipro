@@ -1,0 +1,55 @@
+<!-- pages/information/information.wxml -->
+<tabbar selected="{{0}}"></tabbar>
+<!-- 资讯轮播图 -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+	<block wx:for="{{infoTop}}" wx:key="index" >
+		<swiper-item class="swiper-item">
+			<image mode="{{aspectFit}}" src="{{item.cover}}" class="slide-image" bindtap="toDetail" data-id="{{item.pkInfoManageId}}" />
+		</swiper-item>
+	</block>
+</swiper>
+<text class="top-wrap">置顶帖</text>
+<!-- 置顶帖 -->
+<block wx:for="{{infoTop}}" wx:key="index">
+	<view class="container" bindtap="toDetail" data-id="{{item.pkInfoManageId}}">
+		<!-- 置顶帖图片 -->
+		<image class="first" src="{{item.cover}}"></image>
+		<!-- 文字 -->
+		<view class="text1">
+			<text class="firsttext">{{item.title}}</text>
+			<text class="firsttext1">{{item.gmtCreate}}</text>
+		</view>
+	</view>
+</block>
+<!-- 资讯（全部，教导处，学生会）的页面跳转 -->
+<view class="swiper-tab">
+	<view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+		全部
+	</view>
+	<view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+		教导处
+	</view>
+	<view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">
+		学生会
+	</view>
+</view>
+<!-- 更多资讯内容区（三个滑块） -->
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" 
+style="height:{{winHeight - 31}}px" bindchange="bindChange">
+	<swiper-item wx:for="{{3}}" wx:key="index">
+    <scroll-view class="scroll-view" scroll-y="true" lower-threshold="50" scroll-top="0" scroll-into-view="" 
+    scroll-with-animation="false" enable-back-to-top="true" bindscrolltolower="" 
+    bindscroll="">
+			<block wx:for="{{infoAll}}" wx:key="index">
+				<view class="container3" bindtap="toDetail" data-id="{{item.pkInfoManageId}}">
+					<image class="first3" src="{{item.cover}}"></image>
+					<!-- 文字 -->
+					<view class="text3">
+						<text class="lasttext3">{{item.title}}</text>
+						<text class="time3">{{item.gmtCreate}}</text>
+					</view>
+				</view>
+			</block>
+		</scroll-view>
+	</swiper-item>
+</swiper>

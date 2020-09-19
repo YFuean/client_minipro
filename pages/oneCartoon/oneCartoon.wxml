@@ -1,0 +1,19 @@
+<!--pages/oneCartoon/oneCartoon.wxml-->
+<view class="oneCartoon-page">
+<view class="head-card">
+<view class="user-info">
+<image src="{{user.avatar}}"></image>
+<text class="ka-size">我的余额</text>
+<text class="my-money">{{myBalance}}元</text>
+</view>
+<text class="my-kahao ka-size">卡号：{{user.jobNumber}}</text>
+</view>
+<view class="servicr-list">
+<view wx:for="{{service_list}}" wx:for-item="item" class="service-item">
+<navigator url="{{item.path}}">
+<image src="{{item.icon}}"></image>
+</navigator>
+<text>{{item.name}}</text>
+</view>
+</view>
+</view>

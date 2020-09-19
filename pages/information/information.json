@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "资讯",
+  "usingComponents": {
+    "tabbar": "/tabbarCmponent/index-tabbar/index-tabbar"
+  }
+}

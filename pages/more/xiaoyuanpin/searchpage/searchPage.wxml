@@ -1,0 +1,141 @@
+<!-- <view class="searchPage"> -->
+<view class="search-banner">
+    <view class="search-input">
+        <image class="xicon-small mr-10" src="https://miaoxun.oss-cn-hangzhou.aliyuncs.com/images/xiaoyuanpin/sousuo_gray.png"></image>
+        <input type="text" confirm-type="search" bindinput="getValue" bindconfirm="search" bindfocus="clickFocus" class="search" placeholder="搜索职位、公司" value="{{inputStr}}" />
+        <image class="xicon-tiny" bind:tap="clearInput" src="https://miaoxun.oss-cn-hangzhou.aliyuncs.com/images/xiaoyuanpin/guanbi_gray.png"></image>
+    </view>
+    <view class="xbtn-small" bind:tap="search">
+        <text class="search">搜索</text>
+    </view>
+</view>
+<!-- 历史记录 -->
+<block wx:if="{{showHistory}}">
+    <view class="history">
+        <view class="xtitle3--text mb-40">历史搜索</view>
+        <view class="xchip-warp">
+            <view class="xchip-item-samll-darken" wx:for="{{historyList}}" wx:key="index"
+            bind:tap="clickHistoryChip" data-value="{{item.value}}">{{item.value}}</view>
+        </view>
+    </view>
+</block>
+<block wx:else>
+    <!-- tab: 搜兼职、搜校招、搜公司 -->
+    <view class="tab mb-50">
+        <view class="tab-item mr-30 {{currentItem === item.id ? 'active' : ''}}" wx:for="{{tabList}}" wx:key="index" bind:tap="changeItem" data-id="{{item.id}}">
+            {{item.name}}
+        </view>
+    </view>
+    <!-- 三个列表滑块 -->
+    <swiper class="" indicator-color="rgba(0,0,0,.3)" current="{{currentItem}}" bindchange="changeSwiper" data-id="{{currentItem}}" style="height: {{winHeight?winHeight+'px':'auto'}}">
+        <!-- 兼职职位列表 -->
+        <swiper-item class="" item-id="">
+            <!-- 若搜索结果为空 -->
+            <block wx:if="{{resListPartJob.length === 0 && showRes}}">
+                <view class="typeListNull">
+                    <text class="xtitle3--text mt-50" selectable="false" space="false" decode="false">当前关键字没有职位啦~</text>
+                </view>
+            </block>
+            <!-- 工作列表的卡片 -->
+            <block wx:else>
+                <view wx:for="{{resListPartJob}}" wx:key="index" class="card-job-wrap" bindtap="toNextPage" data-url="jobDetail" data-id="{{item.pkPartJobId}}">
+                    <view class="card-job" hover-class="none" hover-stop-propagation="false">
+                        <!-- 职位名称、薪资 -->
+                        <view class="card-header">
+                            <view class="job-title">{{item.name}}</view>
+                            <view class="job-salary">￥{{item.pay}}/天</view>
+                        </view>
+                        <!-- 工作时间等 -->
+                        <view class="card-content">
+                            <view class="job-tiem">
+                                <text class="subcont--text">{{item.workingDate}}</text>
+                                <text class="subcont--text">{{item.workingTime}}</text>
+                            </view>
+                            <text class="subcont--text">{{item.have}}/{{item.number}}</text>
+                        </view>
+                        <!-- 联系人和地点 -->
+                        <view class="card-foot">
+                            <view class="manager-info">
+                                <image class="avatar--small mr-15" src="{{item.bossAvatar}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+                                <text class="manager--text">{{item.bossName}}</text>
+                            </view>
+                            <text class="address-text">{{item.jobType}}</text>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </swiper-item>
+        <!-- 校招职位列表 -->
+        <swiper-item class="" item-id="">
+            <view class="content-recommend" hover-class="none" hover-stop-propagation="false">
+                <!-- 若搜索结果为空 -->
+                <block wx:if="{{resListXiaozhao.length === 0 && showRes}}">
+                    <view class="typeListNull">
+                        <text class="xtitle3--text mt-50" selectable="false" space="false" decode="false">当前关键字没有职位啦~</text>
+                    </view>
+                </block>
+                <!-- 工作列表的卡片 -->
+                <block wx:else>
+                    <view wx:for="{{resListXiaozhao}}" wx:key="index" class="card-job-wrap" bindtap="toNextPage" data-url="jobDetailXz" data-id="{{item.pkPartJobId}}">
+                        <view class="card-job" hover-class="none" hover-stop-propagation="false">
+                            <!-- 职位标题、薪资 -->
+                            <view class="card-header">
+                                <view class="job-title">{{item.name}}</view>
+                                <view class="job-salary">{{item.min}}-{{item.max}}K</view>
+                            </view>
+                            <view class="card-content">
+                                <view class="job-item">
+                                    <!-- <text class="subcont--text">{{item.limitTime}}</text>
+                                    <text class="subcont--text">{{item.workTime}}</text> -->
+                                    <view class="chip">
+                                        <!-- <block class="chip" wx:for="{{item.jobType.name}}" wx:key="index"> -->
+                                        <block class="chip">
+                                            <view class="chip-item">{{item.jobType.name}}</view>
+                                        </block>
+                                    </view>
+                                </view>
+                                <text class="member--text pre-wrap">需要 {{item.max}} 人</text>
+                            </view>
+                            <view class="card-foot">
+                                <text class="manager--text">{{item.boss}}</text>
+                                <text class="address-text">{{item.workplace}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </swiper-item>
+        <!-- 公司职位列表 -->
+        <swiper-item class="" item-id="">
+            <!-- 若搜索结果为空 -->
+            <block wx:if="{{resListCompany.length === 0 && showRes}}">
+                <view class="typeListNull">
+                    <text class="xtitle3--text mt-50" selectable="false" space="false" decode="false">当前关键字没有职位啦~</text>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="company-page" hover-class="none" hover-stop-propagation="false">
+                    <block wx:for="{{resListCompany}}" wx:key="idnex">
+                        <view class="company-card" bind:tap="toCompanyDetail" data-id="{{item.pkCompanyId}}" data-url="companyDetail">
+                            <!-- 公司信息 -->
+                            <view class="company-info">
+                                <view class="avatar">
+                                    <image class="img" src="https://images.weserv.nl/?url={{item.logo}}" mode="aspectFill" lazy-load="false" binderror="" bindload=""></image>
+                                </view>
+                                <view class="info">
+                                    <text class="title4--text" selectable="false" space="false" decode="false">{{item.name}}</text>
+                                    <text class="subtitle--text" selectable="false" space="false" decode="false">{{item.address}}</text>
+                                </view>
+                            </view>
+                            <!-- 公司标签 -->
+                            <view class="company-chip">
+                                <view class="chip" wx:for="{{item.type}}" wx:key="index">{{item}}</view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </block>
+        </swiper-item>
+    </swiper>
+</block>
+<!-- </view> -->

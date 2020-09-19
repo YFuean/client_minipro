@@ -1,0 +1,99 @@
+@import "../../../../../style/xxqGlobalCss";
+
+/* 设置这两个tab -- 兼职、校招 的绝对定位 */
+.absolute {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+
+/* 设置这两个tab 推荐、最新 的吸顶效果 */
+/* .sticky2 {
+  margin-top: 115rpx;
+  position: sticky;
+  top: 100rpx;
+  z-index: 200;
+} */
+
+.tool{
+  display: flex;
+  align-items: center;
+}
+
+.icon-small {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.auto-right {
+  display: flex;
+  justify-content: right;
+}
+
+.card-job-wrap {
+  background-color: #ffffff;
+  padding: 20rpx 40rpx;
+  margin-bottom: 10rpx;
+}
+
+.card-job {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10rpx;
+  color: #616161;
+}
+
+.subcont--text {
+  margin-right: 30rpx;
+  font-size: small;
+}
+
+.job-tiem {
+  display: flex;
+}
+
+.card-foot {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 职位标题 */
+.job-title {
+  font-size: larger;
+  font-weight: 600;
+}
+
+.job-salary {
+  color: #5cb0af;
+}
+
+.address-text {
+  color: #9e9e9e;
+}
+
+.manager-info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar--small {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+
+.mr-15 {
+  margin-right: 15rpx;
+}

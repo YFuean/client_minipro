@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText":"跳蚤市场",
+  "usingComponents": {
+    "tabbar": "/tabbarCmponent/tiaozao-tabbar/tiaozao-tabbar"
+  }
+}

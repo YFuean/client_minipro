@@ -1,0 +1,23 @@
+<!--pages/my/guanyu/guanyu.wxml-->
+<view class="about-head">
+<image class="about-icon" src="/image/icon_guanyuwomen.png"/>
+<view class="about-title">智慧校园</view>
+</view>
+
+<view class="about-main">
+<view class="about-main-title">功能介绍：</view>
+<view class="about-main-content">智慧校园是一款专门为南工院学子打造的集校园学习和生活于一身的小程序</view>
+<view class="about-main-title">联系我们：</view>
+<view class="about-main-content">南工院小程序也将不断的进行完善，除了基础的功能意外，日后还会推出各种更加强大实用的功能，欢迎广大南工院学子加入我们的交流群：XXXXXXXX,提出您的宝贵建议</view>
+<!-- <view class="about-share">
+      <button class="weui-btn2 mini-btn" size="mini" open-type="share">分享朋友</button>
+    </view> -->
+
+<view class="about-footer">
+<text class="about-footer-blue">用户协议</text>
+<text class="about-footer-blue">|</text>
+<text class="about-footer-blue">隐私政策</text>
+<view class="about-footer-ver">Version 1.0</view>
+</view>
+
+</view>

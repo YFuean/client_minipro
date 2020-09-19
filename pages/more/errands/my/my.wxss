@@ -1,0 +1,96 @@
+/* pages/errands/my/my.wxss */
+.container_e {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-content: center; */
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #F5F5F5;
+  /* background: white; */
+  margin: auto;
+  /* position: relative; */
+}
+
+/* 头像、账号部分 */
+.my-head {
+  width: 100%;
+  height: 15em;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  margin-bottom: 20rpx;
+}
+.avatar-info{
+  position: relative;
+}
+.avatar-editor{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 100rpx;
+}
+
+/* 列表部分 */
+.my-body {
+  width: 100%;
+  height: 20em;
+  display: flex;
+  margin: 10px 0px 10px 0px;
+  background-color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-list {
+  height: 4em;
+  width: 95%;
+  display: flex;
+}
+
+.my-list-left {
+  width: 17%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-list-right {
+  display: flex;
+  width: 83%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1rpx solid #C0C0C0;
+}
+
+.list-icon {
+  height: 25px;
+  width: 25px;
+}
+
+.list-text {
+  font-size: 32rpx;
+}
+
+.my-list-forward {
+  height: 15px;
+  width: 15px;
+}
+
+navigator {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

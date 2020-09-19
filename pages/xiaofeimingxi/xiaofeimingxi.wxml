@@ -1,0 +1,14 @@
+<!--pages/xiaofeimingxi/xiaofeimingxi.wxml-->
+<view class="xiaofeimingxi-page">
+<!-- <consumer-list consumer_list="{{consumer_list}}" bind:myget='getDate'>></consumer-list> -->
+<view class="list-item" wx:for="{{consumer_list}}" wx:for-item="item">
+<view class="description">
+<text>{{item.description}}——{{item.payMethod}}</text>
+<text>{{create_time[index]}}</text>
+</view>
+<view class="money">
+<text wx:if="{{item.orderType!=='支出'}}" style="color: #30A9DE">+{{item.orderMoney}}</text>
+<text wx:else style="color: red">-{{item.orderMoney}}</text>
+</view>
+</view>
+</view>

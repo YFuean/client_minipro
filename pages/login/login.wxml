@@ -1,0 +1,29 @@
+
+<!--pages/login/login.wxml-->
+<view class="login-page">
+<view class="hover-title">智慧校园</view>
+<form class="login-form" catchsubmit="formSubmit">
+<view class="phonenumber-input">
+<image src="/image/icon_shouji.png"></image>
+<input type="number"  placeholder="请输入手机号" bindinput="bindAccount"  name="user_account" value="{{user_account}}" placeholder-class="placeholder-class"></input>
+</view>
+<view class="password-input" wx:if="{{!phoneNumber_login}}">
+<image src="/image/icon_yanzhengma.png"></image>
+<input type="password" placeholder="请输入密码" bindinput="bindPassword" name="user_password" value="{{user_password}}" placeholder-class="placeholder-class"></input>
+</view>
+<view class="code-input" wx:if="{{phoneNumber_login}}">
+<image src="/image/icon_yanzhengma.png"></image>
+<input type="number" bindinput="bindCode" name="code" value="{{code}}"></input>
+<button class="getcode-btn" disabled="{{disabled}}" style="background-color: {{disabled ? gray : white}}"  bindtap="getCode">{{msg}}</button>
+</view>
+<view class="login-gutter">
+<text bindtap="changeLogin">{{phoneNumber_login ? '账号密码登录' : '手机号快捷登录'}}</text>
+<text bindtap="go_validatePhoneNumber" wx:if="{{!phoneNumber_login}}">忘记密码</text>
+</view>
+<button class="login-btn" bindtap="submit" formType="submit">登录</button>
+</form>
+<!-- <view class="wx-login" bindtap="wxLogin">
+<image src="/image/icon_weixin.png"></image>
+微信一键登录</view> -->
+</view>
+

@@ -1,0 +1,51 @@
+/* pages/my/guanyu/guanyu.wxss */
+page {
+  background-color: rgb(244, 244, 244);
+  margin:0 auto;
+}
+.about-head {
+  line-height: 1.5;
+  font-family: -apple-system-font, Helvetica Neue, sans-serif;
+  padding: 80rpx 35rpx;
+  text-align: center;
+  background-image: linear-gradient(to top, #448dd7 0%, rgb(55, 129, 214) 100%);
+  box-shadow: 0 10rpx 35rpx #dee1e8;
+  border-radius: 0 0 20% 20%;
+  font-size: 42rpx;
+}
+.about-icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.about-main {
+  width: 85%;
+  margin: 70rpx auto;
+}
+
+.about-main-title {
+  color: #0b77e3;
+}
+.about-main-content {
+  font-size: 30rpx;
+  color: gray;
+}
+.about-footer-blue {
+  color: #0b77e3;
+  font-size: 24rpx;
+  margin: 5rpx;
+}
+
+.about-footer-ver {
+  color: grey;
+  font-size: 24rpx;
+  position:absolute;
+  left: 27%;
+}
+
+.about-footer {
+  height:100rpx;
+  position:absolute;
+  bottom:0;
+  left: 35%;
+}

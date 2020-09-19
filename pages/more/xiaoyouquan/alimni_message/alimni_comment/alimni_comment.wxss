@@ -1,0 +1,57 @@
+/* pages/index/alimni_message/alimni_comment/alimni_comment.wxss */
+page {
+  width: 100%;
+}
+.like {
+  width: 90%;
+  margin:30rpx auto;
+}
+.like-user {
+  font-size: 28rpx;
+  font-weight: 500;
+}
+.like-one {
+  position: absolute;
+  left: 20%;
+  margin-top: -110rpx;
+}
+.like-time {
+  font-size: 24rpx;
+  color: grey;
+}
+.like-text {
+  font-size: 28rpx;
+  position: absolute;
+  left: 20%;
+  font-weight: 500;
+  margin-top: -35rpx;
+}
+.like-content {
+  font-size: 28rpx;
+  background-color: #F5F5F5;
+  float: right;
+  width: 150rpx;
+  height: 100rpx;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-box-orient:vertical;
+  text-overflow: ellipsis;
+  overflow:hidden; 
+  font-weight: 600;
+  -webkit-line-clamp:2;
+}
+
+.like-avatar {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 60rpx;
+}
+
+.line {
+  width: 100%;
+  background-color: rgb(230, 230, 230);
+  height: 1rpx;
+  line-height: 1rpx;
+  border: none;
+  margin-top: 40rpx;
+}

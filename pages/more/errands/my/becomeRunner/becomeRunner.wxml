@@ -1,0 +1,72 @@
+<!--pages/more/errands/my/becomeRunner/becomeRunner.wxml-->
+<!-- <text>pages/more/errands/my/becomeRunner/becomeRunner.wxml</text> -->
+
+<view class="container_e">
+	<!-- 申请进度部分 -->
+	<!-- <view class="progress-contianer">
+	<view class="progress-body">
+		<view class="icon-info">
+		<image class="progress-icon" ></image>
+		</view>
+	</view>
+</view> -->
+	<!-- 输入部分 -->
+	<view class="input-contianer">
+		<view class="intput-title">
+		<!-- 左部分标题 -->
+			<view class="input-title-left">
+				<text class="input-title-left-text">请在下方输入相应信息</text>
+			</view>
+			<!-- 查看申请进度 -->
+			<navigator url="/pages/more/errands/my/progress/progress">
+			<view class="input-title-right">
+				<view class="input-title-icon">
+					<image class="input-icon" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/ic_menu_progress.png"></image>
+				</view>
+				<view class="input-title-right-text">
+					<text>申请进度</text>
+				</view>
+			</view>
+			</navigator>
+		</view>
+
+		<view class="input-view-single">
+			<text class="input-text-single">申请人id:</text>
+			<input class="input-signle" value="{{requesterId}}" bindblur="requesterId_onChange"></input>
+		</view>
+		<view class="input-view-single">
+			<text class="input-text-single">手机号:</text>
+			<input class="input-signle" maxlength="11" value="{{requesterPhonenumber}}" bindinput="requesterPhonenumber_onChange" bindblur="isnull_Pn"></input>
+		</view>
+		<view class="input-view-single">
+			<text class="input-text-single">姓 名:</text>
+			<input class="input-signle" value="{{requesterName}}" bindblur="requesterName_onChange"></input>
+		</view>
+		<view class="textarea-view">
+			<text class="textarea-text">请在下方输入申请原因:</text>
+			<textarea class="textarea-id" auto-height maxlength="-1" value="{{remark}}" bindblur="remark_onChange"></textarea>
+		</view>
+	</view>
+	<!-- 身份证部分 -->
+	<view class="idcard-contianer">
+		<view class="idcard-title">
+			<text class="idcard-title-text">请点击下方图片进行上传身份证照片</text>
+		</view>
+		<view class="idcardfront-view" data-url="{{idCardFront}}">
+			<image wx:if="{{idCardFront==''}}" class="idcardfront-image" catchtap="upShopLogo" data-id="{{front}}" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/shenfenzhengzhengmian_2.png">
+			</image>
+			<image wx:else class="idcardfront-image" catchtap="viewImage" src="{{idCardFront}}">
+			</image>
+		</view>
+		<view class="idcardback-view" data-url="{{idCardBack}}">
+			<image wx:if="{{idCardBack==''}}" class="idcardback-image" catchtap="upShopLogo" data-id="{{back}}" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/shenfenzhengfanmian_2.png"></image>
+			<image wx:else class="idcardfront-image" catchtap="viewImage" src="{{idCardBack}}">
+			</image>
+		</view>
+	</view>
+	<!-- 按钮部分 -->
+	<view class="btn">
+		<button class="btn_enter" style="width: 90%;border-radius: 30px;background-image: linear-gradient(-45deg, #039DFF 0%, #34AFFD 100%);" bindtap="become_runner"><text>确认</text></button>
+	</view>
+
+</view>

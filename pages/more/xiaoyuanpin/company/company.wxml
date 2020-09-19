@@ -1,0 +1,23 @@
+<!-- pages/more/findJob/company/company.wxml -->
+<!-- 导航 -->
+<xiaoyuanpinTabbar selected="{{1}}" bindmyevent="onMyEvent" />
+<view class="company-page" hover-class="none" hover-stop-propagation="false">
+    <block wx:for="{{companyList}}" wx:key="idnex">
+        <view class="company-card" bind:tap="toNextPage" data-id="{{item.pkCompanyId}}" data-url="companyDetail">
+            <!-- 公司信息 -->
+            <view class="company-info">
+                <view class="avatar">
+                    <image class="img" src="https://images.weserv.nl/?url={{item.logo}}" mode="aspectFill" lazy-load="false" binderror="" bindload=""></image>
+                </view>
+                <view class="info">
+                    <text class="title4--text" selectable="false" space="false" decode="false">{{item.name}}</text>
+                    <text class="subtitle--text" selectable="false" space="false" decode="false">{{item.address}}</text>
+                </view>
+            </view>
+            <!-- 公司标签 -->
+            <view class="company-chip">
+                <view class="chip" wx:for="{{item.type}}" wx:key="index">{{item}}</view>
+            </view>
+        </view>
+    </block>
+</view>

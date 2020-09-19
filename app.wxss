@@ -1,0 +1,28 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.hollow-circle-blue{
+  width: 4px;
+  height: 4px;
+  border: 2px solid rgb(0, 154, 255);
+  border-radius: 4px;
+  margin: 27rpx 10rpx 27rpx 0rpx;
+}
+
+.hollow-circle-yellow {
+  width: 4px;
+  height: 4px;
+  border: 2px solid rgb(255, 211, 0);
+  border-radius: 4px;
+  margin: 27rpx 10rpx 27rpx 0rpx;
+}
+Page{
+  margin-bottom: 100rpx;
+}

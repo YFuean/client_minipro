@@ -1,0 +1,34 @@
+<!--pages/more/tiaozaoshichang/fenlei.wxml-->
+<!-- <tabbar selected="{{1}}"></tabbar> -->
+ 
+ <!-- IQOO分类布局 -->
+ 
+ <!--------------- 侧方导航栏布局 ---------------->
+<view class="container">
+ 
+  <scroll-view class='nav_left' scroll-y='true'>
+    <block wx:for="{{cateItems}}" wx:key="{{index}}">
+      <view class="nav_left_items {{curNav==item.pkFleaTypeId?'active':''}}" bindtap="switchRightTab" data-index='{{index}}' data-id="{{item.pkFleaTypeId}}">{{item.typeName}}</view>
+    </block>
+  </scroll-view>
+ 
+  <scroll-view class="nav_right" scroll-y="true">
+    <!--如果有数据，才遍历项-->
+    <view wx:if="{{cateItems[curIndex].subTypes.length>0}}">
+      <block wx:for="{{cateItems[curIndex].subTypes}}" wx:key="{{index}}" >
+        <view class="nav_right_items" data-index='{{index}}' data-id="{{item.pkFleaTypeId}}" bindtap="go_type">
+            <image src="{{item.typeCoverUrl}}"></image>
+            <view class='name1'>{{item.typeName}}</view>
+            <!-- <view class="name2">{{item.name2}}</view>
+            <view class="name3">{{item.name3}}</view>   -->
+        </view>
+      </block>
+    </view>
+ 
+    <!--如果无数据，则显示数据-->
+    <view class="nocate" wx:else>
+      <text>该分类暂无数据</text>
+    </view>
+  </scroll-view>
+ 
+</view>

@@ -1,0 +1,17 @@
+
+<!--tabbarCmponent/tabbar.wxml-->
+<cover-view class="tab-bar">
+  <!-- <cover-view class="tab-bar-border"></cover-view> -->
+  <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}"  bindtap="switchTab">
+  <block wx:if="{{ index === 2}}" id="tabbbar_nav">
+    <cover-image src="{{selected === index ? item.selectedIconPath : item.iconPath}}" id="pub-img"></cover-image>
+    <cover-view style="color: {{selected === index ? selectedColor : color}};font-size: {{selected === index ? selectedSize : size}};">{{item.text}}</cover-view>
+  </block>
+  <block wx:else>
+    <cover-image src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></cover-image>
+    <cover-view style="color: {{selected === index ? selectedColor : color}};font-size: {{selected === index ? selectedSize : size}}">{{item.text}}</cover-view>
+  </block>
+  </cover-view>
+</cover-view>
+
+

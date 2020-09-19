@@ -1,0 +1,8 @@
+<view class="xiaoyuanpin-tabbar" hover-class="none" hover-stop-propagation="false">
+    <navigator open-type="redirect" url="{{item.toPath}}" wx:for="{{tabbarList}}" wx:key="index" class="tabbar-item" hover-class="none" 
+    hover-stop-propagation="false" bindtap="onMyEvent" data-selected="{{item}}">
+        <image wx:if="{{item.tabId === selected}}" class="small-icon" src="{{item.iconActive}}" mode="aspectFill" lazy-load="false"  binderror="" bindload=""></image>
+        <image wx:else class="small-icon" src="{{item.icon}}" mode="aspectFill" lazy-load="false"  binderror="" bindload=""></image>
+        <text class="small--text" selectable="false" space="false" decode="false">{{item.text}}</text>
+    </navigator>
+</view>

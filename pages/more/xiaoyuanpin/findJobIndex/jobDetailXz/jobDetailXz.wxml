@@ -1,0 +1,71 @@
+<view class="jobDetailXzPage">
+    <!-- 职位、薪资、工作时间等 -->
+    <view class="card-job-ver">
+        <view class="row1">
+            <text class="title">{{detailInfo.name}}</text>
+            <text class="salary">{{detailInfo.min}}-{{detailInfo.max}}K</text>
+        </view>
+        <view class="row2">
+            <view class="icon-text mb-40">
+                <image class="icon--small mr-20" src="https://miaoxun.oss-cn-hangzhou.aliyuncs.com/images/xiaoyuanpin/didian.png"></image>
+                <text class="text">{{detailInfo.company.address}}</text>
+            </view>
+            <view class="icon-text ">
+                <image class="icon--small mr-20" src="https://miaoxun.oss-cn-hangzhou.aliyuncs.com/images/xiaoyuanpin/shijian.png"></image>
+                <text class="text">{{detailInfo.workingTime}}</text>
+            </view>
+        </view>
+    </view>
+    <!-- 联系人信息 -->
+    <view class="card-job-hor">
+        <image class="ml-10 avatar--mid mr-30" src="http://www.qzqn8.com/wp-content/uploads/2020/02/2-9.jpg" mode="aspectFill" lazy-load="false" binderror="" bindload=""></image>
+        <view class="info">
+            <view class="info-item">
+                <image class="icon--small mr-20 mb-20" src="https://miaoxun.oss-cn-hangzhou.aliyuncs.com/images/xiaoyuanpin/geren.png"></image>
+                <text class="text">{{detailInfo.boss}}</text>
+            </view>
+            <view class="info-item">
+                <image class="icon--small mr-20" src="https://miaoxun.oss-cn-hangzhou.aliyuncs.com/images/xiaoyuanpin/dianhua.png"></image>
+                <text class="text">{{detailInfo.bossPhone}}</text>
+            </view>
+        </view>
+    </view>
+    <!-- 职位详情 -->
+    <view class="card-job-ver">
+        <view class="row3">
+            <text class="xtitle--text mr-40 mb-30">职位详情</text>
+            <view class="chip-item">{{detailInfo.jobType.name}}</view>
+        </view>
+        <view class="row4">
+            <text class="xsubtitle--text-mid">{{detailInfo.description}}</text>
+            <!-- <text class="show-all">查看全部</text> -->
+        </view>
+    </view>
+    <!-- 公司信息 -->
+    <view class="card-job-hor">
+        <image class="logo--mid mr-20" src="https://images.weserv.nl/?url={{detailInfo.company.logo}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+        <view class="info">
+            <view class="info-item">
+                <text class="text">{{detailInfo.company.name}}</text>
+            </view>
+            <view class="info-item">
+                <text class="text">{{detailInfo.company.tag}}·{{detailInfo.company.workers}}人·{{detailInfo.company.type}}</text>
+            </view>
+        </view>
+    </view>
+    <!-- 温馨提示 -->
+    <view class="card-job-ver mb-100">
+        <view class="row5 mb-20">
+            <image class="icon--small mr-20" src="https://miaoxun.oss-cn-hangzhou.aliyuncs.com/images/xiaoyuanpin/jinggao.png"></image>
+            <text class="text--warning">温馨提示</text>
+        </view>
+        <text class="content">该Boss承诺名下所有职位不向您收费，如有不实，请立即举报</text>
+    </view>
+    
+</view>
+<!-- 立即沟通-按钮 -->
+<view class="card-job-foot">
+    <view class="btn-large" bind:tap="showPopup">立即沟通</view>
+</view>
+
+<popup id='popup' title='小提示' content='尚未开通会话服务，请电话联系该boss~' btn_no='取消' btn_ok='确定' bind:error="_error" bind:success="_success"></popup>

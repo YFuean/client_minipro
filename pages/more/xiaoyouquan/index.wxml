@@ -1,0 +1,112 @@
+<!--index.wxml-->
+<view class="alumni-title" >
+	<image class="alumni-image" src="{{avatar}}" />
+	<message isMsg="{{isMsg}}" class="msg"></message>
+	<view bindtap="bindReco" class="alumni-post">
+		推荐好友
+	</view>
+	<!-- <view bindtap="goLog"> 日志</view> -->
+</view>
+
+<!-- 导航区域 -->
+<view class='topTabSwiper'>
+	<view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' bindtap='checkPost'>
+		<image class="tab-icon" src="/image/icon/fabu_blue_ico.png" />
+		<text class="tab-title">发布</text>
+	</view>
+	<view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' bindtap='checkMess'>
+		<image class="tab-icon" src="/image/icon/xiaoxi_blue_ico.png" />
+		<text class="tab-title">消息</text>
+	</view>
+	<view class='tab  {{currentData == 2 ? "tabBorer" : ""}}' bindtap='checkFollow'>
+		<image class="tab-icon" src="/image/icon/shoucang_blue_ico.png" />
+		<text class="tab-title">收藏</text>
+	</view>
+</view>
+
+
+<block wx:for="{{dynamic}}" wx:key="">
+	<view class="alimni">
+
+
+		<!-- 点击更多按钮展开后的按钮 -->
+		<view class="hover" wx:if="{{item.isShow}}">
+			<button style="width:60rpx;height:30rpx;font-weight: 500;font-size: 20rpx;padding:0;" size="mini" open-type="share" class="hover-text">分享</button>
+			<button bindtap="putStar" data-id="{{item.pkDynamicId}}" style="width:60rpx;height:30rpx;font-weight: 500;font-size: 20rpx;padding:0;" size="mini" class="hover-text">收藏</button>
+			<button bindtap="reportSelect" style="width:60rpx;height:30rpx;font-weight: 500;font-size: 20rpx;padding:0;" size="mini" class="hover-text">举报</button>
+		</view>
+		<image bindtap="changeHover" data-index="{{index}}" class="alimni-info-icon" src="/image/icon/gengduo_blue_icon.png" />
+		<!-- 头像 -->
+		<image bindtap="changeUser" data-index="{{index}}" class="alimni-info-avatar" src="{{item.userAccount.avatar}}" />
+
+		<!-- 底部个人资料弹框 -->
+		<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" data-index="{{index}}" hidden="{{!item.showModal}}"></view>
+
+		<view class="modal-dialog" hidden="{{!item.showModal}}">
+			<image class="bottom-avatar" src="{{item.userAccount.avatar}}" />
+			<view style="margin-left:30rpx">{{item.userAccount.userName}}</view>
+			<view class="bottom-year">{{item.userAccount.gender}}</view>
+			<view class="bottom-place">{{item.userAccount.address}}</view>
+			<view class="bottom-btn">
+				<view bindtap="goBlackList" bindlongtap="delDynamic" data-id="{{item.userId}}" class="bottom-btn-dele">
+					拉黑
+				</view>
+				<view data-name = "{{item.userAccount.userName}}" bindtap="goChat" class="bottom-btn-chat">
+					发起私聊
+				</view>
+			</view>
+		</view>
+
+		<!-- 用户 内容-->
+		<view bindtap="changeInfo" data-type="{{item.type}}" data-index="{{index}}" data-time="{{item.gmtCreate}}" data-id="{{item.pkDynamicId}}">
+
+			<text class="alimni-info-user">{{item.userAccount.nickname}}</text>
+			<text class="alimni-info-content {{!item.ellipsis?'ellipsis':'unellipsis'}}">{{item.content}}</text>
+			<!-- <text wx:if="{{item.ellipsis}}" class="alimni-info-content unellipsis">{{item.content}}</text> -->
+		</view>
+
+		<text wx:if="{{item.isZhan}}" bindtap="ellipsis" data-index="{{index}}" class="text-style">点击展开/收起</text>
+		<image data-id="{{index}}" bindtap="hideComm" class="alimni-info-img" src="https://n.sinaimg.cn/sinacn20110/575/w1920h1055/20190508/86b0-hwsffza7766335.jpg" />
+
+		<!-- 1-9张图片摆放组件 -->
+		<block data-id="{{index}}" bindtap="hideComm" wx:for="{{item.picture}}" wx:for-item="img" wx:key="view-images">
+			<view class="image-box">
+				<GridView images="{{img}}" mode='center'></GridView>
+			</view>
+		</block>
+		<!-- 类型和时间 -->
+		<view data-id="{{index}}" bindtap="hideComm" wx:if="{{item.type.length == 4}}" class="alimni-type">{{item.type}}</view>
+		<view data-id="{{index}}" bindtap="hideComm" class="alimni-info-time">{{item.gmtCreate}}</view>
+		<!-- 点赞评论 -->
+		<image bindtap="changeComment" data-index="{{index}}" class="alimni-icon" src="/image/icon/pinglun_black_icon.png" />
+		<text data-id="{{index}}" bindtap="hideComm" class="alimni-info-dianzan-text">{{item.thumbs}}</text>
+		<image animation="{{animation}}" bindtap="dianzan" data-index="{{index}}" data-id="{{item.pkDynamicId}}" class="alimni-info-dianzan" src="{{item.isLike?'/image/icon/yidianzan_icon.png':'/image/icon_dianzan.png'}}" />
+
+		<!-- 评论展示 -->
+
+		<view class="alimni-comments" data-id="{{index}}" bindtap="hideComm">
+			<block wx:for="{{item.commentList}}"  wx:for-item="comment">
+				<text class="comment-user">{{item.commentVoList[index].nickname}}: </text> <text class="comment-content">{{comment.content}}</text>
+				<view></view>
+			</block>
+		</view>
+
+		<!-- 评论框 -->
+		<view hidden="{{!item.isComment}}"  class="alimni-info-reply">
+			<image class="alimni-info-reply-cra" src="/image/icon/camera_icon.png" />
+			<view class="alimni-info-reply-input">
+				<input cursor-spacing="30rpx" bindinput="inputContent" value="{{commentContent}}" maxlength="100" focus class="alimni-info-reply-input-con" placeholder="评论" />
+				<!-- <image class="alimni-info-reply-icon" src="/asstes/icon/xiaolian_icon.png"/> -->
+			</view>
+			<text class="alimni-info-reply-btn" data-index="{{index}}" data-id="{{item.pkDynamicId}}" bindtap="sendComment">发送</text>
+		</view>
+
+
+	</view>
+	<view class="line"></view>
+</block>
+
+<!-- <view bindtap="allDynamic" class="footer">
+	点击加载更多...
+</view> -->
+

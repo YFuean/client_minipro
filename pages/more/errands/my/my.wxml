@@ -1,0 +1,70 @@
+<!--pages/errands/my/my.wxml-->
+<!-- <text>pages/errands/my/my.wxml</text> -->
+
+<view class="container_e">
+	<!-- 头像、账号部分 -->
+	<view class="my-head" data-url="{{user.avatar}}">
+		<view class="avatar-info" catchtap="viewImage" catchlongtap="saveImage">
+			<image class="userinfo-avatar" src="{{user.avatar}}" mode="cover"></image>
+			<image class="avatar-editor" src="/image/editor.png" catchtap="upShopLogo"></image>
+		</view>
+		<view class="useinfo-phoneNumber"><text>{{newUser.phoneNumber}}</text></view>
+	</view>
+	<!-- 列表部分 -->
+	<view class="my-body">
+		<!-- 订单 -->
+		<navigator url="/pages/more/errands/order/order">
+			<view class="my-list">
+				<view class="my-list-left">
+					<image class="list-icon" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/ic_menu_order.png"></image>
+				</view>
+				<view class="my-list-right">
+					<text class="list-text">订单</text>
+					<image class="my-list-forward" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/ic_recognition_forward.png"></image>
+				</view>
+			</view>
+		</navigator>
+		<!-- 钱包 -->
+		<view class="my-list">
+			<view class="my-list-left">
+				<image class="list-icon" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/ic_menu_wallet.png"></image>
+			</view>
+			<view class="my-list-right">
+				<text class="list-text">钱包</text>
+				<image class="my-list-forward" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/ic_recognition_forward.png"></image>
+			</view>
+		</view>
+		<!-- 客服 -->
+		<view class="my-list">
+			<view class="my-list-left">
+				<image class="list-icon" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/ic_menu_service.png"></image>
+			</view>
+			<view class="my-list-right">
+				<text class="list-text">客服</text>
+				<image class="my-list-forward" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/ic_recognition_forward.png"></image>
+			</view>
+		</view>
+		<!-- 设置 -->
+		<view class="my-list">
+			<view class="my-list-left">
+				<image class="list-icon" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/ic_menu_setting.png"></image>
+			</view>
+			<view class="my-list-right">
+				<text class="list-text">设置</text>
+				<image class="my-list-forward" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/ic_recognition_forward.png"></image>
+			</view>
+		</view>
+		<!-- 申请成为跑腿员 -->
+		<navigator url="/pages/more/errands/my/becomeRunner/becomeRunner">
+			<view class="my-list">
+				<view class="my-list-left">
+					<image class="list-icon" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/ic_menu_points_shop.png"></image>
+				</view>
+				<view class="my-list-right">
+					<text class="list-text">申请成为跑腿</text>
+					<image class="my-list-forward" src="https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/ic_recognition_forward.png"></image>
+				</view>
+			</view>
+		</navigator>
+	</view>
+</view>

@@ -1,0 +1,17 @@
+/* pages/dianfeichongzhi/dianfeichongzhi.wxss */
+@import "/pages/xiaoyuankachongzhi/xiaoyuankachongzhi.wxss";
+.select-sushe{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.indicator-class{
+  height: 50px;
+  width: 200px;
+  color: yellow;
+  font-weight: 650;
+}
+.selected-date{
+  margin-left: 1.5rem;
+}

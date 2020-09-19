@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "money-card": "/components/momeyCard/money-card"
+  },
+  "navigationBarTitleText": "网费充值"
+}

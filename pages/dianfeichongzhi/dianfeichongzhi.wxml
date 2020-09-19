@@ -1,0 +1,43 @@
+<view class="xaoyuankachongzhi-page">
+<view class="select-sushe">
+  <view class="page-body">
+    <view class="selected-date">宿舍：{{buildingName}}-{{buildingNum}}-{{room}}</view>
+    <picker-view indicator-class="indicator-class"  style="width: 500rpx; height: 200rpx;" value="{{value}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{buildings}}" wx:key="{{item}}" wx:for-item="item" style="line-height: 50px; text-align: center;">{{item.name}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{buildindNums}}" wx:key="{{item}}" wx:for-item="item" style="line-height: 50px; text-align: center;">{{item.num}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{rooms}}" wx:key="{{item}}" wx:for-item="item" style=" line-height: 50px; text-align: center;">{{item.num}}</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+
+
+</view>
+<text class="description">充值金额</text>
+<view class="jine-list">
+<money-card money_list="{{money_list}}" bindmyevent="onMyEvent"></money-card>
+</view>
+<text class="description">选择支付方式</text>
+<view class="zhifufangshi-list">
+<radio-group bindchange="radioChange">
+<label  wx:for="{{zhifu_list}}" wx:key="{{item.id}}" class="zhifu-item">
+<view class="zhifu-description">
+<image src="{{item.icon}}"></image>
+{{item.name}}
+</view>
+<view>
+<radio value="{{item.name}}" color="rgb(93,177,234)" checked="true"/>
+</view>
+</label>
+</radio-group>
+</view>
+<modal hidden="{{hiddenmodalput}}" title="请输入自定义金额"  confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+    <input type='text' bindinput="bindMoney"  placeholder="请输入金额" auto-focus/>  
+</modal> 
+<button class="chongzhi-btn" catchtap="go_chongzhi">立即充值</button>
+</view>
+

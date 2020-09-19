@@ -1,0 +1,57 @@
+/* pages/more/tiaozaoshichang/mydata.wxss */
+.jinbenxinxi-page{
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+
+.title{
+  font-size: 30rpx;
+  color: rgb(189, 176, 176);
+  margin: 10rpx;
+}
+
+.zilaio-card{
+  margin: 10rpx;
+  padding: 30rpx;
+  border: 1rpx solid gray;
+  width: 92%;
+  height: 700rpx;
+  border-radius: 30rpx;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  line-height: 100rpx;
+}
+
+.info{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.zilaio-card image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+}
+
+#right-icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+}
+
+.card-info{
+  color: gray;
+}

@@ -1,0 +1,29 @@
+<!-- 搜索框 -->
+    <view class="add-search">
+
+        <form wx:if="{{!isInputing}}">
+            <view style=" width: 135%;"  class="input-box">
+            <icon class="search-icon" type="search" size="20"/> 
+            <input value="{{key}}" class="search-input" type="text" placeholder="请输入联系人姓名或电话" confirm-type="search" bindinput="bindKeyInput" />
+            </view>
+        </form>
+
+        <form wx:if="{{isInputing}}">
+            <view style=" width: 120%;"  class="input-box">
+            <icon class="search-icon" type="search" size="20"/> 
+            <input value="{{key}}" class="search-input" type="text" placeholder="请输入联系人姓名或电话" confirm-type="search" bindinput="bindKeyInput" />
+            </view>
+            <view formType="reset" hidden="{{!isInputing}}" class="search-fail" bindtap="Search">搜索</view> 
+        </form>
+    </view>
+
+<view class="result-title">查询结果</view>
+<view class="add-line"></view>
+ <view class="search-result"  wx:for="{{userList}}" wx:key="index" bindtap="enter" data-username="{{item.userName}}" data-pkuseraccountid="{{item.pkUserAccountId}}" data-avatar="{{item.avatar}}"  data-tele="{{item.phoneNumber}}">
+      <form>
+        <image class="search-result-img" src="{{item.avatar}}"/>
+        <text class="search-result-name">{{item.userName}}</text>
+        <view class="search-result-num">{{item.phoneNumber}}</view>
+        <view class="add-line"></view>
+      </form>
+</view>

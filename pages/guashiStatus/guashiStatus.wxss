@@ -1,0 +1,37 @@
+/* pages/guashiStatus/guashiStatus.wxss */
+.guashi-page{
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+  align-items: center;
+}
+.placeholder-class{
+  font-size: 30rpx;
+  color: rgb(130, 145, 145);
+  background-color: rgb(230, 230, 230);
+  width: 700rpx;
+  padding: 10rpx;
+  height: 50rpx;
+  margin-bottom: 20rpx;
+  padding: 10rpx;
+}
+textarea{
+  background-color: rgb(230, 230, 230);
+  width: 700rpx;
+  padding: 10rpx;
+  height: 50rpx;
+  margin-bottom: 20rpx;
+  padding: 10rpx;
+}
+.beizhu{
+  background-color: rgb(230, 230, 230);
+  width: 700rpx;
+  padding: 10rpx;
+  height: 300rpx;
+  margin-bottom: 20rpx;
+}
+button{
+  color: white;
+  background-color: #30A9DE;
+  margin-top: 50rpx;
+}

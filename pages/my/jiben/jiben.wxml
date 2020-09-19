@@ -1,0 +1,41 @@
+<view class="user-show">
+<view class="avatar-show">
+<text>头像</text>
+<image class="userinfo-avatar" src="{{user.avatar}}" mode="cover" catchtap="viewImage"></image>
+</view>
+<view class="info-show">
+<text  class="info-text">昵称</text>
+<input placeholder="{{user.nickname}}" bindinput="bindNickName" wx:if="{{updateStatus}}"></input>
+<text wx:else="{{!updateStatus}}">{{user.nickname}}</text>
+<image src="/image/editor.png" catchtap="changeStatus"></image>
+</view>
+<view class="info-show">
+<text  class="info-text">性别</text>
+<!-- <input placeholder="{{newUser.gender}}"></input> -->
+<text catchtap="choose_sex">{{newUser.gender}}</text>
+<!-- <image src="/image/editor.png" ></image> -->
+</view>
+<view class="info-show">
+<text  class="info-text">手机</text>
+<text>{{user.phoneNumber}}</text>
+</view>
+<view class="info-show">
+<text  class="info-text">学号</text>
+<text>{{user.jobNumber}}</text>
+</view>
+<view class="info-show">
+<text  class="info-text">班级</text>
+<text>{{user.clazzId}}</text>
+</view>
+<view class="info-show">
+<text  class="info-text">地址</text>
+<text>{{user.address}}</text>
+</view>
+ <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+  <view  class="info-show">
+     <text class="picker">修改地址： </text>
+     <text class="smallsize">{{region[0]}}，{{region[1]}}，{{region[2]}}</text>
+  </view>
+</picker>
+  <button class="save-btn"  bindtap="save_info">保存</button>
+</view>

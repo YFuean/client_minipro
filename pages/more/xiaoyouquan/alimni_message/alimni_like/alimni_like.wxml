@@ -1,0 +1,13 @@
+<!--pages/index/alimni_message/alimni_like/alimni_like.wxml-->
+<view class="like">
+<view></view>
+<image class="like-avatar" src="{{likeList[4]}}" />
+<view class="like-one">
+<text class="like-user">{{likeList[1]}}</text>
+<!-- <text class="like-time"> 1分钟前</text> -->
+</view>
+<view class="like-text">点赞了你的贴子</view>
+<text class="like-content">{{likeList[2]}}</text>
+</view>
+<view class="line"></view>
+

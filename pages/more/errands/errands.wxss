@@ -1,0 +1,279 @@
+/* pages/more/errands/errands.wxss */
+.background {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-content: center; */
+  /* position: fixed; */
+  height: 100%;
+  width: 100%;
+  /* background: #F5F5F5; */
+  background: white;
+  margin: auto;
+  background-image: url("https://newbers.oss-cn-hangzhou.aliyuncs.com/pic/shansong_background1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* position: relative; */
+}
+
+/* .background-img{
+  position: absolute;
+  width: 100%;
+} */
+
+/* .background-img image{
+  width: 100%;
+} */
+
+.container_e {
+  height: 830rpx;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+.service {
+  position: absolute;
+  top: 450rpx;
+  width: 95%;
+  height: 350rpx;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 10px 0px;
+  /* 在绝对定位下实现水平居中 */
+  /* left:50%;
+  margin-left:-45%; */
+}
+
+.information-container_e{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* 帮我送、帮我取导航设置 */
+.service-tab {
+  display: flex;
+  height: auto;
+  width: auto;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #c0c0c0;
+  text-align: center;
+  line-height: 26rpx;
+  flex-direction: row;
+}
+
+.service-tab-list {
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  font-size: 12px;
+  color: #777777;
+}
+
+/* 资讯（全部，教导处，学生会）的页面跳转 */
+.on {
+  font-size: 13px;
+  color: black;
+  border-bottom: 20rpx solid yellow;
+
+}
+
+.swiper-box {
+  display: block;
+  /* height: 100%; */
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-box view {
+  text-align: center;
+}
+
+.service-tab-body{
+  width: 100%;
+  height: 50%;
+}
+
+.service-tab-input {
+  /* 固定 */
+  display: flex;
+  /* 排序的方向 */
+  flex-direction: row;
+  /* 中间 */
+  /* justify-content: center; */
+  align-items: center;
+  /* 属性适用于所有的flex容器，它是用来设置每个flex元素在侧轴上的默认对齐方式。 */
+  height: 50%;
+  width: 100%;
+  align-items: flex-start;
+  padding: 10px;
+  /* margin-left: 10px; */
+}
+navigator{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+.service-tab-input{
+  height: 3em;
+   width: 95%;
+   display: flex;
+}
+.my-list-left{
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-list-middle{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+  align-items: center;
+  /* justify-content: center; */
+}
+.my-list-middle-double{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.my-list-right{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.my-list-forward{
+  height: 15px;
+  width: 15px;
+}
+.service-tab-radius-blue{
+  width: 4px;
+  height: 4px;
+  border: 2px solid blue;
+  border-radius: 4px;
+}
+
+.service-tab-radius-yellow {
+  width: 4px;
+  height: 4px;
+  border: 2px solid yellow;
+  border-radius: 4px;
+}
+
+.service-tab-input-text{
+  height: 100%;
+  width: 100%;
+  color: #777777;
+  font-size: 30rpx;
+  line-height:80rpx;
+  text-align: left;
+}
+.service-tab-input-text-single{
+  height: 50%;
+  width: 100%;
+  color: #000000;
+  line-height: 34rpx;
+  font-size: 34rpx;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.service-tab-input-text-double{
+  height: 50%;
+  width: 100%;
+  line-height: 26rpx;
+  color: #777777;
+  font-size: 26rpx;
+  text-align: left;
+}
+
+/*  个人中心、我的订单、接单、跑腿  */
+
+.navigator-tab{
+  /* position: absolute; */
+  display: flex;
+  justify-content: space-around;
+  height: 150rpx;
+  /* border-bottom: 1rpx solid rgb(194, 180, 180,0.7); */
+  padding: 15rpx 0rpx 15rpx 0rpx;
+  width: 100%;
+  /* top: 850rpx; */
+}
+
+.nav-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-icon{
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 15rpx;
+}
+
+.nav-title{
+  font-size: 24rpx;
+}
+
+/* 资讯卡片 */
+.information-card{
+  display: flex;
+  height: 6em;
+  width: 95%;
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px 0px 10px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 10px 0px;
+}
+.information-left{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 70%;
+}
+.information-title{
+  height: 50%;
+  font-size: 34rpx;
+  line-height: 3em;
+  margin-left: 10px;
+}
+.information-info{
+  height: 50%;
+  font-size: 26rpx;
+  color: #777777;
+  line-height: 1em;
+  margin-left: 10px;
+
+}
+.information-right{
+  display: flex;
+  height: 100%;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}
+.information-right image{
+  height: 80%;
+  width: 80%;
+}

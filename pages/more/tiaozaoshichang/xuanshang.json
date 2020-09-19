@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText":"悬赏",
+  "usingComponents": {
+    "tabbar": "/tabbarCmponent/tiaozao-tabbar/tiaozao-tabbar"
+  }
+}

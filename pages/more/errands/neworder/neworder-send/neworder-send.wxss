@@ -1,0 +1,145 @@
+/* pages/errands/neworder-send/neworder-send.wxss */
+
+
+.send-address{
+  /* padding-left: 30rpx; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-content: center; */
+  height: 100%;
+  width: 100%;
+  /* background-color: tomato; */
+}
+
+.goods-type{
+  padding-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-content: center; */
+  height: 100%;
+  width: 100%;
+  /* background-color: tomato; */
+}
+
+.add-order{
+  padding-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-content: center; */
+  height: 100%;
+  width: 100%;
+  /* background-color: tomato; */
+}
+
+/* 来这儿拿、送到这儿 */
+.address-title{
+  padding-left: 10rpx;
+  font-size: 40rpx;
+}
+
+.first-inputs{
+  margin: 10rpx;
+  display: flex; 
+  border-bottom: 1rpx solid grey;
+  padding-bottom: 2px;
+}
+.first-inputs-left{
+  display: flex;
+  width: 90%;
+  height: 3em;
+}
+.first-inputs-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 3em;
+}
+.address-input{
+  height: 3em;
+  width: 100%;
+  line-height: 3em;
+}
+.address-icon{
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.second-inputs{
+  margin: 10rpx;
+  display: flex;
+  border-bottom: 1rpx solid grey;
+  padding-bottom: 2px;
+}
+.specific-input{
+  height: 3em;
+  width: 100%;
+  
+}
+
+.third-inputs{
+  margin: 10rpx;
+  display: flex;
+  border-bottom: 1rpx solid grey;
+  padding-bottom: 2px;
+}
+.name{
+  height: 3em;
+  width: 50%;
+}
+.name-input{
+  height: 2em;
+}
+
+.tel{
+  height: 3em;
+  width: 50%;
+}
+.tel-input{
+  height: 2em;
+  border-left: 1rpx solid grey;
+}
+
+.goods-type-inputs{
+  margin: 10rpx;
+  display: flex; 
+  border-bottom: 1rpx solid grey;
+  padding-bottom: 2px;
+}
+
+.goods-type-input{
+  height: 3em;
+  width: 100%;
+}
+
+.goods-weight-inputs{
+  margin: 10rpx;
+  display: flex; 
+  border-bottom: 1rpx solid grey;
+  padding-bottom: 2px;
+}
+
+.goods-weight-input{
+  height: 3em;
+  width: 100%;
+}
+
+.btn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 100rpx 0rpx 0rpx 0rpx;
+}
+
+.btn-enter{
+  background-color: deepskyblue ;
+  color:#ffff;
+  font-weight: 500;
+}
+
+

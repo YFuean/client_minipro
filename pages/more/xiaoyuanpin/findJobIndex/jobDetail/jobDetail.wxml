@@ -1,0 +1,72 @@
+<view class="jobDetailPage">
+    <!-- 这是那个主色的banner -->
+    <view class="header">
+        <text class="title--text">轻松{{detailInfo.payType}}小任务</text>
+        <view class="header-body">
+            <text class="light--text mr-10">{{detailInfo.pay}}元/天</text>
+            <text class="" selectable="false" space="false" decode="false">完工结算</text>
+        </view>
+        <view class="header-foot">
+            <text class="mr-10">人数 {{detailInfo.have}}/{{detailInfo.number}} 人</text>
+            <view wx:if="{{detailInfo.number === detailInfo.have}}" class="full ml-10">已满</view>
+        </view>
+    </view>
+    <!-- 兼职详情 的详细信息区域 -->
+    <view class="content">
+        <!-- 职位名称、薪资、人数等 -->
+        <view class="content-header mb-50 mt-30">
+            <text class="xtitle2--text">{{detailInfo.name}}</text>
+            <view class=" xsubtitle--text-mid chip mt-20" hover-class="none" hover-stop-propagation="false">
+                <text class="mr-20" selectable="false" space="false" decode="false">日期</text>
+                <text class="" selectable="false" space="false" decode="false">{{detailInfo.workingDate}}</text>
+            </view>
+            <view class=" xsubtitle--text-mid chip mt-20" hover-class="none" hover-stop-propagation="false">
+                <text class="mr-20" selectable="false" space="false" decode="false">时间</text>
+                <text class="" selectable="false" space="false" decode="false">{{detailInfo.workingTime}}</text>
+            </view>
+            <view class=" xsubtitle--text-mid chip mt-20 " hover-class="none" hover-stop-propagation="false">
+                <text class="mr-20" selectable="false" space="false" decode="false">地点</text>
+                <text class="" selectable="false" space="false" decode="false">{{detailInfo.workplace}}</text>
+            </view>
+        </view>
+        <!-- 岗位详情 -->
+        <text class="xtitle2--text" selectable="false" space="false" decode="false">岗位详情</text>
+        <view class="content-body xsubtitle--text-mid mb-50" hover-class="none" hover-stop-propagation="false">
+            <text class="description" selectable="false" space="false" decode="false">{{detailInfo.description}}</text>
+        </view>
+        <!-- 岗位负责人 -->
+        <text class="xtitle2--text" selectable="false" space="false" decode="false">岗位负责人</text>
+        <view class="content-foot xsubtitle--text-mid">
+            <view class="avatar mr-20" hover-class="none" hover-stop-propagation="false">
+                <image class="circle" src="{{detailInfo.bossAvatar}}" mode="aspectFill" lazy-load="false" binderror="" bindload=""></image>
+            </view>
+            <view class="info">
+                <view class="info-person mb-10">
+                    <text class="mr-20" selectable="false" space="false" decode="false">{{detailInfo.bossName}}</text>
+                    <text class="" selectable="false" space="false" decode="false">{{detailInfo.bossPhone}}</text>
+                </view>
+                <view class="con">
+                    <!-- <icon class="" type="success_no_circle" size="23" color="#11aca8"></icon> -->
+                    <image class="mr-20 ml-10 small-icon" src="https://zhxy-vue.oss-cn-hangzhou.aliyuncs.com/icon/position/renzheng.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+                    <text class="a">个人认证</text>
+                </view>
+            </view>
+        </view>
+        <view class="buttom">
+            <!-- 校园小贴士卡片 -->
+            <view class="tips mb-20">
+                <view class="tips-title mb-20">
+                    <!-- <icon class="" type="info" size="23" color="#11aca8"></icon> -->
+                    <image class="mr-20 ml-10 small-icon" src="https://zhxy-vue.oss-cn-hangzhou.aliyuncs.com/icon/position/dunpai.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+                    <text class="tips-text">校园聘小贴士</text>
+                </view>
+                <view class="tips-info world">兼职过程中请拒绝向商家缴纳任何费用，若收费向客服举报</view>
+            </view>
+            <!-- 联系对方 按钮 -->
+            <view class="card-job-foot">
+                <view class="xbtn-large" bind:tap="showPopup">联系对方</view>
+            </view>
+        </view>
+    </view>
+    <popup id='popup' title='小提示' content='尚未开通会话服务，请电话联系该boss~' btn_no='取消' btn_ok='确定' bind:error="_error" bind:success="_success"></popup>
+</view>

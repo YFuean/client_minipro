@@ -1,0 +1,25 @@
+<!--pages/xiaoyuankacongzhi/xiaoyuankacongzhi.wxml-->
+<view class="xaoyuankachongzhi-page">
+<text class="description">充值金额</text>
+<view class="jine-list">
+<money-card money_list="{{money_list}}" bindmyevent="onMyEvent"></money-card>
+</view>
+<text class="description">选择支付方式</text>
+<view class="zhifufangshi-list">
+<radio-group bindchange="radioChange">
+<label  wx:for="{{zhifu_list}}" wx:key="{{item.id}}" class="zhifu-item">
+<view class="zhifu-description">
+<image src="{{item.icon}}"></image>
+{{item.name}}
+</view>
+<view>
+<radio value="{{item.name}}" color="rgb(93,177,234)" checked="true"/>
+</view>
+</label>
+</radio-group>
+</view> 
+<modal hidden="{{hiddenmodalput}}" title="请输入自定义金额" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+    <input type='digit' bindinput="bindMoney"  placeholder="请输入金额" auto-focus/>  
+</modal> 
+<button class="chongzhi-btn" catchtap="go_chongzhi">立即充值</button>
+</view>

@@ -1,0 +1,221 @@
+/* pages/more/tiaozaoshichang/index.wxss */
+.shouye-page{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(247, 237, 237);
+  height: 100%;
+} 
+
+.search{  
+  width: 80%;  
+}  
+.search_arr {  
+  border: 1px solid #d0d0d0;  
+  border-radius: 10rpx;  
+  margin-left: 20rpx;  
+}  
+.search_arr input{  
+  margin-left: 60rpx;  
+  height: 60rpx;  
+  border-radius: 20px;  
+}  
+.bc_text {  
+  line-height: 68rpx;  
+  height: 68rpx;  
+  margin-top: 34rpx;  
+}  
+
+.page_row{  
+  display: flex;  
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #6AAFE6;
+  border-radius: 0 0 10% 10%;
+  height: 80rpx;
+  padding: 20rpx;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}  
+
+.page_row image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  border: 1rpx solid rgb(196, 181, 181);
+  background-color: white;
+}
+
+.fabu-img{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.searchcion {  
+  margin: 10rpx 10rpx 10rpx 10rpx;  
+  position: absolute;  
+  left:140rpx;  
+  z-index: 2;  
+  width: 20px;  
+  height: 20px;  
+  text-align: center;  
+}  
+
+.search-input{
+  padding: 5rpx;
+  color: white;
+}
+
+.placeholder-class{
+  text-align: center;
+  font-size: 35rpx;
+  letter-spacing: 3rpx;
+  color: white;
+}
+
+.fenlei-info{
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 20rpx;
+  width: 90%;
+  height: 200rpx;
+  padding: 10rpx;
+  border-radius: 20rpx;
+  justify-content: space-around;
+  align-content: space-around;
+  background-color: white;
+  font-size: 30rpx;
+  font-weight: 600;
+  white-space: nowrap;
+  position: relative;
+}
+
+.fenlei-item{
+  display: inline-block;
+  margin: 40rpx 20rpx 20rpx 20rpx;
+}
+
+.fenlei-item-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.fenlei-item-info image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 20rpx;
+  border-radius: 50%;
+}
+
+.tip{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.more{
+  margin-left: 450rpx;
+  color: red;
+}
+
+.xuanshang-info{
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 20rpx;
+  width: 80%;
+  height: 100%;
+  padding: 10rpx;
+  border-radius: 20rpx;
+  justify-content: space-around;
+  align-content: space-around;
+  background-color: white;
+  font-size: 30rpx;
+  font-weight: 600;
+  white-space: nowrap;
+  position: relative;
+}
+
+.goods-show{
+  padding: 20rpx;
+}
+
+.good-card{
+  display: flex;
+  flex-direction: column;
+  margin: 10rpx;
+  justify-content: flex-start;
+  /* border: 1rpx solid rgb(201, 188, 188); */
+  box-shadow: gray 2rpx;
+  background-color: white;
+  border-radius: 10rpx;
+}
+
+.good-description{
+  padding: 10rpx;
+  display: flex;
+  flex-direction: column;
+  font-size: 35rpx;
+}
+
+.good-buy{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 20rpx;
+  padding: 10rpx;
+}
+
+.good-buy image{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.good-price{
+  color: red;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+
+#left{
+  width: 47%;
+  margin: 0 1% 0 2%;
+  float: left;
+ }
+
+ #right{
+  width: 47%;
+  margin: 0 2% 0 1%;
+  float: left;
+ }
+
+ .cover-image{
+  width: 100%;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+ }
+ 
+ .float-btn{
+   position: fixed;
+   left: 40%;
+ }
+ 
+ #pub-img{
+  position: fixed;
+  bottom: 10rpx;
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  border: 8rpx solid white;
+  background-color: rgb(223, 223, 218);
+}
+ 
+

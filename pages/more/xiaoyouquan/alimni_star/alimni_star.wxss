@@ -1,0 +1,75 @@
+/* pages/index/alimni_star/alimni_star.wxss */
+page {
+  width: 100%;
+}
+/* .image-box {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 2vw;
+  box-sizing:border-box;
+} */
+.line {
+  width: 100%;
+  border: 0.5rpx solid rgb(199, 198, 198);
+  margin-top: 20rpx;
+}
+
+.star-avatar {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50rpx;
+  margin-top: 20rpx;
+}
+.star-info {
+  margin: 40rpx;
+}
+.star-user {
+  font-size: 24rpx;
+  font-weight: 600;
+  margin-left: 20rpx;
+}
+
+.star-time {
+  font-size: 20rpx;
+  color: rgb(134, 131, 131);
+  float: right;
+  margin-top: 65rpx;
+}
+.star-title {
+  font-size: 28rpx;
+  font-family: sans-serif;
+  width: 73%;
+  font-weight: lighter;
+  /* margin-left: 20rpx; */
+  letter-spacing: 2rpx;
+  display: -webkit-box;
+  -webkit-box-orient:vertical;
+  text-overflow: ellipsis;
+  overflow:hidden; 
+  font-weight: 600;
+  -webkit-line-clamp:2;
+}
+.star-image {
+  width: 22%;
+  height: 60%;
+  right: 30rpx;
+  position: absolute;
+  margin-top: -30rpx;
+}
+
+.star-right {
+  width: 22%;
+  height: 40%;
+  background-color: whitesmoke;
+  right: 30rpx;
+  margin-top: -120rpx;
+  position: absolute;
+  display: -webkit-box;
+  -webkit-box-orient:vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  font-size: 26rpx;
+  background-color: whitesmoke;
+}

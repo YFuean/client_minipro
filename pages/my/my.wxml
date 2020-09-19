@@ -1,0 +1,29 @@
+<!--pages/my/my.wxml-->
+<tabbar selected="{{4}}"></tabbar>
+<view class="container">
+<view class="userinfo" catchlongtap="saveImage" data-url="{{user.avatar}}" wx:if="{{token!==null}}">
+<view class="avatar-info" catchtap="viewImage">
+        <image class="userinfo-avatar" src="{{user.avatar}}" mode="cover" ></image>
+        <image class="avatar-editor" src="/image/editor.png" catchtap="upShopLogo"></image>
+</view>
+        <text>{{user.nickname}}</text>
+        <text>{{user.phoneNumber}}</text>
+</view>
+<view class="userinfo"  bindtap="go_login" wx:if="{{token===null}}">
+        <image class="userinfo-avatar" src="/image/icon_wode.png" mode="cover" ></image>
+        <text>尚未登录</text>
+</view>
+<view class="menu-list"  wx:if="{{token!=null}}">
+<view wx:for="{{menu_list}}" class="menu-item" data-name="{{item.name}}" data-url="{{item.path}}" bindtap="go_page">
+<view class="menu">
+<image src="{{item.icon}}"></image>
+<text>{{item.name}}</text>
+</view>
+<view>
+<image src="/image/right.png" class="right-image"></image>
+</view>
+
+</view>
+</view> 
+</view> 
+

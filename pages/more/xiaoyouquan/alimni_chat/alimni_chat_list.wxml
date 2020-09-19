@@ -1,0 +1,24 @@
+<!--pages/index/alimni_chat/alimni_chat_list.wxml-->
+<view class="chat-row">
+	<view bindtap="goSet" class="chat-top">
+		<image class="chat-list-icon" src="/image/icon/shezhi_icon.png" />
+		<text class="chat-shezhi">私聊设置</text>
+	</view>
+</view>
+
+<block wx:for="{{user}}" wx:key=''>
+<view bindtap="bindChat" data-id="{{index}}" data-name="{{item.name}}" class="chat-list">
+	<image class="chat-list-avatar" src="{{item.avatar}}" />
+	<text class="chat-list-user">{{item.name}}</text>
+	<view class="chat-list-content">你好</view>
+	<text class="chat-list-time">15:26</text>
+	<view class="line"></view>
+</view>
+</block>
+
+<!-- <view> -->
+<!-- <button bindtap="chatLow" type="primary">双人聊天</button>
+<button bindtap="chatMany">多人聊天</button> -->
+<!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="warning">一键授权</button>
+<view class='openid' bindtap='copyOpenid'>你的openid：{{openid}}</view>
+</view> -->

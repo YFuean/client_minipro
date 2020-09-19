@@ -1,0 +1,63 @@
+<!-- index.wxml -->
+<!-- <wxs src="../../utils/subUtil.js" module="tools" /> -->
+<tabbar selected="{{2}}"></tabbar>
+<view class="shouye-page">
+    <scroll-view class="content-info" scroll-y>
+        <view class="shouye-silde">
+            <swiper class="shouye-info-silde" indicator-color="rgba(255,255,255,.5)" indicator-active-color="#fff" indicator-dots interval="2000" circular autoplay current="{{swiperCurrent}}">
+                <block wx:for="{{slide_list}}" wx:for-item="item">
+                    <swiper-item id="image-item">
+                        <image class="swiper-img" src="{{item.src}}"></image>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+        <view class="shouye-nav">
+            <view class="nav-list" wx:for="{{nav_list}}" wx:for-item="item">
+                <navigator url="{{item.path}}">
+                    <view class="nav-item">
+                        <image src="{{item.icon}}" class="nav-icon"></image>
+                        <text class="nav-title">{{item.title}}</text>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+        <view class="today-course">
+            <text style="font-weight:650">我的课程</text>
+            <scroll-view scroll-x="true" class="course-info" wx:if="{{token!=null}}">
+                <view wx:for="{{course_list}}" wx:for-item="item" class="course-item {{index%2===0?'even':'ood'}}">
+                    <view class="course-info">
+                        <text class="course-name">{{item.subjectName}}</text>
+                        <text>第{{item.time*2-1}}-{{item.time*2+1}}节</text>
+                        <view class="classroom">
+                            <text>{{item.towerName}}</text>
+                            <text>{{item.roomName}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view wx:if="{{length==0}}" class="no_class">
+                    <text>今日没课</text>
+                </view>
+            </scroll-view>        
+            <view wx:else class="not-login">
+                <text>您尚未登录，请先去登录</text>
+                <navigator url="/pages/login/login">
+                    <text class="go-login">去登录</text>
+                </navigator>
+            </view>
+        </view>
+        <view class="hot-zixun">
+            <text>热门资讯</text>
+            <view class="hot-zixun-info">
+                <view wx:for="{{infoList}}" wx:for-item="item" class="zixun-card" 
+                bindtap="toDetail" data-id="{{item.pkInfoManageId}}">
+                    <image src="{{item.cover}}"></image>
+                    <view class="zixun-info">
+                        <text class="info-title">{{item.title}}</text>
+                        <text class="date-info">{{item.gmtCreate}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

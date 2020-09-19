@@ -1,0 +1,119 @@
+{
+  "pages": [
+  "pages/index/index",
+    "pages/information/information",
+    "pages/message/message",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/informationDetail/informationDetail",
+    "pages/contacts/contacts",
+    "pages/my/my",
+    "pages/my/jiben/jiben",
+    "pages/my/guanyu/guanyu",
+    "pages/my/qinli/qinli",
+    "pages/my/yijian/yijian",
+    "pages/validatePhoneNumber/validatePhoneNumber",
+    "pages/updatePassword/updatePassword",
+    "pages/classSchedule/classSchedule",
+    "pages/examinationQuery/examinationQuery",
+    "pages/library/library",
+    "pages/oneCartoon/oneCartoon",
+    "pages/xiaoyuankachongzhi/xiaoyuankachongzhi",
+    "pages/dianfeichongzhi/dianfeichongzhi",
+    "pages/wangfeichongzhi/wangfeichongzhi",
+    "pages/xiaofeimingxi/xiaofeimingxi",
+    "pages/guashiStatus/guashiStatus",
+    "pages/addperson/addperson",
+    "pages/message-detail/message-detail",
+    "pages/more/more/more",
+    "pages/more/errands/errands",
+    "pages/more/errands/my/my",
+    "pages/more/errands/order/order",
+    "pages/more/errands/receive/receive",
+    "pages/more/errands/running/running",
+    "pages/more/errands/neworder/neworder-get/neworder-get",
+    "pages/more/errands/neworder/neworder-send/neworder-send",
+    "pages/more/errands/neworder/neworder",
+    "pages/more/errands/my/becomeRunner/becomeRunner",
+    "pages/more/errands/my/progress/progress",
+    "pages/more/tiaozaoshichang/tiaozaoshichang",
+    "pages/more/tiaozaoshichang/index",
+    "pages/more/tiaozaoshichang/fenlei",
+    "pages/more/tiaozaoshichang/xuanshang",
+    "pages/more/tiaozaoshichang/my",
+    "pages/more/tiaozaoshichang/search",
+    "pages/more/tiaozaoshichang/personal",
+    "pages/more/tiaozaoshichang/mydata",
+    "pages/more/tiaozaoshichang/gooddetail",
+    "pages/more/tiaozaoshichang/goodstype",
+    "pages/more/xiaoyouquan/index",
+    "pages/more/xiaoyouquan/alimni_chat/alimni_chatting/alimni_chatting",
+    "pages/more/xiaoyouquan/alimni_chat/alimni_chat_list",
+    "pages/more/xiaoyouquan/alimni_star/alimni_star",
+    "pages/more/xiaoyouquan/black_list/black_list",
+    "pages/more/xiaoyouquan/alimni_message/alimni_comment/alimni_comment",
+    "pages/more/xiaoyouquan/alimni_message/alimni_like/alimni_like",
+    "pages/more/xiaoyouquan/alimni_post/alimni_post",
+    "pages/more/xiaoyouquan/alimni_message/alimni_message",
+    "pages/more/xiaoyouquan/alimni_info/alimni_info",
+    "pages/more/xiaoyouquan/alimni_chat/alimni_set/alimni_set",
+    "pages/more/xiaoyouquan/recommend/recommend"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  },
+  "plugins": {
+    "chooseLocation": {
+      "version": "1.0.4",
+      "provider": "wx76a9a06e5b4e693e"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "智慧校园",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [{
+        "pagePath": "pages/information/information",
+        "text": "资讯",
+        "iconPath": "image/icon_zixun1.png",
+        "selectedIconPath": "image/icon_zixun.png"
+      },
+      {
+        "pagePath": "pages/contacts/contacts",
+        "text": "通讯录",
+        "iconPath": "image/icon_tongxunlu.png",
+        "selectedIconPath": "image/icon_tongxunlu2.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/icon_shouye2.png",
+        "selectedIconPath": "image/icon_shouye.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "image/icon_xiaoxi.png",
+        "selectedIconPath": "image/icon_xiaoxi2.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "image/icon_wode.png",
+        "selectedIconPath": "image/icon_wode2.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+
+}
